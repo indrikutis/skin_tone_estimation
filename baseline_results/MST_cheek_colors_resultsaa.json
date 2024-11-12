@@ -1,0 +1,121 @@
+{
+    "subject_2": {
+        "PXL_20220922_173547366.jpg": {
+            "left_cheek_color": [
+                36,
+                44,
+                64
+            ],
+            "right_cheek_color": null,
+            "avg_cheek_color": null
+        },
+        "PXL_20220922_173611308.jpg": {
+            "left_cheek_color": null,
+            "right_cheek_color": null,
+            "avg_cheek_color": null
+        }
+    },
+    "subject_4": {
+        "PXL_20220922_162127092.jpg": {
+            "left_cheek_color": null,
+            "right_cheek_color": null,
+            "avg_cheek_color": null
+        }
+    },
+    "subject_8": {
+        "PXL_20220922_144342994.jpg": {
+            "left_cheek_color": null,
+            "right_cheek_color": null,
+            "avg_cheek_color": null
+        }
+    },
+    "subject_13": {
+        "PXL_20220922_141129747.jpg": {
+            "left_cheek_color": [
+                45,
+                55,
+                84
+            ],
+            "right_cheek_color": [
+                20,
+                35,
+                72
+            ],
+            "avg_cheek_color": [
+                32,
+                45,
+                78
+            ]
+        },
+        "PXL_20220922_141142245.jpg": {
+            "left_cheek_color": [
+                34,
+                42,
+                72
+            ],
+            "right_cheek_color": [
+                17,
+                27,
+                60
+            ],
+            "avg_cheek_color": [
+                25,
+                34,
+                66
+            ]
+        }
+    },
+    "subject_16": {
+        "PXL_20220922_162910059.jpg": {
+            "left_cheek_color": [
+                187,
+                197,
+                225
+            ],
+            "right_cheek_color": [
+                127,
+                149,
+                203
+            ],
+            "avg_cheek_color": [
+                157,
+                173,
+                214
+            ]
+        },
+        "PXL_20220922_162924532.jpg": {
+            "left_cheek_color": [
+                156,
+                168,
+                216
+            ],
+            "right_cheek_color": [
+                115,
+                134,
+                200
+            ],
+            "avg_cheek_color": [
+                135,
+                151,
+                208
+            ]
+        },
+        "PXL_20220922_163150248.jpg": {
+            "left_cheek_color": [
+                75,
+                83,
+                135
+            ],
+            "right_cheek_color": [
+                95,
+                108,
+                175
+            ],
+            "avg_cheek_color": [
+                85,
+                95,
+                155
+            ]
+        }
+    }
+}
