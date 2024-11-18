@@ -8,6 +8,8 @@ import math
 from collections import defaultdict
 from sklearn.cluster import KMeans
 import json
+from collections import Counter
+
 
 import sys
 sys.path.append('/home/dasec-notebook/Thesis/OFIQ-Project/python')
@@ -554,3 +556,20 @@ def calculate_best_mst_orb(rgb, mst_orb_salient_colors):
             best_mst_orb = mst_orb_name.split('.')[0].split('_')[1] 
 
     return best_mst_orb, lowest_rmse
+
+
+def mode(values):
+    """ Calculate the mode of a list of values.
+
+    Args:
+        values (list): The list of values
+
+    Returns:
+        list: The mode(s) of the list.
+    """
+
+    value_counts = Counter(values)
+    max_count = max(value_counts.values())
+    modes = [value for value, count in value_counts.items() if count == max_count]
+    
+    return modes
