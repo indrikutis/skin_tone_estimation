@@ -1,0 +1,3435 @@
+{
+    "00080": {
+        "DSC_0703.JPG": {
+            "left_cheek_color": [
+                72,
+                100,
+                180
+            ],
+            "right_cheek_color": [
+                73,
+                86,
+                163
+            ],
+            "avg_cheek_color": [
+                72,
+                93,
+                171
+            ]
+        }
+    },
+    "00195": {
+        "DSC_1745.JPG": {
+            "left_cheek_color": [
+                45,
+                82,
+                151
+            ],
+            "right_cheek_color": [
+                56,
+                87,
+                158
+            ],
+            "avg_cheek_color": [
+                50,
+                84,
+                154
+            ]
+        }
+    },
+    "00104": {
+        "DSC_0909.JPG": {
+            "left_cheek_color": [
+                72,
+                101,
+                162
+            ],
+            "right_cheek_color": [
+                80,
+                97,
+                151
+            ],
+            "avg_cheek_color": [
+                76,
+                99,
+                156
+            ]
+        }
+    },
+    "00202": {
+        "DSC_1809.JPG": {
+            "left_cheek_color": [
+                68,
+                93,
+                164
+            ],
+            "right_cheek_color": [
+                70,
+                87,
+                155
+            ],
+            "avg_cheek_color": [
+                69,
+                90,
+                159
+            ]
+        }
+    },
+    "00086": {
+        "DSC_0754.JPG": {
+            "left_cheek_color": [
+                80,
+                111,
+                186
+            ],
+            "right_cheek_color": [
+                89,
+                105,
+                180
+            ],
+            "avg_cheek_color": [
+                84,
+                108,
+                183
+            ]
+        }
+    },
+    "00052": {
+        "DSC_0457.JPG": {
+            "left_cheek_color": [
+                76,
+                105,
+                182
+            ],
+            "right_cheek_color": [
+                83,
+                101,
+                176
+            ],
+            "avg_cheek_color": [
+                79,
+                103,
+                179
+            ]
+        }
+    },
+    "00068": {
+        "DSC_0602.JPG": {
+            "left_cheek_color": [
+                24,
+                68,
+                133
+            ],
+            "right_cheek_color": [
+                38,
+                81,
+                146
+            ],
+            "avg_cheek_color": [
+                31,
+                74,
+                139
+            ]
+        },
+        "DSC_0603.JPG": {
+            "left_cheek_color": [
+                18,
+                61,
+                125
+            ],
+            "right_cheek_color": [
+                35,
+                72,
+                140
+            ],
+            "avg_cheek_color": [
+                26,
+                66,
+                132
+            ]
+        }
+    },
+    "00173": {
+        "DSC_1537.JPG": {
+            "left_cheek_color": [
+                78,
+                107,
+                182
+            ],
+            "right_cheek_color": [
+                87,
+                100,
+                168
+            ],
+            "avg_cheek_color": [
+                82,
+                103,
+                175
+            ]
+        }
+    },
+    "00141": {
+        "DSC_1246.JPG": {
+            "left_cheek_color": [
+                59,
+                91,
+                166
+            ],
+            "right_cheek_color": [
+                82,
+                99,
+                179
+            ],
+            "avg_cheek_color": [
+                70,
+                95,
+                172
+            ]
+        }
+    },
+    "00170": {
+        "DSC_1510.JPG": {
+            "left_cheek_color": [
+                23,
+                73,
+                144
+            ],
+            "right_cheek_color": [
+                34,
+                75,
+                150
+            ],
+            "avg_cheek_color": [
+                28,
+                74,
+                147
+            ]
+        }
+    },
+    "00067": {
+        "DSC_0593.JPG": {
+            "left_cheek_color": [
+                66,
+                89,
+                155
+            ],
+            "right_cheek_color": [
+                69,
+                85,
+                146
+            ],
+            "avg_cheek_color": [
+                67,
+                87,
+                150
+            ]
+        }
+    },
+    "00001": {
+        "DSC_0033.JPG": {
+            "left_cheek_color": [
+                36,
+                81,
+                157
+            ],
+            "right_cheek_color": [
+                52,
+                91,
+                165
+            ],
+            "avg_cheek_color": [
+                44,
+                86,
+                161
+            ]
+        }
+    },
+    "00024": {
+        "DSC_0195.JPG": {
+            "left_cheek_color": [
+                23,
+                65,
+                136
+            ],
+            "right_cheek_color": [
+                42,
+                75,
+                146
+            ],
+            "avg_cheek_color": [
+                32,
+                70,
+                141
+            ]
+        }
+    },
+    "00092": {
+        "DSC_0808.JPG": {
+            "left_cheek_color": [
+                52,
+                87,
+                166
+            ],
+            "right_cheek_color": [
+                65,
+                96,
+                173
+            ],
+            "avg_cheek_color": [
+                58,
+                91,
+                169
+            ]
+        }
+    },
+    "00061": {
+        "DSC_0538.JPG": {
+            "left_cheek_color": [
+                51,
+                81,
+                161
+            ],
+            "right_cheek_color": [
+                79,
+                94,
+                180
+            ],
+            "avg_cheek_color": [
+                65,
+                87,
+                170
+            ]
+        }
+    },
+    "00007": {
+        "DSC_0059.JPG": {
+            "left_cheek_color": [
+                51,
+                84,
+                167
+            ],
+            "right_cheek_color": [
+                62,
+                96,
+                173
+            ],
+            "avg_cheek_color": [
+                56,
+                90,
+                170
+            ]
+        }
+    },
+    "00094": {
+        "DSC_0825.JPG": {
+            "left_cheek_color": [
+                72,
+                97,
+                154
+            ],
+            "right_cheek_color": [
+                93,
+                111,
+                170
+            ],
+            "avg_cheek_color": [
+                82,
+                104,
+                162
+            ]
+        }
+    },
+    "00128": {
+        "DSC_1128.JPG": {
+            "left_cheek_color": [
+                20,
+                67,
+                126
+            ],
+            "right_cheek_color": [
+                35,
+                73,
+                143
+            ],
+            "avg_cheek_color": [
+                27,
+                70,
+                134
+            ]
+        }
+    },
+    "00027": {
+        "DSC_0222.JPG": {
+            "left_cheek_color": [
+                101,
+                121,
+                180
+            ],
+            "right_cheek_color": [
+                92,
+                109,
+                163
+            ],
+            "avg_cheek_color": [
+                96,
+                115,
+                171
+            ]
+        }
+    },
+    "00044": {
+        "DSC_0384.JPG": {
+            "left_cheek_color": [
+                43,
+                75,
+                152
+            ],
+            "right_cheek_color": [
+                48,
+                76,
+                156
+            ],
+            "avg_cheek_color": [
+                45,
+                75,
+                154
+            ]
+        }
+    },
+    "00191": {
+        "DSC_1707.JPG": {
+            "left_cheek_color": [
+                56,
+                92,
+                159
+            ],
+            "right_cheek_color": [
+                71,
+                88,
+                148
+            ],
+            "avg_cheek_color": [
+                63,
+                90,
+                153
+            ]
+        }
+    },
+    "00193": {
+        "DSC_1726.JPG": {
+            "left_cheek_color": [
+                38,
+                79,
+                163
+            ],
+            "right_cheek_color": [
+                60,
+                94,
+                178
+            ],
+            "avg_cheek_color": [
+                49,
+                86,
+                170
+            ]
+        }
+    },
+    "00056": {
+        "DSC_0493.JPG": {
+            "left_cheek_color": [
+                63,
+                109,
+                176
+            ],
+            "right_cheek_color": [
+                74,
+                114,
+                181
+            ],
+            "avg_cheek_color": [
+                68,
+                111,
+                178
+            ]
+        }
+    },
+    "00030": {
+        "DSC_0250.JPG": {
+            "left_cheek_color": [
+                44,
+                74,
+                152
+            ],
+            "right_cheek_color": [
+                72,
+                97,
+                170
+            ],
+            "avg_cheek_color": [
+                58,
+                85,
+                161
+            ]
+        }
+    },
+    "00099": {
+        "DSC_0867.JPG": {
+            "left_cheek_color": [
+                64,
+                93,
+                168
+            ],
+            "right_cheek_color": [
+                83,
+                105,
+                181
+            ],
+            "avg_cheek_color": [
+                73,
+                99,
+                174
+            ]
+        }
+    },
+    "00184": {
+        "DSC_1639.JPG": {
+            "left_cheek_color": [
+                60,
+                93,
+                189
+            ],
+            "right_cheek_color": [
+                83,
+                104,
+                202
+            ],
+            "avg_cheek_color": [
+                71,
+                98,
+                195
+            ]
+        }
+    },
+    "00064": {
+        "DSC_0565.JPG": {
+            "left_cheek_color": [
+                54,
+                94,
+                161
+            ],
+            "right_cheek_color": [
+                62,
+                92,
+                160
+            ],
+            "avg_cheek_color": [
+                58,
+                93,
+                160
+            ]
+        }
+    },
+    "00119": {
+        "DSC_1045.JPG": {
+            "left_cheek_color": [
+                107,
+                124,
+                185
+            ],
+            "right_cheek_color": [
+                77,
+                89,
+                158
+            ],
+            "avg_cheek_color": [
+                92,
+                106,
+                171
+            ]
+        }
+    },
+    "00153": {
+        "DSC_1353.JPG": {
+            "left_cheek_color": [
+                62,
+                103,
+                171
+            ],
+            "right_cheek_color": [
+                82,
+                115,
+                178
+            ],
+            "avg_cheek_color": [
+                72,
+                109,
+                174
+            ]
+        }
+    },
+    "00161": {
+        "DSC_1425.JPG": {
+            "left_cheek_color": [
+                31,
+                62,
+                113
+            ],
+            "right_cheek_color": [
+                40,
+                64,
+                117
+            ],
+            "avg_cheek_color": [
+                35,
+                63,
+                115
+            ]
+        }
+    },
+    "00010": {
+        "DSC_0077.JPG": {
+            "left_cheek_color": [
+                45,
+                79,
+                151
+            ],
+            "right_cheek_color": [
+                51,
+                82,
+                154
+            ],
+            "avg_cheek_color": [
+                48,
+                80,
+                152
+            ]
+        }
+    },
+    "00166": {
+        "DSC_1476.JPG": {
+            "left_cheek_color": [
+                56,
+                84,
+                156
+            ],
+            "right_cheek_color": [
+                66,
+                83,
+                164
+            ],
+            "avg_cheek_color": [
+                61,
+                83,
+                160
+            ]
+        },
+        "DSC_1473.JPG": {
+            "left_cheek_color": [
+                60,
+                86,
+                157
+            ],
+            "right_cheek_color": [
+                66,
+                84,
+                153
+            ],
+            "avg_cheek_color": [
+                63,
+                85,
+                155
+            ]
+        }
+    },
+    "00200": {
+        "DSC_1791.JPG": {
+            "left_cheek_color": [
+                72,
+                106,
+                185
+            ],
+            "right_cheek_color": [
+                86,
+                106,
+                183
+            ],
+            "avg_cheek_color": [
+                79,
+                106,
+                184
+            ]
+        }
+    },
+    "00097": {
+        "DSC_0850.JPG": {
+            "left_cheek_color": [
+                43,
+                86,
+                165
+            ],
+            "right_cheek_color": [
+                49,
+                87,
+                169
+            ],
+            "avg_cheek_color": [
+                46,
+                86,
+                167
+            ]
+        }
+    },
+    "00155": {
+        "DSC_1371.JPG": {
+            "left_cheek_color": [
+                71,
+                98,
+                174
+            ],
+            "right_cheek_color": [
+                94,
+                116,
+                189
+            ],
+            "avg_cheek_color": [
+                82,
+                107,
+                181
+            ]
+        }
+    },
+    "00192": {
+        "DSC_1717.JPG": {
+            "left_cheek_color": [
+                15,
+                65,
+                123
+            ],
+            "right_cheek_color": [
+                31,
+                64,
+                124
+            ],
+            "avg_cheek_color": [
+                23,
+                64,
+                123
+            ]
+        }
+    },
+    "00189": {
+        "DSC_1688.JPG": {
+            "left_cheek_color": [
+                65,
+                95,
+                176
+            ],
+            "right_cheek_color": [
+                83,
+                101,
+                187
+            ],
+            "avg_cheek_color": [
+                74,
+                98,
+                181
+            ]
+        }
+    },
+    "00058": {
+        "DSC_0511.JPG": {
+            "left_cheek_color": [
+                63,
+                101,
+                172
+            ],
+            "right_cheek_color": [
+                82,
+                111,
+                176
+            ],
+            "avg_cheek_color": [
+                72,
+                106,
+                174
+            ]
+        }
+    },
+    "00124": {
+        "DSC_1091.JPG": {
+            "left_cheek_color": [
+                54,
+                84,
+                167
+            ],
+            "right_cheek_color": [
+                81,
+                102,
+                186
+            ],
+            "avg_cheek_color": [
+                67,
+                93,
+                176
+            ]
+        }
+    },
+    "00183": {
+        "DSC_1630.JPG": {
+            "left_cheek_color": [
+                56,
+                88,
+                162
+            ],
+            "right_cheek_color": [
+                77,
+                99,
+                175
+            ],
+            "avg_cheek_color": [
+                66,
+                93,
+                168
+            ]
+        }
+    },
+    "00079": {
+        "DSC_0695.JPG": {
+            "left_cheek_color": [
+                16,
+                65,
+                126
+            ],
+            "right_cheek_color": [
+                29,
+                68,
+                137
+            ],
+            "avg_cheek_color": [
+                22,
+                66,
+                131
+            ]
+        }
+    },
+    "00075": {
+        "DSC_0663.JPG": {
+            "left_cheek_color": [
+                68,
+                98,
+                180
+            ],
+            "right_cheek_color": [
+                82,
+                98,
+                188
+            ],
+            "avg_cheek_color": [
+                75,
+                98,
+                184
+            ]
+        }
+    },
+    "00142": {
+        "DSC_1254.JPG": {
+            "left_cheek_color": [
+                41,
+                81,
+                160
+            ],
+            "right_cheek_color": [
+                58,
+                90,
+                171
+            ],
+            "avg_cheek_color": [
+                49,
+                85,
+                165
+            ]
+        }
+    },
+    "00129": {
+        "DSC_1137.JPG": {
+            "left_cheek_color": [
+                8,
+                63,
+                134
+            ],
+            "right_cheek_color": [
+                28,
+                71,
+                150
+            ],
+            "avg_cheek_color": [
+                18,
+                67,
+                142
+            ]
+        }
+    },
+    "00063": {
+        "DSC_0556.JPG": {
+            "left_cheek_color": [
+                34,
+                71,
+                123
+            ],
+            "right_cheek_color": [
+                48,
+                76,
+                128
+            ],
+            "avg_cheek_color": [
+                41,
+                73,
+                125
+            ]
+        }
+    },
+    "00157": {
+        "DSC_1389.JPG": {
+            "left_cheek_color": [
+                67,
+                96,
+                162
+            ],
+            "right_cheek_color": [
+                72,
+                90,
+                151
+            ],
+            "avg_cheek_color": [
+                69,
+                93,
+                156
+            ]
+        }
+    },
+    "00165": {
+        "DSC_1464.JPG": {
+            "left_cheek_color": [
+                63,
+                101,
+                167
+            ],
+            "right_cheek_color": [
+                70,
+                94,
+                157
+            ],
+            "avg_cheek_color": [
+                66,
+                97,
+                162
+            ]
+        }
+    },
+    "00175": {
+        "DSC_1556.JPG": {
+            "left_cheek_color": [
+                67,
+                105,
+                181
+            ],
+            "right_cheek_color": [
+                87,
+                117,
+                189
+            ],
+            "avg_cheek_color": [
+                77,
+                111,
+                185
+            ]
+        }
+    },
+    "00130": {
+        "DSC_1146.JPG": {
+            "left_cheek_color": [
+                35,
+                76,
+                148
+            ],
+            "right_cheek_color": [
+                56,
+                90,
+                161
+            ],
+            "avg_cheek_color": [
+                45,
+                83,
+                154
+            ]
+        }
+    },
+    "00055": {
+        "DSC_0484.JPG": {
+            "left_cheek_color": [
+                49,
+                84,
+                158
+            ],
+            "right_cheek_color": [
+                68,
+                94,
+                168
+            ],
+            "avg_cheek_color": [
+                58,
+                89,
+                163
+            ]
+        }
+    },
+    "00126": {
+        "DSC_1109.JPG": {
+            "left_cheek_color": [
+                40,
+                83,
+                164
+            ],
+            "right_cheek_color": [
+                48,
+                87,
+                169
+            ],
+            "avg_cheek_color": [
+                44,
+                85,
+                166
+            ]
+        }
+    },
+    "00012": {
+        "DSC_0094.JPG": {
+            "left_cheek_color": [
+                47,
+                81,
+                153
+            ],
+            "right_cheek_color": [
+                51,
+                82,
+                159
+            ],
+            "avg_cheek_color": [
+                49,
+                81,
+                156
+            ]
+        }
+    },
+    "00032": {
+        "DSC_0268.JPG": {
+            "left_cheek_color": [
+                55,
+                81,
+                168
+            ],
+            "right_cheek_color": [
+                61,
+                91,
+                170
+            ],
+            "avg_cheek_color": [
+                58,
+                86,
+                169
+            ]
+        }
+    },
+    "00149": {
+        "DSC_1317.JPG": {
+            "left_cheek_color": [
+                70,
+                110,
+                185
+            ],
+            "right_cheek_color": [
+                69,
+                108,
+                184
+            ],
+            "avg_cheek_color": [
+                69,
+                109,
+                184
+            ]
+        }
+    },
+    "00054": {
+        "DSC_0475.JPG": {
+            "left_cheek_color": [
+                49,
+                90,
+                164
+            ],
+            "right_cheek_color": [
+                62,
+                102,
+                173
+            ],
+            "avg_cheek_color": [
+                55,
+                96,
+                168
+            ]
+        }
+    },
+    "00020": {
+        "DSC_0160.JPG": {
+            "left_cheek_color": [
+                73,
+                113,
+                176
+            ],
+            "right_cheek_color": [
+                68,
+                98,
+                159
+            ],
+            "avg_cheek_color": [
+                70,
+                105,
+                167
+            ]
+        }
+    },
+    "00112": {
+        "DSC_0979.JPG": {
+            "left_cheek_color": [
+                87,
+                114,
+                177
+            ],
+            "right_cheek_color": [
+                87,
+                105,
+                167
+            ],
+            "avg_cheek_color": [
+                87,
+                109,
+                172
+            ]
+        }
+    },
+    "00174": {
+        "DSC_1546.JPG": {
+            "left_cheek_color": [
+                52,
+                84,
+                141
+            ],
+            "right_cheek_color": [
+                63,
+                84,
+                130
+            ],
+            "avg_cheek_color": [
+                57,
+                84,
+                135
+            ]
+        }
+    },
+    "00041": {
+        "DSC_0357.JPG": {
+            "left_cheek_color": [
+                45,
+                79,
+                130
+            ],
+            "right_cheek_color": [
+                47,
+                80,
+                139
+            ],
+            "avg_cheek_color": [
+                46,
+                79,
+                134
+            ]
+        }
+    },
+    "00180": {
+        "DSC_1603.JPG": {
+            "left_cheek_color": [
+                42,
+                87,
+                160
+            ],
+            "right_cheek_color": [
+                62,
+                101,
+                173
+            ],
+            "avg_cheek_color": [
+                52,
+                94,
+                166
+            ]
+        }
+    },
+    "00051": {
+        "DSC_0448.JPG": {
+            "left_cheek_color": [
+                70,
+                101,
+                174
+            ],
+            "right_cheek_color": [
+                87,
+                110,
+                186
+            ],
+            "avg_cheek_color": [
+                78,
+                105,
+                180
+            ]
+        }
+    },
+    "00181": {
+        "DSC_1612.JPG": {
+            "left_cheek_color": [
+                75,
+                106,
+                187
+            ],
+            "right_cheek_color": [
+                81,
+                97,
+                179
+            ],
+            "avg_cheek_color": [
+                78,
+                101,
+                183
+            ]
+        }
+    },
+    "00198": {
+        "DSC_1772.JPG": {
+            "left_cheek_color": [
+                29,
+                71,
+                148
+            ],
+            "right_cheek_color": [
+                42,
+                73,
+                157
+            ],
+            "avg_cheek_color": [
+                35,
+                72,
+                152
+            ]
+        }
+    },
+    "00057": {
+        "DSC_0502.JPG": {
+            "left_cheek_color": [
+                64,
+                93,
+                167
+            ],
+            "right_cheek_color": [
+                65,
+                89,
+                159
+            ],
+            "avg_cheek_color": [
+                64,
+                91,
+                163
+            ]
+        }
+    },
+    "00106": {
+        "DSC_0926.JPG": {
+            "left_cheek_color": [
+                40,
+                82,
+                160
+            ],
+            "right_cheek_color": [
+                66,
+                95,
+                179
+            ],
+            "avg_cheek_color": [
+                53,
+                88,
+                169
+            ]
+        }
+    },
+    "00209": {
+        "DSC_1872.JPG": {
+            "left_cheek_color": [
+                51,
+                83,
+                153
+            ],
+            "right_cheek_color": [
+                68,
+                90,
+                162
+            ],
+            "avg_cheek_color": [
+                59,
+                86,
+                157
+            ]
+        }
+    },
+    "00121": {
+        "DSC_1063.JPG": {
+            "left_cheek_color": [
+                80,
+                104,
+                164
+            ],
+            "right_cheek_color": [
+                74,
+                90,
+                145
+            ],
+            "avg_cheek_color": [
+                77,
+                97,
+                154
+            ]
+        }
+    },
+    "00148": {
+        "DSC_1308.JPG": {
+            "left_cheek_color": [
+                84,
+                111,
+                189
+            ],
+            "right_cheek_color": [
+                92,
+                107,
+                192
+            ],
+            "avg_cheek_color": [
+                88,
+                109,
+                190
+            ]
+        }
+    },
+    "00133": {
+        "DSC_1175.JPG": {
+            "left_cheek_color": [
+                47,
+                85,
+                158
+            ],
+            "right_cheek_color": [
+                71,
+                102,
+                172
+            ],
+            "avg_cheek_color": [
+                59,
+                93,
+                165
+            ]
+        }
+    },
+    "00102": {
+        "DSC_0894.JPG": {
+            "left_cheek_color": [
+                25,
+                67,
+                138
+            ],
+            "right_cheek_color": [
+                42,
+                77,
+                149
+            ],
+            "avg_cheek_color": [
+                33,
+                72,
+                143
+            ]
+        }
+    },
+    "00093": {
+        "DSC_0817.JPG": {
+            "left_cheek_color": [
+                69,
+                94,
+                169
+            ],
+            "right_cheek_color": [
+                74,
+                93,
+                151
+            ],
+            "avg_cheek_color": [
+                71,
+                93,
+                160
+            ]
+        }
+    },
+    "00084": {
+        "DSC_0736.JPG": {
+            "left_cheek_color": [
+                30,
+                65,
+                137
+            ],
+            "right_cheek_color": [
+                63,
+                86,
+                154
+            ],
+            "avg_cheek_color": [
+                46,
+                75,
+                145
+            ]
+        }
+    },
+    "00146": {
+        "DSC_1289.JPG": {
+            "left_cheek_color": [
+                55,
+                85,
+                164
+            ],
+            "right_cheek_color": [
+                72,
+                87,
+                168
+            ],
+            "avg_cheek_color": [
+                63,
+                86,
+                166
+            ]
+        }
+    },
+    "00035": {
+        "DSC_0300.JPG": {
+            "left_cheek_color": [
+                70,
+                87,
+                156
+            ],
+            "right_cheek_color": [
+                74,
+                86,
+                158
+            ],
+            "avg_cheek_color": [
+                72,
+                86,
+                157
+            ]
+        }
+    },
+    "00132": {
+        "DSC_1166.JPG": {
+            "left_cheek_color": [
+                39,
+                81,
+                157
+            ],
+            "right_cheek_color": [
+                61,
+                97,
+                167
+            ],
+            "avg_cheek_color": [
+                50,
+                89,
+                162
+            ]
+        }
+    },
+    "00101": {
+        "DSC_0884.JPG": {
+            "left_cheek_color": [
+                59,
+                82,
+                148
+            ],
+            "right_cheek_color": [
+                74,
+                86,
+                153
+            ],
+            "avg_cheek_color": [
+                66,
+                84,
+                150
+            ]
+        }
+    },
+    "00070": {
+        "DSC_0621.JPG": {
+            "left_cheek_color": [
+                52,
+                88,
+                174
+            ],
+            "right_cheek_color": [
+                75,
+                105,
+                187
+            ],
+            "avg_cheek_color": [
+                63,
+                96,
+                180
+            ]
+        }
+    },
+    "00139": {
+        "DSC_1230.JPG": {
+            "left_cheek_color": [
+                70,
+                101,
+                170
+            ],
+            "right_cheek_color": [
+                68,
+                84,
+                145
+            ],
+            "avg_cheek_color": [
+                69,
+                92,
+                157
+            ]
+        }
+    },
+    "00204": {
+        "DSC_1827.JPG": {
+            "left_cheek_color": [
+                73,
+                110,
+                177
+            ],
+            "right_cheek_color": [
+                71,
+                98,
+                160
+            ],
+            "avg_cheek_color": [
+                72,
+                104,
+                168
+            ]
+        }
+    },
+    "00009": {
+        "DSC_0069.JPG": {
+            "left_cheek_color": [
+                50,
+                99,
+                173
+            ],
+            "right_cheek_color": [
+                61,
+                106,
+                181
+            ],
+            "avg_cheek_color": [
+                55,
+                102,
+                177
+            ]
+        }
+    },
+    "00135": {
+        "DSC_1193.JPG": {
+            "left_cheek_color": [
+                55,
+                87,
+                164
+            ],
+            "right_cheek_color": [
+                66,
+                87,
+                170
+            ],
+            "avg_cheek_color": [
+                60,
+                87,
+                167
+            ]
+        }
+    },
+    "00151": {
+        "DSC_1336.JPG": {
+            "left_cheek_color": [
+                28,
+                60,
+                134
+            ],
+            "right_cheek_color": [
+                65,
+                82,
+                161
+            ],
+            "avg_cheek_color": [
+                46,
+                71,
+                147
+            ]
+        }
+    },
+    "00205": {
+        "DSC_1836.JPG": {
+            "left_cheek_color": [
+                38,
+                69,
+                151
+            ],
+            "right_cheek_color": [
+                66,
+                84,
+                174
+            ],
+            "avg_cheek_color": [
+                52,
+                76,
+                162
+            ]
+        }
+    },
+    "00031": {
+        "DSC_0259.JPG": {
+            "left_cheek_color": [
+                94,
+                115,
+                175
+            ],
+            "right_cheek_color": [
+                86,
+                103,
+                165
+            ],
+            "avg_cheek_color": [
+                90,
+                109,
+                170
+            ]
+        }
+    },
+    "00199": {
+        "DSC_1781.JPG": {
+            "left_cheek_color": [
+                68,
+                108,
+                176
+            ],
+            "right_cheek_color": [
+                64,
+                96,
+                163
+            ],
+            "avg_cheek_color": [
+                66,
+                102,
+                169
+            ]
+        }
+    },
+    "00050": {
+        "DSC_0440.JPG": {
+            "left_cheek_color": [
+                61,
+                98,
+                163
+            ],
+            "right_cheek_color": [
+                66,
+                97,
+                154
+            ],
+            "avg_cheek_color": [
+                63,
+                97,
+                158
+            ]
+        }
+    },
+    "00003": {
+        "DSC_0042.JPG": {
+            "left_cheek_color": [
+                31,
+                66,
+                132
+            ],
+            "right_cheek_color": [
+                34,
+                65,
+                133
+            ],
+            "avg_cheek_color": [
+                32,
+                65,
+                132
+            ]
+        }
+    },
+    "00196": {
+        "DSC_1754.JPG": {
+            "left_cheek_color": [
+                54,
+                78,
+                170
+            ],
+            "right_cheek_color": [
+                78,
+                89,
+                186
+            ],
+            "avg_cheek_color": [
+                66,
+                83,
+                178
+            ]
+        }
+    },
+    "00123": {
+        "DSC_1081.JPG": {
+            "left_cheek_color": [
+                59,
+                94,
+                165
+            ],
+            "right_cheek_color": [
+                68,
+                100,
+                170
+            ],
+            "avg_cheek_color": [
+                63,
+                97,
+                167
+            ]
+        }
+    },
+    "00117": {
+        "DSC_1027.JPG": {
+            "left_cheek_color": [
+                51,
+                87,
+                157
+            ],
+            "right_cheek_color": [
+                48,
+                81,
+                153
+            ],
+            "avg_cheek_color": [
+                49,
+                84,
+                155
+            ]
+        }
+    },
+    "00131": {
+        "DSC_1155.JPG": {
+            "left_cheek_color": [
+                30,
+                78,
+                153
+            ],
+            "right_cheek_color": [
+                41,
+                82,
+                161
+            ],
+            "avg_cheek_color": [
+                35,
+                80,
+                157
+            ]
+        }
+    },
+    "00138": {
+        "DSC_1221.JPG": {
+            "left_cheek_color": [
+                70,
+                104,
+                173
+            ],
+            "right_cheek_color": [
+                75,
+                100,
+                163
+            ],
+            "avg_cheek_color": [
+                72,
+                102,
+                168
+            ]
+        }
+    },
+    "00178": {
+        "DSC_1584.JPG": {
+            "left_cheek_color": [
+                54,
+                94,
+                172
+            ],
+            "right_cheek_color": [
+                69,
+                99,
+                182
+            ],
+            "avg_cheek_color": [
+                61,
+                96,
+                177
+            ]
+        }
+    },
+    "00005": {
+        "DSC_0051.JPG": {
+            "left_cheek_color": [
+                31,
+                83,
+                167
+            ],
+            "right_cheek_color": [
+                15,
+                65,
+                147
+            ],
+            "avg_cheek_color": [
+                23,
+                74,
+                157
+            ]
+        }
+    },
+    "00034": {
+        "DSC_0289.JPG": {
+            "left_cheek_color": [
+                73,
+                106,
+                187
+            ],
+            "right_cheek_color": [
+                85,
+                116,
+                195
+            ],
+            "avg_cheek_color": [
+                79,
+                111,
+                191
+            ]
+        }
+    },
+    "00168": {
+        "DSC_1491.JPG": {
+            "left_cheek_color": [
+                65,
+                99,
+                179
+            ],
+            "right_cheek_color": [
+                76,
+                99,
+                183
+            ],
+            "avg_cheek_color": [
+                70,
+                99,
+                181
+            ]
+        }
+    },
+    "00083": {
+        "DSC_0727.JPG": {
+            "left_cheek_color": [
+                27,
+                81,
+                165
+            ],
+            "right_cheek_color": [
+                47,
+                93,
+                182
+            ],
+            "avg_cheek_color": [
+                37,
+                87,
+                173
+            ]
+        }
+    },
+    "00060": {
+        "DSC_0529.JPG": {
+            "left_cheek_color": [
+                48,
+                86,
+                167
+            ],
+            "right_cheek_color": [
+                64,
+                91,
+                177
+            ],
+            "avg_cheek_color": [
+                56,
+                88,
+                172
+            ]
+        }
+    },
+    "00071": {
+        "DSC_0630.JPG": {
+            "left_cheek_color": [
+                59,
+                88,
+                169
+            ],
+            "right_cheek_color": [
+                75,
+                96,
+                175
+            ],
+            "avg_cheek_color": [
+                67,
+                92,
+                172
+            ]
+        }
+    },
+    "00158": {
+        "DSC_1398.JPG": {
+            "left_cheek_color": [
+                58,
+                85,
+                170
+            ],
+            "right_cheek_color": [
+                80,
+                95,
+                184
+            ],
+            "avg_cheek_color": [
+                69,
+                90,
+                177
+            ]
+        }
+    },
+    "00015": {
+        "DSC_0118.JPG": {
+            "left_cheek_color": [
+                30,
+                72,
+                148
+            ],
+            "right_cheek_color": [
+                50,
+                84,
+                161
+            ],
+            "avg_cheek_color": [
+                40,
+                78,
+                154
+            ]
+        }
+    },
+    "00021": {
+        "DSC_0168.JPG": {
+            "left_cheek_color": [
+                9,
+                64,
+                131
+            ],
+            "right_cheek_color": [
+                26,
+                72,
+                143
+            ],
+            "avg_cheek_color": [
+                17,
+                68,
+                137
+            ]
+        }
+    },
+    "00013": {
+        "DSC_0102.JPG": {
+            "left_cheek_color": [
+                55,
+                84,
+                167
+            ],
+            "right_cheek_color": [
+                73,
+                87,
+                168
+            ],
+            "avg_cheek_color": [
+                64,
+                85,
+                167
+            ]
+        },
+        "DSC_0101.JPG": {
+            "left_cheek_color": [
+                46,
+                76,
+                158
+            ],
+            "right_cheek_color": [
+                84,
+                98,
+                184
+            ],
+            "avg_cheek_color": [
+                65,
+                87,
+                171
+            ]
+        }
+    },
+    "00163": {
+        "DSC_1445.JPG": {
+            "left_cheek_color": [
+                29,
+                75,
+                155
+            ],
+            "right_cheek_color": [
+                43,
+                78,
+                158
+            ],
+            "avg_cheek_color": [
+                36,
+                76,
+                156
+            ]
+        }
+    },
+    "00073": {
+        "DSC_0647.JPG": {
+            "left_cheek_color": [
+                46,
+                88,
+                168
+            ],
+            "right_cheek_color": [
+                85,
+                125,
+                190
+            ],
+            "avg_cheek_color": [
+                65,
+                106,
+                179
+            ]
+        }
+    },
+    "00046": {
+        "DSC_0401.JPG": {
+            "left_cheek_color": [
+                67,
+                103,
+                181
+            ],
+            "right_cheek_color": [
+                88,
+                120,
+                193
+            ],
+            "avg_cheek_color": [
+                77,
+                111,
+                187
+            ]
+        }
+    },
+    "00134": {
+        "DSC_1184.JPG": {
+            "left_cheek_color": [
+                85,
+                125,
+                195
+            ],
+            "right_cheek_color": [
+                74,
+                101,
+                168
+            ],
+            "avg_cheek_color": [
+                79,
+                113,
+                181
+            ]
+        }
+    },
+    "00206": {
+        "DSC_1845.JPG": {
+            "left_cheek_color": [
+                69,
+                84,
+                156
+            ],
+            "right_cheek_color": [
+                90,
+                101,
+                174
+            ],
+            "avg_cheek_color": [
+                79,
+                92,
+                165
+            ]
+        }
+    },
+    "00143": {
+        "DSC_1262.JPG": {
+            "left_cheek_color": [
+                15,
+                63,
+                135
+            ],
+            "right_cheek_color": [
+                32,
+                69,
+                146
+            ],
+            "avg_cheek_color": [
+                23,
+                66,
+                140
+            ]
+        }
+    },
+    "00059": {
+        "DSC_0520.JPG": {
+            "left_cheek_color": [
+                72,
+                105,
+                173
+            ],
+            "right_cheek_color": [
+                88,
+                116,
+                182
+            ],
+            "avg_cheek_color": [
+                80,
+                110,
+                177
+            ]
+        }
+    },
+    "00037": {
+        "DSC_0319.JPG": {
+            "left_cheek_color": [
+                59,
+                78,
+                149
+            ],
+            "right_cheek_color": [
+                57,
+                70,
+                136
+            ],
+            "avg_cheek_color": [
+                58,
+                74,
+                142
+            ]
+        }
+    },
+    "00105": {
+        "DSC_0918.JPG": {
+            "left_cheek_color": [
+                28,
+                83,
+                163
+            ],
+            "right_cheek_color": [
+                18,
+                72,
+                148
+            ],
+            "avg_cheek_color": [
+                23,
+                77,
+                155
+            ]
+        }
+    },
+    "00053": {
+        "DSC_0466.JPG": {
+            "left_cheek_color": [
+                75,
+                115,
+                182
+            ],
+            "right_cheek_color": [
+                87,
+                126,
+                189
+            ],
+            "avg_cheek_color": [
+                81,
+                120,
+                185
+            ]
+        }
+    },
+    "00042": {
+        "DSC_0366.JPG": {
+            "left_cheek_color": [
+                55,
+                98,
+                172
+            ],
+            "right_cheek_color": [
+                62,
+                98,
+                160
+            ],
+            "avg_cheek_color": [
+                58,
+                98,
+                166
+            ]
+        }
+    },
+    "00110": {
+        "DSC_0961.JPG": {
+            "left_cheek_color": [
+                36,
+                76,
+                160
+            ],
+            "right_cheek_color": [
+                55,
+                89,
+                171
+            ],
+            "avg_cheek_color": [
+                45,
+                82,
+                165
+            ]
+        }
+    },
+    "00049": {
+        "DSC_0430.JPG": {
+            "left_cheek_color": [
+                64,
+                95,
+                165
+            ],
+            "right_cheek_color": [
+                65,
+                87,
+                153
+            ],
+            "avg_cheek_color": [
+                64,
+                91,
+                159
+            ]
+        }
+    },
+    "00127": {
+        "DSC_1119.JPG": {
+            "left_cheek_color": [
+                27,
+                74,
+                148
+            ],
+            "right_cheek_color": [
+                54,
+                90,
+                165
+            ],
+            "avg_cheek_color": [
+                40,
+                82,
+                156
+            ]
+        }
+    },
+    "00188": {
+        "DSC_1676.JPG": {
+            "left_cheek_color": [
+                77,
+                109,
+                178
+            ],
+            "right_cheek_color": [
+                103,
+                124,
+                192
+            ],
+            "avg_cheek_color": [
+                90,
+                116,
+                185
+            ]
+        }
+    },
+    "00022": {
+        "DSC_0177.JPG": {
+            "left_cheek_color": [
+                45,
+                77,
+                159
+            ],
+            "right_cheek_color": [
+                51,
+                75,
+                164
+            ],
+            "avg_cheek_color": [
+                48,
+                76,
+                161
+            ]
+        }
+    },
+    "00036": {
+        "DSC_0310.JPG": {
+            "left_cheek_color": [
+                60,
+                91,
+                167
+            ],
+            "right_cheek_color": [
+                63,
+                90,
+                171
+            ],
+            "avg_cheek_color": [
+                61,
+                90,
+                169
+            ]
+        }
+    },
+    "00164": {
+        "DSC_1454.JPG": {
+            "left_cheek_color": [
+                55,
+                93,
+                168
+            ],
+            "right_cheek_color": [
+                92,
+                126,
+                189
+            ],
+            "avg_cheek_color": [
+                73,
+                109,
+                178
+            ]
+        }
+    },
+    "00087": {
+        "DSC_0764.JPG": {
+            "left_cheek_color": [
+                66,
+                102,
+                168
+            ],
+            "right_cheek_color": [
+                75,
+                95,
+                163
+            ],
+            "avg_cheek_color": [
+                70,
+                98,
+                165
+            ]
+        }
+    },
+    "00197": {
+        "DSC_1763.JPG": {
+            "left_cheek_color": [
+                52,
+                89,
+                168
+            ],
+            "right_cheek_color": [
+                61,
+                93,
+                175
+            ],
+            "avg_cheek_color": [
+                56,
+                91,
+                171
+            ]
+        }
+    },
+    "00078": {
+        "DSC_0687.JPG": {
+            "left_cheek_color": [
+                47,
+                86,
+                171
+            ],
+            "right_cheek_color": [
+                64,
+                98,
+                182
+            ],
+            "avg_cheek_color": [
+                55,
+                92,
+                176
+            ]
+        }
+    },
+    "00144": {
+        "DSC_1271.JPG": {
+            "left_cheek_color": [
+                60,
+                101,
+                178
+            ],
+            "right_cheek_color": [
+                71,
+                100,
+                179
+            ],
+            "avg_cheek_color": [
+                65,
+                100,
+                178
+            ]
+        }
+    },
+    "00085": {
+        "DSC_0746.JPG": {
+            "left_cheek_color": [
+                69,
+                105,
+                188
+            ],
+            "right_cheek_color": [
+                104,
+                137,
+                209
+            ],
+            "avg_cheek_color": [
+                86,
+                121,
+                198
+            ]
+        }
+    },
+    "00090": {
+        "DSC_0792.JPG": {
+            "left_cheek_color": [
+                42,
+                84,
+                159
+            ],
+            "right_cheek_color": [
+                56,
+                91,
+                168
+            ],
+            "avg_cheek_color": [
+                49,
+                87,
+                163
+            ]
+        }
+    },
+    "00082": {
+        "DSC_0719.JPG": {
+            "left_cheek_color": [
+                55,
+                80,
+                157
+            ],
+            "right_cheek_color": [
+                66,
+                84,
+                164
+            ],
+            "avg_cheek_color": [
+                60,
+                82,
+                160
+            ]
+        }
+    },
+    "00011": {
+        "DSC_0086.JPG": {
+            "left_cheek_color": [
+                57,
+                94,
+                161
+            ],
+            "right_cheek_color": [
+                67,
+                102,
+                170
+            ],
+            "avg_cheek_color": [
+                62,
+                98,
+                165
+            ]
+        }
+    },
+    "00095": {
+        "DSC_0833.JPG": {
+            "left_cheek_color": [
+                46,
+                77,
+                154
+            ],
+            "right_cheek_color": [
+                74,
+                99,
+                174
+            ],
+            "avg_cheek_color": [
+                60,
+                88,
+                164
+            ]
+        }
+    },
+    "00179": {
+        "DSC_1594.JPG": {
+            "left_cheek_color": [
+                50,
+                87,
+                166
+            ],
+            "right_cheek_color": [
+                86,
+                116,
+                189
+            ],
+            "avg_cheek_color": [
+                68,
+                101,
+                177
+            ]
+        }
+    },
+    "00145": {
+        "DSC_1280.JPG": {
+            "left_cheek_color": [
+                68,
+                105,
+                178
+            ],
+            "right_cheek_color": [
+                67,
+                91,
+                160
+            ],
+            "avg_cheek_color": [
+                67,
+                98,
+                169
+            ]
+        }
+    },
+    "00088": {
+        "DSC_0774.JPG": {
+            "left_cheek_color": [
+                35,
+                80,
+                157
+            ],
+            "right_cheek_color": [
+                51,
+                91,
+                170
+            ],
+            "avg_cheek_color": [
+                43,
+                85,
+                163
+            ]
+        }
+    },
+    "00008": {
+        "DSC_0063.JPG": {
+            "left_cheek_color": [
+                62,
+                99,
+                174
+            ],
+            "right_cheek_color": [
+                64,
+                100,
+                176
+            ],
+            "avg_cheek_color": [
+                63,
+                99,
+                175
+            ]
+        }
+    },
+    "00066": {
+        "DSC_0584.JPG": {
+            "left_cheek_color": [
+                71,
+                95,
+                171
+            ],
+            "right_cheek_color": [
+                62,
+                79,
+                139
+            ],
+            "avg_cheek_color": [
+                66,
+                87,
+                155
+            ]
+        }
+    },
+    "00081": {
+        "DSC_0711.JPG": {
+            "left_cheek_color": [
+                44,
+                94,
+                171
+            ],
+            "right_cheek_color": [
+                65,
+                107,
+                184
+            ],
+            "avg_cheek_color": [
+                54,
+                100,
+                177
+            ]
+        }
+    },
+    "00160": {
+        "DSC_1416.JPG": {
+            "left_cheek_color": [
+                26,
+                65,
+                145
+            ],
+            "right_cheek_color": [
+                47,
+                70,
+                158
+            ],
+            "avg_cheek_color": [
+                36,
+                67,
+                151
+            ]
+        }
+    },
+    "00108": {
+        "DSC_0943.JPG": {
+            "left_cheek_color": [
+                66,
+                90,
+                151
+            ],
+            "right_cheek_color": [
+                89,
+                109,
+                175
+            ],
+            "avg_cheek_color": [
+                77,
+                99,
+                163
+            ]
+        }
+    },
+    "00072": {
+        "DSC_0639.JPG": {
+            "left_cheek_color": [
+                71,
+                89,
+                166
+            ],
+            "right_cheek_color": [
+                74,
+                84,
+                155
+            ],
+            "avg_cheek_color": [
+                72,
+                86,
+                160
+            ]
+        }
+    },
+    "00171": {
+        "DSC_1519.JPG": {
+            "left_cheek_color": [
+                38,
+                75,
+                151
+            ],
+            "right_cheek_color": [
+                81,
+                103,
+                176
+            ],
+            "avg_cheek_color": [
+                59,
+                89,
+                163
+            ]
+        }
+    },
+    "00185": {
+        "DSC_1648.JPG": {
+            "left_cheek_color": [
+                59,
+                93,
+                173
+            ],
+            "right_cheek_color": [
+                75,
+                92,
+                168
+            ],
+            "avg_cheek_color": [
+                67,
+                92,
+                170
+            ]
+        }
+    },
+    "00116": {
+        "DSC_1017.JPG": {
+            "left_cheek_color": [
+                65,
+                102,
+                180
+            ],
+            "right_cheek_color": [
+                68,
+                105,
+                181
+            ],
+            "avg_cheek_color": [
+                66,
+                103,
+                180
+            ]
+        }
+    },
+    "00062": {
+        "DSC_0547.JPG": {
+            "left_cheek_color": [
+                56,
+                83,
+                170
+            ],
+            "right_cheek_color": [
+                77,
+                88,
+                186
+            ],
+            "avg_cheek_color": [
+                66,
+                85,
+                178
+            ]
+        }
+    },
+    "00147": {
+        "DSC_1299.JPG": {
+            "left_cheek_color": [
+                46,
+                79,
+                162
+            ],
+            "right_cheek_color": [
+                62,
+                87,
+                172
+            ],
+            "avg_cheek_color": [
+                54,
+                83,
+                167
+            ]
+        }
+    },
+    "00098": {
+        "DSC_0858.JPG": {
+            "left_cheek_color": [
+                49,
+                91,
+                169
+            ],
+            "right_cheek_color": [
+                86,
+                121,
+                189
+            ],
+            "avg_cheek_color": [
+                67,
+                106,
+                179
+            ]
+        }
+    },
+    "00107": {
+        "DSC_0934.JPG": {
+            "left_cheek_color": [
+                80,
+                106,
+                175
+            ],
+            "right_cheek_color": [
+                78,
+                92,
+                165
+            ],
+            "avg_cheek_color": [
+                79,
+                99,
+                170
+            ]
+        }
+    },
+    "00136": {
+        "DSC_1202.JPG": {
+            "left_cheek_color": [
+                58,
+                85,
+                159
+            ],
+            "right_cheek_color": [
+                64,
+                83,
+                159
+            ],
+            "avg_cheek_color": [
+                61,
+                84,
+                159
+            ]
+        }
+    },
+    "00039": {
+        "DSC_0338.JPG": {
+            "left_cheek_color": [
+                63,
+                97,
+                168
+            ],
+            "right_cheek_color": [
+                67,
+                93,
+                171
+            ],
+            "avg_cheek_color": [
+                65,
+                95,
+                169
+            ]
+        }
+    },
+    "00077": {
+        "DSC_0679.JPG": {
+            "left_cheek_color": [
+                75,
+                105,
+                177
+            ],
+            "right_cheek_color": [
+                78,
+                96,
+                161
+            ],
+            "avg_cheek_color": [
+                76,
+                100,
+                169
+            ]
+        }
+    },
+    "00186": {
+        "DSC_1657.JPG": {
+            "left_cheek_color": [
+                54,
+                84,
+                155
+            ],
+            "right_cheek_color": [
+                55,
+                70,
+                126
+            ],
+            "avg_cheek_color": [
+                54,
+                77,
+                140
+            ]
+        }
+    },
+    "00038": {
+        "DSC_0328.JPG": {
+            "left_cheek_color": [
+                71,
+                98,
+                176
+            ],
+            "right_cheek_color": [
+                75,
+                99,
+                178
+            ],
+            "avg_cheek_color": [
+                73,
+                98,
+                177
+            ]
+        }
+    },
+    "00154": {
+        "DSC_1362.JPG": {
+            "left_cheek_color": [
+                57,
+                99,
+                170
+            ],
+            "right_cheek_color": [
+                81,
+                116,
+                184
+            ],
+            "avg_cheek_color": [
+                69,
+                107,
+                177
+            ]
+        }
+    },
+    "00187": {
+        "DSC_1667.JPG": {
+            "left_cheek_color": [
+                73,
+                87,
+                157
+            ],
+            "right_cheek_color": [
+                74,
+                79,
+                147
+            ],
+            "avg_cheek_color": [
+                73,
+                83,
+                152
+            ]
+        }
+    },
+    "00167": {
+        "DSC_1482.JPG": {
+            "left_cheek_color": [
+                18,
+                75,
+                143
+            ],
+            "right_cheek_color": [
+                33,
+                78,
+                154
+            ],
+            "avg_cheek_color": [
+                25,
+                76,
+                148
+            ]
+        }
+    },
+    "00172": {
+        "DSC_1528.JPG": {
+            "left_cheek_color": [
+                57,
+                88,
+                171
+            ],
+            "right_cheek_color": [
+                92,
+                108,
+                192
+            ],
+            "avg_cheek_color": [
+                74,
+                98,
+                181
+            ]
+        }
+    },
+    "00203": {
+        "DSC_1818.JPG": {
+            "left_cheek_color": [
+                26,
+                67,
+                125
+            ],
+            "right_cheek_color": [
+                37,
+                71,
+                134
+            ],
+            "avg_cheek_color": [
+                31,
+                69,
+                129
+            ]
+        }
+    },
+    "00014": {
+        "DSC_0110.JPG": {
+            "left_cheek_color": [
+                14,
+                67,
+                139
+            ],
+            "right_cheek_color": [
+                31,
+                77,
+                152
+            ],
+            "avg_cheek_color": [
+                22,
+                72,
+                145
+            ]
+        }
+    },
+    "00089": {
+        "DSC_0783.JPG": {
+            "left_cheek_color": [
+                24,
+                71,
+                145
+            ],
+            "right_cheek_color": [
+                47,
+                82,
+                157
+            ],
+            "avg_cheek_color": [
+                35,
+                76,
+                151
+            ]
+        }
+    },
+    "00114": {
+        "DSC_0999.JPG": {
+            "left_cheek_color": [
+                61,
+                101,
+                170
+            ],
+            "right_cheek_color": [
+                81,
+                108,
+                172
+            ],
+            "avg_cheek_color": [
+                71,
+                104,
+                171
+            ]
+        }
+    },
+    "00002": {
+        "DSC_0038.JPG": {
+            "left_cheek_color": [
+                48,
+                89,
+                166
+            ],
+            "right_cheek_color": [
+                45,
+                85,
+                165
+            ],
+            "avg_cheek_color": [
+                46,
+                87,
+                165
+            ]
+        }
+    },
+    "00019": {
+        "DSC_0151.JPG": {
+            "left_cheek_color": [
+                29,
+                83,
+                165
+            ],
+            "right_cheek_color": [
+                45,
+                90,
+                174
+            ],
+            "avg_cheek_color": [
+                37,
+                86,
+                169
+            ]
+        }
+    },
+    "00017": {
+        "DSC_0135.JPG": {
+            "left_cheek_color": [
+                39,
+                80,
+                158
+            ],
+            "right_cheek_color": [
+                52,
+                87,
+                164
+            ],
+            "avg_cheek_color": [
+                45,
+                83,
+                161
+            ]
+        }
+    },
+    "00023": {
+        "DSC_0187.JPG": {
+            "left_cheek_color": [
+                64,
+                105,
+                181
+            ],
+            "right_cheek_color": [
+                77,
+                112,
+                184
+            ],
+            "avg_cheek_color": [
+                70,
+                108,
+                182
+            ]
+        }
+    },
+    "00115": {
+        "DSC_1008.JPG": {
+            "left_cheek_color": [
+                73,
+                90,
+                160
+            ],
+            "right_cheek_color": [
+                71,
+                83,
+                158
+            ],
+            "avg_cheek_color": [
+                72,
+                86,
+                159
+            ]
+        }
+    },
+    "00074": {
+        "DSC_0655.JPG": {
+            "left_cheek_color": [
+                55,
+                90,
+                162
+            ],
+            "right_cheek_color": [
+                69,
+                91,
+                170
+            ],
+            "avg_cheek_color": [
+                62,
+                90,
+                166
+            ]
+        }
+    },
+    "00109": {
+        "DSC_0952.JPG": {
+            "left_cheek_color": [
+                83,
+                119,
+                186
+            ],
+            "right_cheek_color": [
+                103,
+                131,
+                192
+            ],
+            "avg_cheek_color": [
+                93,
+                125,
+                189
+            ]
+        }
+    },
+    "00137": {
+        "DSC_1212.JPG": {
+            "left_cheek_color": [
+                75,
+                100,
+                170
+            ],
+            "right_cheek_color": [
+                80,
+                99,
+                160
+            ],
+            "avg_cheek_color": [
+                77,
+                99,
+                165
+            ]
+        }
+    },
+    "00076": {
+        "DSC_0671.JPG": {
+            "left_cheek_color": [
+                44,
+                82,
+                150
+            ],
+            "right_cheek_color": [
+                64,
+                102,
+                164
+            ],
+            "avg_cheek_color": [
+                54,
+                92,
+                157
+            ]
+        }
+    },
+    "00176": {
+        "DSC_1566.JPG": {
+            "left_cheek_color": [
+                56,
+                98,
+                176
+            ],
+            "right_cheek_color": [
+                85,
+                117,
+                186
+            ],
+            "avg_cheek_color": [
+                70,
+                107,
+                181
+            ]
+        }
+    },
+    "00208": {
+        "DSC_1863.JPG": {
+            "left_cheek_color": [
+                31,
+                67,
+                143
+            ],
+            "right_cheek_color": [
+                45,
+                72,
+                149
+            ],
+            "avg_cheek_color": [
+                38,
+                69,
+                146
+            ]
+        }
+    },
+    "00040": {
+        "DSC_0348.JPG": {
+            "left_cheek_color": [
+                34,
+                70,
+                143
+            ],
+            "right_cheek_color": [
+                39,
+                73,
+                150
+            ],
+            "avg_cheek_color": [
+                36,
+                71,
+                146
+            ]
+        }
+    },
+    "00028": {
+        "DSC_0232.JPG": {
+            "left_cheek_color": [
+                76,
+                101,
+                170
+            ],
+            "right_cheek_color": [
+                69,
+                89,
+                152
+            ],
+            "avg_cheek_color": [
+                72,
+                95,
+                161
+            ]
+        }
+    },
+    "00159": {
+        "DSC_1407.JPG": {
+            "left_cheek_color": [
+                59,
+                88,
+                159
+            ],
+            "right_cheek_color": [
+                78,
+                97,
+                166
+            ],
+            "avg_cheek_color": [
+                68,
+                92,
+                162
+            ]
+        }
+    },
+    "00190": {
+        "DSC_1698.JPG": {
+            "left_cheek_color": [
+                50,
+                71,
+                158
+            ],
+            "right_cheek_color": [
+                73,
+                84,
+                174
+            ],
+            "avg_cheek_color": [
+                61,
+                77,
+                166
+            ]
+        }
+    },
+    "00096": {
+        "DSC_0842.JPG": {
+            "left_cheek_color": [
+                66,
+                109,
+                173
+            ],
+            "right_cheek_color": [
+                69,
+                99,
+                157
+            ],
+            "avg_cheek_color": [
+                67,
+                104,
+                165
+            ]
+        }
+    },
+    "00118": {
+        "DSC_1036.JPG": {
+            "left_cheek_color": [
+                94,
+                137,
+                200
+            ],
+            "right_cheek_color": [
+                97,
+                141,
+                202
+            ],
+            "avg_cheek_color": [
+                95,
+                139,
+                201
+            ]
+        }
+    },
+    "00194": {
+        "DSC_1736.JPG": {
+            "left_cheek_color": [
+                46,
+                84,
+                165
+            ],
+            "right_cheek_color": [
+                72,
+                97,
+                180
+            ],
+            "avg_cheek_color": [
+                59,
+                90,
+                172
+            ]
+        }
+    },
+    "00033": {
+        "DSC_0279.JPG": {
+            "left_cheek_color": [
+                54,
+                97,
+                175
+            ],
+            "right_cheek_color": [
+                54,
+                96,
+                177
+            ],
+            "avg_cheek_color": [
+                54,
+                96,
+                176
+            ]
+        }
+    }
+}

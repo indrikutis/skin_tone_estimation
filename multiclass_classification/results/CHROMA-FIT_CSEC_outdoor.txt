@@ -1,0 +1,60 @@
+Model: Logistic Regression
+Accuracy: 0.5000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00         1
+           2       0.50      0.97      0.66        32
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00         2
+           5       1.00      0.33      0.50         3
+           6       0.00      0.00      0.00         9
+           7       0.00      0.00      0.00         6
+           8       0.00      0.00      0.00         3
+
+    accuracy                           0.50        64
+   macro avg       0.19      0.16      0.14        64
+weighted avg       0.30      0.50      0.35        64
+
+==================================================
+Model: Random Forest Classifier
+Accuracy: 0.4219
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00         1
+           2       0.48      0.78      0.60        32
+           3       0.33      0.12      0.18         8
+           4       0.00      0.00      0.00         2
+           5       0.00      0.00      0.00         3
+           6       0.20      0.11      0.14         9
+           7       0.00      0.00      0.00         6
+           8       0.00      0.00      0.00         3
+
+    accuracy                           0.42        64
+   macro avg       0.13      0.13      0.11        64
+weighted avg       0.31      0.42      0.34        64
+
+==================================================
+Model: Support Vector Classifier (SVC)
+Accuracy: 0.5000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00         1
+           2       0.50      1.00      0.67        32
+           3       0.00      0.00      0.00         8
+           4       0.00      0.00      0.00         2
+           5       0.00      0.00      0.00         3
+           6       0.00      0.00      0.00         9
+           7       0.00      0.00      0.00         6
+           8       0.00      0.00      0.00         3
+
+    accuracy                           0.50        64
+   macro avg       0.06      0.12      0.08        64
+weighted avg       0.25      0.50      0.33        64
+
+==================================================

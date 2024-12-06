@@ -1,0 +1,5161 @@
+{
+    "00195": {
+        "MST_value": 6,
+        "DSC_4109.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    97,
+                    111,
+                    152
+                ],
+                "right_cheek_color": [
+                    129,
+                    140,
+                    186
+                ],
+                "avg_cheek_color": [
+                    113,
+                    125,
+                    169
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    58,
+                    24,
+                    14
+                ],
+                "right_sclera_color": [
+                    48,
+                    16,
+                    4
+                ],
+                "avg_sclera_color": [
+                    53,
+                    20,
+                    9
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9545127153396606
+            }
+        }
+    },
+    "00104": {
+        "MST_value": 2,
+        "DSC_1934.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    176,
+                    176,
+                    217
+                ],
+                "right_cheek_color": [
+                    210,
+                    211,
+                    250
+                ],
+                "avg_cheek_color": [
+                    193,
+                    193,
+                    233
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    75,
+                    33,
+                    24
+                ],
+                "right_sclera_color": [
+                    55,
+                    22,
+                    11
+                ],
+                "avg_sclera_color": [
+                    65,
+                    27,
+                    17
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9646925926208496
+            }
+        }
+    },
+    "00202": {
+        "MST_value": 2,
+        "DSC_4309.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    144,
+                    155,
+                    204
+                ],
+                "right_cheek_color": [
+                    146,
+                    158,
+                    208
+                ],
+                "avg_cheek_color": [
+                    145,
+                    156,
+                    206
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.962373435497284
+            }
+        }
+    },
+    "00086": {
+        "MST_value": 2,
+        "DSC_1754.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    63,
+                    68,
+                    111
+                ],
+                "right_cheek_color": [
+                    40,
+                    43,
+                    73
+                ],
+                "avg_cheek_color": [
+                    51,
+                    55,
+                    92
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    21,
+                    9,
+                    2
+                ],
+                "right_sclera_color": [
+                    29,
+                    14,
+                    9
+                ],
+                "avg_sclera_color": [
+                    25,
+                    11,
+                    5
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.1212740242481231
+            }
+        }
+    },
+    "00052": {
+        "MST_value": 2,
+        "DSC_0893.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    90,
+                    91,
+                    112
+                ],
+                "right_cheek_color": [
+                    105,
+                    103,
+                    132
+                ],
+                "avg_cheek_color": [
+                    97,
+                    97,
+                    122
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    77,
+                    58,
+                    56
+                ],
+                "right_sclera_color": [
+                    35,
+                    26,
+                    19
+                ],
+                "avg_sclera_color": [
+                    56,
+                    42,
+                    37
+                ]
+            }
+        }
+    },
+    "00068": {
+        "MST_value": 7,
+        "DSC_1431.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    29,
+                    42,
+                    70
+                ],
+                "right_cheek_color": [
+                    35,
+                    46,
+                    78
+                ],
+                "avg_cheek_color": [
+                    32,
+                    44,
+                    74
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    49,
+                    40,
+                    31
+                ],
+                "right_sclera_color": [
+                    22,
+                    15,
+                    12
+                ],
+                "avg_sclera_color": [
+                    35,
+                    27,
+                    21
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.956772804260254
+            }
+        }
+    },
+    "00141": {
+        "MST_value": 3,
+        "DSC_2736.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    110,
+                    116,
+                    158
+                ],
+                "right_cheek_color": [
+                    67,
+                    71,
+                    107
+                ],
+                "avg_cheek_color": [
+                    88,
+                    93,
+                    132
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    35,
+                    18,
+                    10
+                ],
+                "right_sclera_color": [
+                    35,
+                    14,
+                    6
+                ],
+                "avg_sclera_color": [
+                    35,
+                    16,
+                    8
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.4172243475914001
+            }
+        }
+    },
+    "00170": {
+        "MST_value": 6,
+        "DSC_3409.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    110,
+                    121,
+                    165
+                ],
+                "right_cheek_color": [
+                    113,
+                    126,
+                    171
+                ],
+                "avg_cheek_color": [
+                    111,
+                    123,
+                    168
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    27,
+                    19,
+                    16
+                ],
+                "right_sclera_color": [
+                    29,
+                    21,
+                    16
+                ],
+                "avg_sclera_color": [
+                    28,
+                    20,
+                    16
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.849559485912323
+            }
+        }
+    },
+    "00067": {
+        "MST_value": 2,
+        "DSC_1341.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    170,
+                    170,
+                    219
+                ],
+                "right_cheek_color": [
+                    163,
+                    164,
+                    217
+                ],
+                "avg_cheek_color": [
+                    166,
+                    167,
+                    218
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    44,
+                    9,
+                    10
+                ],
+                "right_sclera_color": [
+                    36,
+                    11,
+                    11
+                ],
+                "avg_sclera_color": [
+                    40,
+                    10,
+                    10
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9848211407661438
+            }
+        }
+    },
+    "00092": {
+        "MST_value": 2,
+        "DSC_1665.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    133,
+                    147,
+                    197
+                ],
+                "right_cheek_color": [
+                    124,
+                    138,
+                    187
+                ],
+                "avg_cheek_color": [
+                    128,
+                    142,
+                    192
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    40,
+                    8,
+                    0
+                ],
+                "right_sclera_color": [
+                    84,
+                    56,
+                    44
+                ],
+                "avg_sclera_color": [
+                    62,
+                    32,
+                    22
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.1119082942605018
+            }
+        }
+    },
+    "00094": {
+        "MST_value": 2,
+        "DSC_1691.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    50,
+                    57,
+                    90
+                ],
+                "right_cheek_color": [
+                    128,
+                    127,
+                    173
+                ],
+                "avg_cheek_color": [
+                    89,
+                    92,
+                    131
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    33,
+                    19,
+                    14
+                ],
+                "right_sclera_color": [
+                    22,
+                    8,
+                    1
+                ],
+                "avg_sclera_color": [
+                    27,
+                    13,
+                    7
+                ]
+            }
+        }
+    },
+    "00128": {
+        "MST_value": 6,
+        "DSC_2280.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    28,
+                    32,
+                    51
+                ],
+                "right_cheek_color": [
+                    119,
+                    124,
+                    159
+                ],
+                "avg_cheek_color": [
+                    73,
+                    78,
+                    105
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    42,
+                    27,
+                    27
+                ],
+                "right_sclera_color": [
+                    16,
+                    11,
+                    9
+                ],
+                "avg_sclera_color": [
+                    29,
+                    19,
+                    18
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8396382927894592
+            }
+        }
+    },
+    "00044": {
+        "MST_value": 6,
+        "DSC_0684.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    61,
+                    70,
+                    103
+                ],
+                "right_cheek_color": [
+                    168,
+                    177,
+                    227
+                ],
+                "avg_cheek_color": [
+                    114,
+                    123,
+                    165
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.898809015750885
+            }
+        }
+    },
+    "00191": {
+        "MST_value": 2,
+        "DSC_3907.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    63,
+                    84,
+                    118
+                ],
+                "right_cheek_color": [
+                    135,
+                    143,
+                    185
+                ],
+                "avg_cheek_color": [
+                    99,
+                    113,
+                    151
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    72,
+                    38,
+                    28
+                ],
+                "right_sclera_color": [
+                    54,
+                    28,
+                    10
+                ],
+                "avg_sclera_color": [
+                    63,
+                    33,
+                    19
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9851014614105223
+            }
+        }
+    },
+    "00193": {
+        "MST_value": 2,
+        "DSC_4093.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    109,
+                    116,
+                    167
+                ],
+                "right_cheek_color": [
+                    165,
+                    174,
+                    224
+                ],
+                "avg_cheek_color": [
+                    137,
+                    145,
+                    195
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    62,
+                    29,
+                    12
+                ],
+                "right_sclera_color": [
+                    56,
+                    32,
+                    20
+                ],
+                "avg_sclera_color": [
+                    59,
+                    30,
+                    16
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8870856165885925
+            }
+        }
+    },
+    "00056": {
+        "MST_value": 3,
+        "DSC_0926.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    60,
+                    67,
+                    88
+                ],
+                "right_cheek_color": [
+                    84,
+                    90,
+                    116
+                ],
+                "avg_cheek_color": [
+                    72,
+                    78,
+                    102
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.1327224671840667
+            }
+        }
+    },
+    "00099": {
+        "MST_value": 2,
+        "DSC_1796.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    139,
+                    139,
+                    185
+                ],
+                "right_cheek_color": [
+                    155,
+                    155,
+                    202
+                ],
+                "avg_cheek_color": [
+                    147,
+                    147,
+                    193
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    72,
+                    44,
+                    40
+                ],
+                "right_sclera_color": [
+                    77,
+                    50,
+                    44
+                ],
+                "avg_sclera_color": [
+                    74,
+                    47,
+                    42
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9364988803863524
+            }
+        }
+    },
+    "00184": {
+        "MST_value": 2,
+        "DSC_3851.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    71,
+                    74,
+                    126
+                ],
+                "right_cheek_color": [
+                    164,
+                    163,
+                    225
+                ],
+                "avg_cheek_color": [
+                    117,
+                    118,
+                    175
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.625141978263855
+            }
+        }
+    },
+    "00119": {
+        "MST_value": 2,
+        "DSC_2142.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    91,
+                    92,
+                    134
+                ],
+                "right_cheek_color": [
+                    199,
+                    201,
+                    245
+                ],
+                "avg_cheek_color": [
+                    145,
+                    146,
+                    189
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    53,
+                    18,
+                    11
+                ],
+                "right_sclera_color": [
+                    39,
+                    16,
+                    8
+                ],
+                "avg_sclera_color": [
+                    46,
+                    17,
+                    9
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9601678252220154
+            }
+        }
+    },
+    "00153": {
+        "MST_value": 2,
+        "DSC_2967.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    48,
+                    57,
+                    80
+                ],
+                "right_cheek_color": [
+                    177,
+                    182,
+                    217
+                ],
+                "avg_cheek_color": [
+                    112,
+                    119,
+                    148
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    30,
+                    23,
+                    22
+                ],
+                "right_sclera_color": [
+                    17,
+                    13,
+                    10
+                ],
+                "avg_sclera_color": [
+                    23,
+                    18,
+                    16
+                ]
+            }
+        }
+    },
+    "00161": {
+        "MST_value": 6,
+        "DSC_3175.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    34,
+                    34,
+                    54
+                ],
+                "right_cheek_color": [
+                    99,
+                    95,
+                    126
+                ],
+                "avg_cheek_color": [
+                    66,
+                    64,
+                    90
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    37,
+                    29,
+                    27
+                ],
+                "right_sclera_color": [
+                    21,
+                    13,
+                    11
+                ],
+                "avg_sclera_color": [
+                    29,
+                    21,
+                    19
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9807727336883544
+            }
+        }
+    },
+    "00166": {
+        "MST_value": 3,
+        "DSC_3215.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    113,
+                    107,
+                    150
+                ],
+                "right_cheek_color": [
+                    212,
+                    206,
+                    248
+                ],
+                "avg_cheek_color": [
+                    162,
+                    156,
+                    199
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    48,
+                    8,
+                    6
+                ],
+                "right_sclera_color": [
+                    29,
+                    11,
+                    7
+                ],
+                "avg_sclera_color": [
+                    38,
+                    9,
+                    6
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9884753227233888
+            }
+        }
+    },
+    "00200": {
+        "MST_value": 2,
+        "DSC_4293.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    156,
+                    167,
+                    219
+                ],
+                "right_cheek_color": [
+                    166,
+                    173,
+                    224
+                ],
+                "avg_cheek_color": [
+                    161,
+                    170,
+                    221
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    112,
+                    65,
+                    45
+                ],
+                "right_sclera_color": [
+                    114,
+                    69,
+                    53
+                ],
+                "avg_sclera_color": [
+                    113,
+                    67,
+                    49
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9652833938598632
+            }
+        }
+    },
+    "00047": {
+        "MST_value": 5,
+        "DSC_0708.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    122,
+                    132,
+                    163
+                ],
+                "right_cheek_color": [
+                    151,
+                    158,
+                    195
+                ],
+                "avg_cheek_color": [
+                    136,
+                    145,
+                    179
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7555307745933533
+            }
+        }
+    },
+    "00097": {
+        "MST_value": 7,
+        "DSC_1756.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    68,
+                    72,
+                    114
+                ],
+                "right_cheek_color": [
+                    142,
+                    145,
+                    194
+                ],
+                "avg_cheek_color": [
+                    105,
+                    108,
+                    154
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    30,
+                    10,
+                    5
+                ],
+                "right_sclera_color": [
+                    22,
+                    11,
+                    7
+                ],
+                "avg_sclera_color": [
+                    26,
+                    10,
+                    6
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9250419735908508
+            }
+        }
+    },
+    "00155": {
+        "MST_value": 2,
+        "DSC_2984.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    71,
+                    67,
+                    101
+                ],
+                "right_cheek_color": [
+                    215,
+                    214,
+                    250
+                ],
+                "avg_cheek_color": [
+                    143,
+                    140,
+                    175
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7650052905082703
+            }
+        }
+    },
+    "00192": {
+        "MST_value": 8,
+        "DSC_4189.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    27,
+                    41,
+                    63
+                ],
+                "right_cheek_color": [
+                    46,
+                    54,
+                    79
+                ],
+                "avg_cheek_color": [
+                    36,
+                    47,
+                    71
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    25,
+                    19,
+                    14
+                ],
+                "right_sclera_color": [
+                    33,
+                    24,
+                    19
+                ],
+                "avg_sclera_color": [
+                    29,
+                    21,
+                    16
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7331185936927795
+            }
+        }
+    },
+    "00189": {
+        "MST_value": 2,
+        "DSC_3891.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    95,
+                    104,
+                    152
+                ],
+                "right_cheek_color": [
+                    180,
+                    183,
+                    239
+                ],
+                "avg_cheek_color": [
+                    137,
+                    143,
+                    195
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9918773174285888
+            }
+        }
+    },
+    "00124": {
+        "MST_value": 2,
+        "DSC_2248.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    54,
+                    57,
+                    94
+                ],
+                "right_cheek_color": [
+                    165,
+                    164,
+                    220
+                ],
+                "avg_cheek_color": [
+                    109,
+                    110,
+                    157
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.943976104259491
+            }
+        }
+    },
+    "00079": {
+        "MST_value": 8,
+        "DSC_1857.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    30,
+                    50,
+                    92
+                ],
+                "right_cheek_color": [
+                    9,
+                    16,
+                    32
+                ],
+                "avg_cheek_color": [
+                    19,
+                    33,
+                    62
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    14,
+                    7,
+                    3
+                ],
+                "right_sclera_color": [
+                    22,
+                    10,
+                    6
+                ],
+                "avg_sclera_color": [
+                    18,
+                    8,
+                    4
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.3757122159004211
+            }
+        }
+    },
+    "00075": {
+        "MST_value": 2,
+        "DSC_1525.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    62,
+                    75,
+                    120
+                ],
+                "right_cheek_color": [
+                    63,
+                    80,
+                    129
+                ],
+                "avg_cheek_color": [
+                    62,
+                    77,
+                    124
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    44,
+                    20,
+                    14
+                ],
+                "right_sclera_color": [
+                    38,
+                    17,
+                    7
+                ],
+                "avg_sclera_color": [
+                    41,
+                    18,
+                    10
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.2757422626018524
+            }
+        }
+    },
+    "00142": {
+        "MST_value": 6,
+        "DSC_2744.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    152,
+                    159,
+                    203
+                ],
+                "right_cheek_color": [
+                    117,
+                    129,
+                    176
+                ],
+                "avg_cheek_color": [
+                    134,
+                    144,
+                    189
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    17,
+                    5,
+                    4
+                ],
+                "right_sclera_color": [
+                    42,
+                    24,
+                    23
+                ],
+                "avg_sclera_color": [
+                    29,
+                    14,
+                    13
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.983143389225006
+            }
+        }
+    },
+    "00129": {
+        "MST_value": 7,
+        "DSC_2288.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    12,
+                    19,
+                    36
+                ],
+                "right_cheek_color": [
+                    57,
+                    79,
+                    135
+                ],
+                "avg_cheek_color": [
+                    34,
+                    49,
+                    85
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    27,
+                    13,
+                    9
+                ],
+                "right_sclera_color": [
+                    23,
+                    16,
+                    11
+                ],
+                "avg_sclera_color": [
+                    25,
+                    14,
+                    10
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8545424938201904
+            }
+        }
+    },
+    "00157": {
+        "MST_value": 2,
+        "DSC_3000.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    52,
+                    58,
+                    82
+                ],
+                "right_cheek_color": [
+                    196,
+                    197,
+                    231
+                ],
+                "avg_cheek_color": [
+                    124,
+                    127,
+                    156
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    8,
+                    30,
+                    42
+                ],
+                "right_sclera_color": [
+                    40,
+                    52,
+                    50
+                ],
+                "avg_sclera_color": [
+                    24,
+                    41,
+                    46
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9874317646026612
+            }
+        }
+    },
+    "00165": {
+        "MST_value": 2,
+        "DSC_3207.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    100,
+                    102,
+                    136
+                ],
+                "right_cheek_color": [
+                    194,
+                    194,
+                    231
+                ],
+                "avg_cheek_color": [
+                    147,
+                    148,
+                    183
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9688832759857178
+            }
+        }
+    },
+    "00130": {
+        "MST_value": 5,
+        "DSC_2296.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    63,
+                    74,
+                    105
+                ],
+                "right_cheek_color": [
+                    154,
+                    166,
+                    212
+                ],
+                "avg_cheek_color": [
+                    108,
+                    120,
+                    158
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    42,
+                    17,
+                    11
+                ],
+                "right_sclera_color": [
+                    27,
+                    14,
+                    6
+                ],
+                "avg_sclera_color": [
+                    34,
+                    15,
+                    8
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.1743198335170745
+            }
+        }
+    },
+    "00055": {
+        "MST_value": 3,
+        "DSC_0918.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    123,
+                    125,
+                    157
+                ],
+                "right_cheek_color": [
+                    141,
+                    138,
+                    177
+                ],
+                "avg_cheek_color": [
+                    132,
+                    131,
+                    167
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    29,
+                    19,
+                    20
+                ],
+                "right_sclera_color": [
+                    40,
+                    26,
+                    24
+                ],
+                "avg_sclera_color": [
+                    34,
+                    22,
+                    22
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.0894620418548584
+            }
+        }
+    },
+    "00126": {
+        "MST_value": 2,
+        "DSC_2264.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    48,
+                    55,
+                    91
+                ],
+                "right_cheek_color": null,
+                "avg_cheek_color": null
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    36,
+                    24,
+                    18
+                ],
+                "right_sclera_color": [
+                    33,
+                    19,
+                    11
+                ],
+                "avg_sclera_color": [
+                    34,
+                    21,
+                    14
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.1829437613487243
+            }
+        }
+    },
+    "00149": {
+        "MST_value": 4,
+        "DSC_2804.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    159,
+                    175,
+                    223
+                ],
+                "right_cheek_color": [
+                    104,
+                    120,
+                    168
+                ],
+                "avg_cheek_color": [
+                    131,
+                    147,
+                    195
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.5581789612770081
+            }
+        }
+    },
+    "00054": {
+        "MST_value": 4,
+        "DSC_0910.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    90,
+                    99,
+                    131
+                ],
+                "right_cheek_color": [
+                    154,
+                    168,
+                    217
+                ],
+                "avg_cheek_color": [
+                    122,
+                    133,
+                    174
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    42,
+                    18,
+                    13
+                ],
+                "right_sclera_color": [
+                    26,
+                    9,
+                    1
+                ],
+                "avg_sclera_color": [
+                    34,
+                    13,
+                    7
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9958668947219848
+            }
+        }
+    },
+    "00041": {
+        "MST_value": 8,
+        "DSC_0754.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    96,
+                    102,
+                    136
+                ],
+                "right_cheek_color": [
+                    72,
+                    77,
+                    104
+                ],
+                "avg_cheek_color": [
+                    84,
+                    89,
+                    120
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    12,
+                    10,
+                    7
+                ],
+                "right_sclera_color": [
+                    27,
+                    22,
+                    20
+                ],
+                "avg_sclera_color": [
+                    19,
+                    16,
+                    13
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9356669783592224
+            }
+        }
+    },
+    "00051": {
+        "MST_value": 2,
+        "DSC_0740.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    123,
+                    119,
+                    146
+                ],
+                "right_cheek_color": [
+                    217,
+                    211,
+                    251
+                ],
+                "avg_cheek_color": [
+                    170,
+                    165,
+                    198
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    113,
+                    89,
+                    84
+                ],
+                "right_sclera_color": [
+                    20,
+                    11,
+                    4
+                ],
+                "avg_sclera_color": [
+                    66,
+                    50,
+                    44
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.99513041973114
+            }
+        }
+    },
+    "00198": {
+        "MST_value": 2,
+        "DSC_4133.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    98,
+                    118,
+                    166
+                ],
+                "right_cheek_color": [
+                    112,
+                    129,
+                    186
+                ],
+                "avg_cheek_color": [
+                    105,
+                    123,
+                    176
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    58,
+                    19,
+                    4
+                ],
+                "right_sclera_color": [
+                    68,
+                    36,
+                    22
+                ],
+                "avg_sclera_color": [
+                    63,
+                    27,
+                    13
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9859054684638976
+            }
+        }
+    },
+    "00209": {
+        "MST_value": 2,
+        "DSC_4489.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    112,
+                    127,
+                    172
+                ],
+                "right_cheek_color": [
+                    97,
+                    113,
+                    156
+                ],
+                "avg_cheek_color": [
+                    104,
+                    120,
+                    164
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9883829951286316
+            }
+        }
+    },
+    "00121": {
+        "MST_value": 2,
+        "DSC_2158.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    69,
+                    75,
+                    116
+                ],
+                "right_cheek_color": [
+                    210,
+                    215,
+                    253
+                ],
+                "avg_cheek_color": [
+                    139,
+                    145,
+                    184
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    108,
+                    64,
+                    64
+                ],
+                "right_sclera_color": [
+                    38,
+                    16,
+                    5
+                ],
+                "avg_sclera_color": [
+                    73,
+                    40,
+                    34
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8519359827041626
+            }
+        }
+    },
+    "00148": {
+        "MST_value": 2,
+        "DSC_2796.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    197,
+                    191,
+                    234
+                ],
+                "right_cheek_color": [
+                    58,
+                    57,
+                    84
+                ],
+                "avg_cheek_color": [
+                    127,
+                    124,
+                    159
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    44,
+                    23,
+                    21
+                ],
+                "right_sclera_color": [
+                    53,
+                    29,
+                    19
+                ],
+                "avg_sclera_color": [
+                    48,
+                    26,
+                    20
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8609161972999573
+            }
+        }
+    },
+    "00169": {
+        "MST_value": 2,
+        "DSC_3393.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    100,
+                    97,
+                    131
+                ],
+                "right_cheek_color": [
+                    59,
+                    63,
+                    94
+                ],
+                "avg_cheek_color": [
+                    79,
+                    80,
+                    112
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    20,
+                    9,
+                    7
+                ],
+                "right_sclera_color": [
+                    31,
+                    13,
+                    9
+                ],
+                "avg_sclera_color": [
+                    25,
+                    11,
+                    8
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9939813017845154
+            }
+        }
+    },
+    "00133": {
+        "MST_value": 4,
+        "DSC_2627.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    63,
+                    79,
+                    118
+                ],
+                "right_cheek_color": [
+                    67,
+                    80,
+                    124
+                ],
+                "avg_cheek_color": [
+                    65,
+                    79,
+                    121
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    37,
+                    25,
+                    20
+                ],
+                "right_sclera_color": [
+                    42,
+                    25,
+                    15
+                ],
+                "avg_sclera_color": [
+                    39,
+                    25,
+                    17
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7350057363510132
+            }
+        }
+    },
+    "00102": {
+        "MST_value": 7,
+        "DSC_1918.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    91,
+                    110,
+                    153
+                ],
+                "right_cheek_color": [
+                    93,
+                    110,
+                    155
+                ],
+                "avg_cheek_color": [
+                    92,
+                    110,
+                    154
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    77,
+                    52,
+                    45
+                ],
+                "right_sclera_color": [
+                    49,
+                    25,
+                    13
+                ],
+                "avg_sclera_color": [
+                    63,
+                    38,
+                    29
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.980189085006714
+            }
+        }
+    },
+    "00093": {
+        "MST_value": 2,
+        "DSC_1717.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    98,
+                    101,
+                    144
+                ],
+                "right_cheek_color": [
+                    100,
+                    98,
+                    146
+                ],
+                "avg_cheek_color": [
+                    99,
+                    99,
+                    145
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    22,
+                    12,
+                    11
+                ],
+                "right_sclera_color": [
+                    22,
+                    11,
+                    12
+                ],
+                "avg_sclera_color": [
+                    22,
+                    11,
+                    11
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.950216829776764
+            }
+        }
+    },
+    "00084": {
+        "MST_value": 2,
+        "DSC_1572.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    23,
+                    38,
+                    68
+                ],
+                "right_cheek_color": [
+                    59,
+                    74,
+                    114
+                ],
+                "avg_cheek_color": [
+                    41,
+                    56,
+                    91
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    30,
+                    16,
+                    6
+                ],
+                "right_sclera_color": [
+                    30,
+                    15,
+                    8
+                ],
+                "avg_sclera_color": [
+                    30,
+                    15,
+                    7
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7316702604293823
+            }
+        }
+    },
+    "00146": {
+        "MST_value": 3,
+        "DSC_2776.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    133,
+                    141,
+                    196
+                ],
+                "right_cheek_color": [
+                    67,
+                    72,
+                    121
+                ],
+                "avg_cheek_color": [
+                    100,
+                    106,
+                    158
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    53,
+                    28,
+                    17
+                ],
+                "right_sclera_color": [
+                    65,
+                    31,
+                    17
+                ],
+                "avg_sclera_color": [
+                    59,
+                    29,
+                    17
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8094637393951416
+            }
+        }
+    },
+    "00035": {
+        "MST_value": 2,
+        "DSC_0704.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    169,
+                    174,
+                    225
+                ],
+                "right_cheek_color": [
+                    70,
+                    70,
+                    100
+                ],
+                "avg_cheek_color": [
+                    119,
+                    122,
+                    162
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    37,
+                    17,
+                    10
+                ],
+                "right_sclera_color": [
+                    46,
+                    22,
+                    12
+                ],
+                "avg_sclera_color": [
+                    41,
+                    19,
+                    11
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9981085062026978
+            }
+        }
+    },
+    "00132": {
+        "MST_value": 7,
+        "DSC_2619.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    75,
+                    99,
+                    142
+                ],
+                "right_cheek_color": [
+                    53,
+                    72,
+                    104
+                ],
+                "avg_cheek_color": [
+                    64,
+                    85,
+                    123
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    28,
+                    19,
+                    10
+                ],
+                "right_sclera_color": [
+                    27,
+                    17,
+                    11
+                ],
+                "avg_sclera_color": [
+                    27,
+                    18,
+                    10
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9272904396057128
+            }
+        }
+    },
+    "00101": {
+        "MST_value": 2,
+        "DSC_1910.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    162,
+                    159,
+                    195
+                ],
+                "right_cheek_color": [
+                    149,
+                    141,
+                    179
+                ],
+                "avg_cheek_color": [
+                    155,
+                    150,
+                    187
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    72,
+                    43,
+                    42
+                ],
+                "right_sclera_color": [
+                    90,
+                    61,
+                    57
+                ],
+                "avg_sclera_color": [
+                    81,
+                    52,
+                    49
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.993605613708496
+            }
+        }
+    },
+    "00070": {
+        "MST_value": 2,
+        "DSC_1449.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    72,
+                    78,
+                    109
+                ],
+                "right_cheek_color": [
+                    52,
+                    63,
+                    92
+                ],
+                "avg_cheek_color": [
+                    62,
+                    70,
+                    100
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    13,
+                    12,
+                    10
+                ],
+                "right_sclera_color": [
+                    11,
+                    8,
+                    7
+                ],
+                "avg_sclera_color": [
+                    12,
+                    10,
+                    8
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7275850772857666
+            }
+        }
+    },
+    "00139": {
+        "MST_value": 2,
+        "DSC_2675.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    158,
+                    166,
+                    214
+                ],
+                "right_cheek_color": [
+                    140,
+                    147,
+                    195
+                ],
+                "avg_cheek_color": [
+                    149,
+                    156,
+                    204
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    49,
+                    21,
+                    10
+                ],
+                "right_sclera_color": [
+                    68,
+                    37,
+                    22
+                ],
+                "avg_sclera_color": [
+                    58,
+                    29,
+                    16
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9720627665519714
+            }
+        }
+    },
+    "00204": {
+        "MST_value": 6,
+        "DSC_4449.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    158,
+                    165,
+                    214
+                ],
+                "right_cheek_color": [
+                    152,
+                    157,
+                    207
+                ],
+                "avg_cheek_color": [
+                    155,
+                    161,
+                    210
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    58,
+                    26,
+                    14
+                ],
+                "right_sclera_color": [
+                    60,
+                    24,
+                    9
+                ],
+                "avg_sclera_color": [
+                    59,
+                    25,
+                    11
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9991082549095154
+            }
+        }
+    },
+    "00135": {
+        "MST_value": 2,
+        "DSC_2643.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    118,
+                    133,
+                    193
+                ],
+                "right_cheek_color": [
+                    99,
+                    115,
+                    173
+                ],
+                "avg_cheek_color": [
+                    108,
+                    124,
+                    183
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    40,
+                    14,
+                    7
+                ],
+                "right_sclera_color": [
+                    49,
+                    19,
+                    11
+                ],
+                "avg_sclera_color": [
+                    44,
+                    16,
+                    9
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9738947153091432
+            }
+        }
+    },
+    "00151": {
+        "MST_value": 2,
+        "DSC_2951.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    46,
+                    57,
+                    91
+                ],
+                "right_cheek_color": [
+                    171,
+                    178,
+                    232
+                ],
+                "avg_cheek_color": [
+                    108,
+                    117,
+                    161
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    62,
+                    27,
+                    18
+                ],
+                "right_sclera_color": [
+                    27,
+                    5,
+                    1
+                ],
+                "avg_sclera_color": [
+                    44,
+                    16,
+                    9
+                ]
+            }
+        }
+    },
+    "00205": {
+        "MST_value": 2,
+        "DSC_4325.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    86,
+                    103,
+                    162
+                ],
+                "right_cheek_color": [
+                    89,
+                    106,
+                    164
+                ],
+                "avg_cheek_color": [
+                    87,
+                    104,
+                    163
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9814640879631042
+            }
+        }
+    },
+    "00199": {
+        "MST_value": 4,
+        "DSC_4416.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    151,
+                    165,
+                    213
+                ],
+                "right_cheek_color": [
+                    136,
+                    148,
+                    197
+                ],
+                "avg_cheek_color": [
+                    143,
+                    156,
+                    205
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9971736669540404
+            }
+        }
+    },
+    "00050": {
+        "MST_value": 1,
+        "DSC_0732.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    67,
+                    72,
+                    99
+                ],
+                "right_cheek_color": [
+                    208,
+                    217,
+                    253
+                ],
+                "avg_cheek_color": [
+                    137,
+                    144,
+                    176
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    66,
+                    29,
+                    20
+                ],
+                "right_sclera_color": [
+                    47,
+                    31,
+                    24
+                ],
+                "avg_sclera_color": [
+                    56,
+                    30,
+                    22
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9476696848869324
+            }
+        }
+    },
+    "00196": {
+        "MST_value": 2,
+        "DSC_4117.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    108,
+                    108,
+                    163
+                ],
+                "right_cheek_color": [
+                    156,
+                    155,
+                    209
+                ],
+                "avg_cheek_color": [
+                    132,
+                    131,
+                    186
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9985448122024536
+            }
+        }
+    },
+    "00117": {
+        "MST_value": 5,
+        "DSC_2124.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    42,
+                    65,
+                    105
+                ],
+                "right_cheek_color": [
+                    62,
+                    85,
+                    130
+                ],
+                "avg_cheek_color": [
+                    52,
+                    75,
+                    117
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7627564072608948
+            }
+        }
+    },
+    "00131": {
+        "MST_value": 6,
+        "DSC_2305.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    43,
+                    50,
+                    74
+                ],
+                "right_cheek_color": [
+                    152,
+                    164,
+                    210
+                ],
+                "avg_cheek_color": [
+                    97,
+                    107,
+                    142
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    32,
+                    18,
+                    14
+                ],
+                "right_sclera_color": [
+                    31,
+                    22,
+                    18
+                ],
+                "avg_sclera_color": [
+                    31,
+                    20,
+                    16
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8855781555175781
+            }
+        }
+    },
+    "00138": {
+        "MST_value": 2,
+        "DSC_2667.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    138,
+                    152,
+                    198
+                ],
+                "right_cheek_color": [
+                    109,
+                    120,
+                    159
+                ],
+                "avg_cheek_color": [
+                    123,
+                    136,
+                    178
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    26,
+                    9,
+                    2
+                ],
+                "right_sclera_color": [
+                    54,
+                    24,
+                    13
+                ],
+                "avg_sclera_color": [
+                    40,
+                    16,
+                    7
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9944000840187072
+            }
+        }
+    },
+    "00122": {
+        "MST_value": 2,
+        "DSC_2166.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    63,
+                    73,
+                    122
+                ],
+                "right_cheek_color": [
+                    110,
+                    117,
+                    175
+                ],
+                "avg_cheek_color": [
+                    86,
+                    95,
+                    148
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    59,
+                    33,
+                    28
+                ],
+                "right_sclera_color": [
+                    51,
+                    31,
+                    26
+                ],
+                "avg_sclera_color": [
+                    55,
+                    32,
+                    27
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9776431322097778
+            }
+        }
+    },
+    "00071": {
+        "MST_value": 2,
+        "DSC_1458.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    89,
+                    103,
+                    155
+                ],
+                "right_cheek_color": [
+                    81,
+                    91,
+                    142
+                ],
+                "avg_cheek_color": [
+                    85,
+                    97,
+                    148
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    37,
+                    11,
+                    16
+                ],
+                "right_sclera_color": [
+                    35,
+                    10,
+                    11
+                ],
+                "avg_sclera_color": [
+                    36,
+                    10,
+                    13
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9959970712661744
+            }
+        }
+    },
+    "00158": {
+        "MST_value": 3,
+        "DSC_3008.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    62,
+                    65,
+                    100
+                ],
+                "right_cheek_color": [
+                    165,
+                    161,
+                    217
+                ],
+                "avg_cheek_color": [
+                    113,
+                    113,
+                    158
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    54,
+                    18,
+                    6
+                ],
+                "right_sclera_color": [
+                    33,
+                    8,
+                    4
+                ],
+                "avg_sclera_color": [
+                    43,
+                    13,
+                    5
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.4980337917804718
+            }
+        }
+    },
+    "00163": {
+        "MST_value": 6,
+        "DSC_3191.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    34,
+                    53,
+                    89
+                ],
+                "right_cheek_color": [
+                    72,
+                    91,
+                    134
+                ],
+                "avg_cheek_color": [
+                    53,
+                    72,
+                    111
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    32,
+                    14,
+                    7
+                ],
+                "right_sclera_color": [
+                    23,
+                    6,
+                    0
+                ],
+                "avg_sclera_color": [
+                    27,
+                    10,
+                    3
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8847324252128601
+            }
+        }
+    },
+    "00073": {
+        "MST_value": 3,
+        "DSC_1507.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    21,
+                    36,
+                    67
+                ],
+                "right_cheek_color": [
+                    46,
+                    55,
+                    96
+                ],
+                "avg_cheek_color": [
+                    33,
+                    45,
+                    81
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    17,
+                    10,
+                    10
+                ],
+                "right_sclera_color": [
+                    13,
+                    6,
+                    5
+                ],
+                "avg_sclera_color": [
+                    15,
+                    8,
+                    7
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.5576668977737427
+            }
+        }
+    },
+    "00046": {
+        "MST_value": 6,
+        "DSC_0700.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    123,
+                    125,
+                    169
+                ],
+                "right_cheek_color": [
+                    199,
+                    200,
+                    246
+                ],
+                "avg_cheek_color": [
+                    161,
+                    162,
+                    207
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    85,
+                    48,
+                    35
+                ],
+                "right_sclera_color": [
+                    32,
+                    13,
+                    7
+                ],
+                "avg_sclera_color": [
+                    58,
+                    30,
+                    21
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.6771206259727478
+            }
+        }
+    },
+    "00134": {
+        "MST_value": 2,
+        "DSC_2635.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    143,
+                    154,
+                    202
+                ],
+                "right_cheek_color": [
+                    85,
+                    97,
+                    144
+                ],
+                "avg_cheek_color": [
+                    114,
+                    125,
+                    173
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    33,
+                    10,
+                    1
+                ],
+                "right_sclera_color": [
+                    33,
+                    14,
+                    4
+                ],
+                "avg_sclera_color": [
+                    33,
+                    12,
+                    2
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8692329525947571
+            }
+        }
+    },
+    "00206": {
+        "MST_value": 3,
+        "DSC_4465.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    172,
+                    170,
+                    225
+                ],
+                "right_cheek_color": [
+                    152,
+                    151,
+                    213
+                ],
+                "avg_cheek_color": [
+                    162,
+                    160,
+                    219
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    87,
+                    40,
+                    30
+                ],
+                "right_sclera_color": [
+                    81,
+                    42,
+                    35
+                ],
+                "avg_sclera_color": [
+                    84,
+                    41,
+                    32
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9852762818336488
+            }
+        }
+    },
+    "00143": {
+        "MST_value": 7,
+        "DSC_2752.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    71,
+                    90,
+                    136
+                ],
+                "right_cheek_color": [
+                    16,
+                    24,
+                    45
+                ],
+                "avg_cheek_color": [
+                    43,
+                    57,
+                    90
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    21,
+                    12,
+                    6
+                ],
+                "right_sclera_color": [
+                    24,
+                    16,
+                    9
+                ],
+                "avg_sclera_color": [
+                    22,
+                    14,
+                    7
+                ]
+            }
+        }
+    },
+    "00152": {
+        "MST_value": 2,
+        "DSC_2959.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    70,
+                    64,
+                    93
+                ],
+                "right_cheek_color": [
+                    237,
+                    235,
+                    252
+                ],
+                "avg_cheek_color": [
+                    153,
+                    149,
+                    172
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    164,
+                    114,
+                    112
+                ],
+                "right_sclera_color": [
+                    46,
+                    24,
+                    19
+                ],
+                "avg_sclera_color": [
+                    105,
+                    69,
+                    65
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9729549884796144
+            }
+        }
+    },
+    "00207": {
+        "MST_value": 6,
+        "DSC_4341.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    99,
+                    120,
+                    167
+                ],
+                "right_cheek_color": [
+                    85,
+                    103,
+                    151
+                ],
+                "avg_cheek_color": [
+                    92,
+                    111,
+                    159
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    24,
+                    13,
+                    8
+                ],
+                "right_sclera_color": [
+                    30,
+                    14,
+                    11
+                ],
+                "avg_sclera_color": [
+                    27,
+                    13,
+                    9
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9642287492752076
+            }
+        }
+    },
+    "00037": {
+        "MST_value": 2,
+        "DSC_0721.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    100,
+                    107,
+                    140
+                ],
+                "right_cheek_color": [
+                    41,
+                    46,
+                    66
+                ],
+                "avg_cheek_color": [
+                    70,
+                    76,
+                    103
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    41,
+                    28,
+                    22
+                ],
+                "right_sclera_color": [
+                    36,
+                    16,
+                    9
+                ],
+                "avg_sclera_color": [
+                    38,
+                    22,
+                    15
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.94801527261734
+            }
+        }
+    },
+    "00053": {
+        "MST_value": 2,
+        "DSC_0901.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    191,
+                    193,
+                    224
+                ],
+                "right_cheek_color": [
+                    117,
+                    124,
+                    164
+                ],
+                "avg_cheek_color": [
+                    154,
+                    158,
+                    194
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    42,
+                    22,
+                    15
+                ],
+                "right_sclera_color": [
+                    37,
+                    18,
+                    15
+                ],
+                "avg_sclera_color": [
+                    39,
+                    20,
+                    15
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.986676812171936
+            }
+        }
+    },
+    "00042": {
+        "MST_value": 5,
+        "DSC_0762.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    164,
+                    196,
+                    245
+                ],
+                "right_cheek_color": [
+                    69,
+                    94,
+                    135
+                ],
+                "avg_cheek_color": [
+                    116,
+                    145,
+                    190
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    25,
+                    12,
+                    3
+                ],
+                "right_sclera_color": [
+                    75,
+                    37,
+                    21
+                ],
+                "avg_sclera_color": [
+                    50,
+                    24,
+                    12
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.969147264957428
+            }
+        }
+    },
+    "00049": {
+        "MST_value": 2,
+        "DSC_0724.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    91,
+                    87,
+                    123
+                ],
+                "right_cheek_color": [
+                    186,
+                    181,
+                    226
+                ],
+                "avg_cheek_color": [
+                    138,
+                    134,
+                    174
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9160121083259584
+            }
+        }
+    },
+    "00069": {
+        "MST_value": 7,
+        "DSC_1440.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    161,
+                    171,
+                    227
+                ],
+                "right_cheek_color": [
+                    173,
+                    181,
+                    234
+                ],
+                "avg_cheek_color": [
+                    167,
+                    176,
+                    230
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.973868727684021
+            }
+        }
+    },
+    "00127": {
+        "MST_value": 7,
+        "DSC_2272.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    39,
+                    54,
+                    86
+                ],
+                "right_cheek_color": [
+                    103,
+                    124,
+                    175
+                ],
+                "avg_cheek_color": [
+                    71,
+                    89,
+                    130
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    51,
+                    34,
+                    27
+                ],
+                "right_sclera_color": [
+                    34,
+                    22,
+                    15
+                ],
+                "avg_sclera_color": [
+                    42,
+                    28,
+                    21
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7855093479156494
+            }
+        }
+    },
+    "00188": {
+        "MST_value": 2,
+        "DSC_3883.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    102,
+                    106,
+                    143
+                ],
+                "right_cheek_color": [
+                    178,
+                    177,
+                    219
+                ],
+                "avg_cheek_color": [
+                    140,
+                    141,
+                    181
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.958251655101776
+            }
+        }
+    },
+    "00022": {
+        "MST_value": 7,
+        "DSC_0291.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    204,
+                    203,
+                    248
+                ],
+                "right_cheek_color": [
+                    130,
+                    129,
+                    175
+                ],
+                "avg_cheek_color": [
+                    167,
+                    166,
+                    211
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    45,
+                    13,
+                    2
+                ],
+                "right_sclera_color": [
+                    54,
+                    7,
+                    0
+                ],
+                "avg_sclera_color": [
+                    49,
+                    10,
+                    1
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.820959210395813
+            }
+        }
+    },
+    "00036": {
+        "MST_value": 6,
+        "DSC_0712.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    119,
+                    141,
+                    192
+                ],
+                "right_cheek_color": [
+                    91,
+                    104,
+                    151
+                ],
+                "avg_cheek_color": [
+                    105,
+                    122,
+                    171
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    62,
+                    42,
+                    31
+                ],
+                "right_sclera_color": [
+                    41,
+                    12,
+                    6
+                ],
+                "avg_sclera_color": [
+                    51,
+                    27,
+                    18
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9815455079078674
+            }
+        }
+    },
+    "00164": {
+        "MST_value": 2,
+        "DSC_3199.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    103,
+                    113,
+                    147
+                ],
+                "right_cheek_color": [
+                    147,
+                    150,
+                    190
+                ],
+                "avg_cheek_color": [
+                    125,
+                    131,
+                    168
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    87,
+                    68,
+                    57
+                ],
+                "right_sclera_color": [
+                    46,
+                    26,
+                    19
+                ],
+                "avg_sclera_color": [
+                    66,
+                    47,
+                    38
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.6835154294967651
+            }
+        }
+    },
+    "00087": {
+        "MST_value": 2,
+        "DSC_1647.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    63,
+                    76,
+                    108
+                ],
+                "right_cheek_color": [
+                    79,
+                    90,
+                    126
+                ],
+                "avg_cheek_color": [
+                    71,
+                    83,
+                    117
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    27,
+                    10,
+                    9
+                ],
+                "right_sclera_color": [
+                    31,
+                    15,
+                    11
+                ],
+                "avg_sclera_color": [
+                    29,
+                    12,
+                    10
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.7367934584617615
+            }
+        }
+    },
+    "00043": {
+        "MST_value": 3,
+        "DSC_0770.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    59,
+                    76,
+                    121
+                ],
+                "right_cheek_color": [
+                    28,
+                    40,
+                    65
+                ],
+                "avg_cheek_color": [
+                    43,
+                    58,
+                    93
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    16,
+                    9,
+                    6
+                ],
+                "right_sclera_color": [
+                    30,
+                    9,
+                    4
+                ],
+                "avg_sclera_color": [
+                    23,
+                    9,
+                    5
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.976185142993927
+            }
+        }
+    },
+    "00197": {
+        "MST_value": 6,
+        "DSC_4125.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    97,
+                    109,
+                    158
+                ],
+                "right_cheek_color": [
+                    149,
+                    160,
+                    214
+                ],
+                "avg_cheek_color": [
+                    123,
+                    134,
+                    186
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    42,
+                    21,
+                    15
+                ],
+                "right_sclera_color": [
+                    38,
+                    18,
+                    9
+                ],
+                "avg_sclera_color": [
+                    40,
+                    19,
+                    12
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.6160391569137573
+            }
+        }
+    },
+    "00162": {
+        "MST_value": 4,
+        "DSC_3183.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    140,
+                    134,
+                    186
+                ],
+                "right_cheek_color": [
+                    171,
+                    163,
+                    212
+                ],
+                "avg_cheek_color": [
+                    155,
+                    148,
+                    199
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9642711281776428
+            }
+        }
+    },
+    "00078": {
+        "MST_value": 4,
+        "DSC_1717.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    98,
+                    114,
+                    176
+                ],
+                "right_cheek_color": [
+                    72,
+                    91,
+                    148
+                ],
+                "avg_cheek_color": [
+                    85,
+                    102,
+                    162
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    44,
+                    18,
+                    12
+                ],
+                "right_sclera_color": [
+                    35,
+                    15,
+                    5
+                ],
+                "avg_sclera_color": [
+                    39,
+                    16,
+                    8
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.950216829776764
+            }
+        }
+    },
+    "00144": {
+        "MST_value": 6,
+        "DSC_2760.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    137,
+                    155,
+                    204
+                ],
+                "right_cheek_color": [
+                    80,
+                    95,
+                    136
+                ],
+                "avg_cheek_color": [
+                    108,
+                    125,
+                    170
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    32,
+                    10,
+                    3
+                ],
+                "right_sclera_color": [
+                    44,
+                    14,
+                    3
+                ],
+                "avg_sclera_color": [
+                    38,
+                    12,
+                    3
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8548072576522827
+            }
+        }
+    },
+    "00085": {
+        "MST_value": 3,
+        "DSC_1745.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    137,
+                    157,
+                    214
+                ],
+                "right_cheek_color": [
+                    125,
+                    140,
+                    198
+                ],
+                "avg_cheek_color": [
+                    131,
+                    148,
+                    206
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    32,
+                    10,
+                    3
+                ],
+                "right_sclera_color": [
+                    47,
+                    16,
+                    7
+                ],
+                "avg_sclera_color": [
+                    39,
+                    13,
+                    5
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9818788170814514
+            }
+        }
+    },
+    "00090": {
+        "MST_value": 7,
+        "DSC_1674.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    14,
+                    24,
+                    46
+                ],
+                "right_cheek_color": [
+                    43,
+                    57,
+                    87
+                ],
+                "avg_cheek_color": [
+                    28,
+                    40,
+                    66
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    7,
+                    7,
+                    3
+                ],
+                "right_sclera_color": [
+                    8,
+                    5,
+                    2
+                ],
+                "avg_sclera_color": [
+                    7,
+                    6,
+                    2
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.872382640838623
+            }
+        }
+    },
+    "00082": {
+        "MST_value": 3,
+        "DSC_1726.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    111,
+                    119,
+                    183
+                ],
+                "right_cheek_color": [
+                    102,
+                    110,
+                    174
+                ],
+                "avg_cheek_color": [
+                    106,
+                    114,
+                    178
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    40,
+                    12,
+                    1
+                ],
+                "right_sclera_color": [
+                    45,
+                    8,
+                    1
+                ],
+                "avg_sclera_color": [
+                    42,
+                    10,
+                    1
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9505748152732848
+            }
+        }
+    },
+    "00095": {
+        "MST_value": 4,
+        "DSC_1743.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    79,
+                    83,
+                    119
+                ],
+                "right_cheek_color": [
+                    133,
+                    143,
+                    189
+                ],
+                "avg_cheek_color": [
+                    106,
+                    113,
+                    154
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    56,
+                    31,
+                    22
+                ],
+                "right_sclera_color": [
+                    49,
+                    31,
+                    27
+                ],
+                "avg_sclera_color": [
+                    52,
+                    31,
+                    24
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.762194812297821
+            }
+        }
+    },
+    "00125": {
+        "MST_value": 6,
+        "DSC_2256.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    35,
+                    35,
+                    69
+                ],
+                "right_cheek_color": [
+                    164,
+                    162,
+                    223
+                ],
+                "avg_cheek_color": [
+                    99,
+                    98,
+                    146
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    55,
+                    31,
+                    28
+                ],
+                "right_sclera_color": [
+                    33,
+                    17,
+                    11
+                ],
+                "avg_sclera_color": [
+                    44,
+                    24,
+                    19
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8610491752624512
+            }
+        }
+    },
+    "00145": {
+        "MST_value": 5,
+        "DSC_2768.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    110,
+                    123,
+                    169
+                ],
+                "right_cheek_color": [
+                    81,
+                    89,
+                    129
+                ],
+                "avg_cheek_color": [
+                    95,
+                    106,
+                    149
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    45,
+                    22,
+                    25
+                ],
+                "right_sclera_color": [
+                    55,
+                    31,
+                    29
+                ],
+                "avg_sclera_color": [
+                    50,
+                    26,
+                    27
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.889896810054779
+            }
+        }
+    },
+    "00045": {
+        "MST_value": 3,
+        "DSC_0692.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    50,
+                    55,
+                    88
+                ],
+                "right_cheek_color": [
+                    173,
+                    173,
+                    234
+                ],
+                "avg_cheek_color": [
+                    111,
+                    114,
+                    161
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    64,
+                    26,
+                    20
+                ],
+                "right_sclera_color": [
+                    30,
+                    13,
+                    6
+                ],
+                "avg_sclera_color": [
+                    47,
+                    19,
+                    13
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.965604841709137
+            }
+        }
+    },
+    "00088": {
+        "MST_value": 7,
+        "DSC_1656.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    30,
+                    48,
+                    80
+                ],
+                "right_cheek_color": [
+                    60,
+                    83,
+                    126
+                ],
+                "avg_cheek_color": [
+                    45,
+                    65,
+                    103
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    17,
+                    8,
+                    2
+                ],
+                "right_sclera_color": [
+                    18,
+                    8,
+                    4
+                ],
+                "avg_sclera_color": [
+                    17,
+                    8,
+                    3
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.2557129859924316
+            }
+        }
+    },
+    "00008": {
+        "MST_value": 5,
+        "DSC_1372.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    132,
+                    141,
+                    186
+                ],
+                "right_cheek_color": [
+                    127,
+                    136,
+                    186
+                ],
+                "avg_cheek_color": [
+                    129,
+                    138,
+                    186
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    31,
+                    10,
+                    4
+                ],
+                "right_sclera_color": [
+                    32,
+                    11,
+                    3
+                ],
+                "avg_sclera_color": [
+                    31,
+                    10,
+                    3
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9913061261177064
+            }
+        }
+    },
+    "00160": {
+        "MST_value": 3,
+        "DSC_3167.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    49,
+                    62,
+                    108
+                ],
+                "right_cheek_color": [
+                    80,
+                    87,
+                    144
+                ],
+                "avg_cheek_color": [
+                    64,
+                    74,
+                    126
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    35,
+                    15,
+                    6
+                ],
+                "right_sclera_color": [
+                    31,
+                    19,
+                    7
+                ],
+                "avg_sclera_color": [
+                    33,
+                    17,
+                    6
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.872642993927002
+            }
+        }
+    },
+    "00072": {
+        "MST_value": 2,
+        "DSC_1498.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    73,
+                    80,
+                    136
+                ],
+                "right_cheek_color": [
+                    134,
+                    144,
+                    205
+                ],
+                "avg_cheek_color": [
+                    103,
+                    112,
+                    170
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    51,
+                    7,
+                    0
+                ],
+                "right_sclera_color": [
+                    36,
+                    8,
+                    4
+                ],
+                "avg_sclera_color": [
+                    43,
+                    7,
+                    2
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8057302832603455
+            }
+        }
+    },
+    "00116": {
+        "MST_value": 5,
+        "DSC_2116.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    66,
+                    91,
+                    141
+                ],
+                "right_cheek_color": [
+                    119,
+                    140,
+                    195
+                ],
+                "avg_cheek_color": [
+                    92,
+                    115,
+                    168
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.4690067172050476
+            }
+        }
+    },
+    "00147": {
+        "MST_value": 6,
+        "DSC_2788.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    151,
+                    159,
+                    218
+                ],
+                "right_cheek_color": [
+                    49,
+                    55,
+                    92
+                ],
+                "avg_cheek_color": [
+                    100,
+                    107,
+                    155
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    26,
+                    7,
+                    2
+                ],
+                "right_sclera_color": [
+                    34,
+                    1,
+                    0
+                ],
+                "avg_sclera_color": [
+                    30,
+                    4,
+                    1
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.951000154018402
+            }
+        }
+    },
+    "00107": {
+        "MST_value": 2,
+        "DSC_1958.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    183,
+                    177,
+                    221
+                ],
+                "right_cheek_color": [
+                    190,
+                    182,
+                    229
+                ],
+                "avg_cheek_color": [
+                    186,
+                    179,
+                    225
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9944826364517212
+            }
+        }
+    },
+    "00136": {
+        "MST_value": 2,
+        "DSC_2651.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    164,
+                    174,
+                    225
+                ],
+                "right_cheek_color": [
+                    117,
+                    131,
+                    180
+                ],
+                "avg_cheek_color": [
+                    140,
+                    152,
+                    202
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    41,
+                    19,
+                    11
+                ],
+                "right_sclera_color": [
+                    41,
+                    11,
+                    2
+                ],
+                "avg_sclera_color": [
+                    41,
+                    15,
+                    6
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.981928825378418
+            }
+        }
+    },
+    "00048": {
+        "MST_value": 2,
+        "DSC_0716.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    69,
+                    67,
+                    96
+                ],
+                "right_cheek_color": [
+                    172,
+                    168,
+                    215
+                ],
+                "avg_cheek_color": [
+                    120,
+                    117,
+                    155
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9846753478050232
+            }
+        }
+    },
+    "00186": {
+        "MST_value": 2,
+        "DSC_3984.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    77,
+                    80,
+                    118
+                ],
+                "right_cheek_color": [
+                    154,
+                    153,
+                    202
+                ],
+                "avg_cheek_color": [
+                    115,
+                    116,
+                    160
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.950001060962677
+            }
+        }
+    },
+    "00038": {
+        "MST_value": 6,
+        "DSC_0729.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    117,
+                    127,
+                    171
+                ],
+                "right_cheek_color": [
+                    41,
+                    47,
+                    72
+                ],
+                "avg_cheek_color": [
+                    79,
+                    87,
+                    121
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    24,
+                    16,
+                    13
+                ],
+                "right_sclera_color": [
+                    57,
+                    33,
+                    20
+                ],
+                "avg_sclera_color": [
+                    40,
+                    24,
+                    16
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.962697684764862
+            }
+        }
+    },
+    "00154": {
+        "MST_value": 2,
+        "DSC_2975.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    75,
+                    77,
+                    105
+                ],
+                "right_cheek_color": [
+                    189,
+                    191,
+                    233
+                ],
+                "avg_cheek_color": [
+                    132,
+                    134,
+                    169
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8070886135101318
+            }
+        }
+    },
+    "00187": {
+        "MST_value": 2,
+        "DSC_3992.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    182,
+                    165,
+                    222
+                ],
+                "right_cheek_color": [
+                    222,
+                    207,
+                    252
+                ],
+                "avg_cheek_color": [
+                    202,
+                    186,
+                    237
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    136,
+                    97,
+                    100
+                ],
+                "right_sclera_color": [
+                    69,
+                    38,
+                    39
+                ],
+                "avg_sclera_color": [
+                    102,
+                    67,
+                    69
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.965078055858612
+            }
+        }
+    },
+    "00167": {
+        "MST_value": 8,
+        "DSC_3223.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    27,
+                    30,
+                    49
+                ],
+                "right_cheek_color": [
+                    46,
+                    54,
+                    84
+                ],
+                "avg_cheek_color": [
+                    36,
+                    42,
+                    66
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    20,
+                    12,
+                    8
+                ],
+                "right_sclera_color": [
+                    18,
+                    10,
+                    6
+                ],
+                "avg_sclera_color": [
+                    19,
+                    11,
+                    7
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9957214593887328
+            }
+        }
+    },
+    "00120": {
+        "MST_value": 3,
+        "DSC_2150.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    37,
+                    56,
+                    101
+                ],
+                "right_cheek_color": [
+                    148,
+                    162,
+                    221
+                ],
+                "avg_cheek_color": [
+                    92,
+                    109,
+                    161
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    50,
+                    17,
+                    7
+                ],
+                "right_sclera_color": [
+                    56,
+                    34,
+                    22
+                ],
+                "avg_sclera_color": [
+                    53,
+                    25,
+                    14
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.576303243637085
+            }
+        }
+    },
+    "00172": {
+        "MST_value": 3,
+        "DSC_3417.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    116,
+                    114,
+                    149
+                ],
+                "right_cheek_color": [
+                    141,
+                    137,
+                    177
+                ],
+                "avg_cheek_color": [
+                    128,
+                    125,
+                    163
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    105,
+                    86,
+                    82
+                ],
+                "right_sclera_color": [
+                    54,
+                    31,
+                    30
+                ],
+                "avg_sclera_color": [
+                    79,
+                    58,
+                    56
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.991065800189972
+            }
+        }
+    },
+    "00203": {
+        "MST_value": 8,
+        "DSC_4549.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    51,
+                    56,
+                    81
+                ],
+                "right_cheek_color": [
+                    43,
+                    46,
+                    73
+                ],
+                "avg_cheek_color": [
+                    47,
+                    51,
+                    77
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    25,
+                    12,
+                    3
+                ],
+                "right_sclera_color": [
+                    17,
+                    4,
+                    0
+                ],
+                "avg_sclera_color": [
+                    21,
+                    8,
+                    1
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.4856261610984802
+            }
+        }
+    },
+    "00089": {
+        "MST_value": 6,
+        "DSC_1665.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    23,
+                    38,
+                    61
+                ],
+                "right_cheek_color": [
+                    25,
+                    39,
+                    63
+                ],
+                "avg_cheek_color": [
+                    24,
+                    38,
+                    62
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    19,
+                    11,
+                    8
+                ],
+                "right_sclera_color": [
+                    17,
+                    9,
+                    6
+                ],
+                "avg_sclera_color": [
+                    18,
+                    10,
+                    7
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.1119082942605018
+            }
+        }
+    },
+    "00114": {
+        "MST_value": 2,
+        "DSC_3771.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    155,
+                    175,
+                    211
+                ],
+                "right_cheek_color": [
+                    173,
+                    190,
+                    228
+                ],
+                "avg_cheek_color": [
+                    164,
+                    182,
+                    219
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8310151696205139
+            }
+        }
+    },
+    "00201": {
+        "MST_value": 2,
+        "DSC_4301.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    166,
+                    179,
+                    234
+                ],
+                "right_cheek_color": [
+                    167,
+                    179,
+                    235
+                ],
+                "avg_cheek_color": [
+                    166,
+                    179,
+                    234
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    94,
+                    43,
+                    30
+                ],
+                "right_sclera_color": [
+                    82,
+                    33,
+                    16
+                ],
+                "avg_sclera_color": [
+                    88,
+                    38,
+                    23
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9967104196548462
+            }
+        }
+    },
+    "00113": {
+        "MST_value": 3,
+        "DSC_3763.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    124,
+                    139,
+                    182
+                ],
+                "right_cheek_color": [
+                    141,
+                    157,
+                    201
+                ],
+                "avg_cheek_color": [
+                    132,
+                    148,
+                    191
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9546102285385132
+            }
+        }
+    },
+    "00156": {
+        "MST_value": 3,
+        "DSC_2992.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    68,
+                    70,
+                    107
+                ],
+                "right_cheek_color": [
+                    187,
+                    183,
+                    233
+                ],
+                "avg_cheek_color": [
+                    127,
+                    126,
+                    170
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    90,
+                    53,
+                    46
+                ],
+                "right_sclera_color": [
+                    49,
+                    24,
+                    20
+                ],
+                "avg_sclera_color": [
+                    69,
+                    38,
+                    33
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8800605535507202
+            }
+        }
+    },
+    "00023": {
+        "MST_value": 6,
+        "DSC_0305.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    218,
+                    229,
+                    253
+                ],
+                "right_cheek_color": [
+                    141,
+                    147,
+                    184
+                ],
+                "avg_cheek_color": [
+                    179,
+                    188,
+                    218
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    35,
+                    19,
+                    14
+                ],
+                "right_sclera_color": [
+                    93,
+                    46,
+                    28
+                ],
+                "avg_sclera_color": [
+                    64,
+                    32,
+                    21
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.921919882297516
+            }
+        }
+    },
+    "00115": {
+        "MST_value": 2,
+        "DSC_2108.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    93,
+                    97,
+                    145
+                ],
+                "right_cheek_color": [
+                    154,
+                    154,
+                    207
+                ],
+                "avg_cheek_color": [
+                    123,
+                    125,
+                    176
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    40,
+                    12,
+                    8
+                ],
+                "right_sclera_color": [
+                    58,
+                    39,
+                    33
+                ],
+                "avg_sclera_color": [
+                    49,
+                    25,
+                    20
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.841937243938446
+            }
+        }
+    },
+    "00074": {
+        "MST_value": 2,
+        "DSC_1516.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    23,
+                    37,
+                    63
+                ],
+                "right_cheek_color": [
+                    94,
+                    108,
+                    146
+                ],
+                "avg_cheek_color": [
+                    58,
+                    72,
+                    104
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    50,
+                    29,
+                    20
+                ],
+                "right_sclera_color": [
+                    32,
+                    18,
+                    9
+                ],
+                "avg_sclera_color": [
+                    41,
+                    23,
+                    14
+                ]
+            }
+        }
+    },
+    "00137": {
+        "MST_value": 2,
+        "DSC_2659.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    162,
+                    161,
+                    206
+                ],
+                "right_cheek_color": [
+                    121,
+                    126,
+                    175
+                ],
+                "avg_cheek_color": [
+                    141,
+                    143,
+                    190
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9962555170059204
+            }
+        }
+    },
+    "00076": {
+        "MST_value": 2,
+        "DSC_1534.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    60,
+                    86,
+                    130
+                ],
+                "right_cheek_color": [
+                    134,
+                    161,
+                    211
+                ],
+                "avg_cheek_color": [
+                    97,
+                    123,
+                    170
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.5561650395393372
+            }
+        }
+    },
+    "00208": {
+        "MST_value": 2,
+        "DSC_4349.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    109,
+                    130,
+                    175
+                ],
+                "right_cheek_color": [
+                    116,
+                    135,
+                    179
+                ],
+                "avg_cheek_color": [
+                    112,
+                    132,
+                    177
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9909452199935912
+            }
+        }
+    },
+    "00018": {
+        "MST_value": 5,
+        "DSC_0120.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    129,
+                    124,
+                    169
+                ],
+                "right_cheek_color": [
+                    71,
+                    68,
+                    100
+                ],
+                "avg_cheek_color": [
+                    100,
+                    96,
+                    134
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    17,
+                    6,
+                    4
+                ],
+                "right_sclera_color": [
+                    22,
+                    11,
+                    14
+                ],
+                "avg_sclera_color": [
+                    19,
+                    8,
+                    9
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9925762414932252
+            }
+        }
+    },
+    "00150": {
+        "MST_value": 2,
+        "DSC_2907.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    90,
+                    93,
+                    132
+                ],
+                "right_cheek_color": [
+                    191,
+                    199,
+                    244
+                ],
+                "avg_cheek_color": [
+                    140,
+                    146,
+                    188
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    55,
+                    18,
+                    9
+                ],
+                "right_sclera_color": [
+                    36,
+                    17,
+                    6
+                ],
+                "avg_sclera_color": [
+                    45,
+                    17,
+                    7
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9951772689819336
+            }
+        }
+    },
+    "00159": {
+        "MST_value": 2,
+        "DSC_3159.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    126,
+                    126,
+                    160
+                ],
+                "right_cheek_color": [
+                    163,
+                    159,
+                    191
+                ],
+                "avg_cheek_color": [
+                    144,
+                    142,
+                    175
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    78,
+                    54,
+                    55
+                ],
+                "right_sclera_color": [
+                    52,
+                    37,
+                    32
+                ],
+                "avg_sclera_color": [
+                    65,
+                    45,
+                    43
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.987727165222168
+            }
+        }
+    },
+    "00190": {
+        "MST_value": 3,
+        "DSC_3899.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    97,
+                    93,
+                    148
+                ],
+                "right_cheek_color": [
+                    184,
+                    176,
+                    233
+                ],
+                "avg_cheek_color": [
+                    140,
+                    134,
+                    190
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9902493357658386
+            }
+        }
+    },
+    "00103": {
+        "MST_value": 2,
+        "DSC_1926.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    105,
+                    105,
+                    152
+                ],
+                "right_cheek_color": [
+                    144,
+                    139,
+                    193
+                ],
+                "avg_cheek_color": [
+                    124,
+                    122,
+                    172
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.9952823519706726
+            }
+        }
+    },
+    "00118": {
+        "MST_value": 5,
+        "DSC_2134.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    42,
+                    65,
+                    105
+                ],
+                "right_cheek_color": [
+                    134,
+                    159,
+                    208
+                ],
+                "avg_cheek_color": [
+                    88,
+                    112,
+                    156
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    43,
+                    10,
+                    1
+                ],
+                "right_sclera_color": [
+                    26,
+                    6,
+                    0
+                ],
+                "avg_sclera_color": [
+                    34,
+                    8,
+                    0
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.910750150680542
+            }
+        }
+    },
+    "00194": {
+        "MST_value": 2,
+        "DSC_4205.JPG": {
+            "CSEC_cheek_colors": {
+                "left_cheek_color": [
+                    87,
+                    106,
+                    153
+                ],
+                "right_cheek_color": [
+                    107,
+                    124,
+                    171
+                ],
+                "avg_cheek_color": [
+                    97,
+                    115,
+                    162
+                ]
+            },
+            "sclera_RGB": {
+                "left_sclera_color": [
+                    57,
+                    20,
+                    5
+                ],
+                "right_sclera_color": [
+                    72,
+                    43,
+                    26
+                ],
+                "avg_sclera_color": [
+                    64,
+                    31,
+                    15
+                ]
+            },
+            "FIQA_exposure": {
+                "Prob_Class_0": 0.8630874156951904
+            }
+        }
+    }
+}
