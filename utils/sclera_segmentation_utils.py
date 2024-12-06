@@ -72,3 +72,25 @@ def get_average_sclera_color(image_path, l_locations, r_locations):
     avg_xyY = rgb_to_xyy(avg_sclera_color)
 
     return avg_xyY
+
+
+def convert_to_native_types(obj):
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()  # Convert NumPy arrays to lists
+    elif isinstance(obj, np.int64):
+        return int(obj)  # Convert np.int64 to regular int
+    elif isinstance(obj, dict):
+        return {key: convert_to_native_types(value) for key, value in obj.items()}  # Recursively convert dict
+    elif isinstance(obj, list):
+        return [convert_to_native_types(item) for item in obj]  # Recursively convert list
+    else:
+        return obj  # Return other types as they are
+
+def clip_coordinates(locations, height, width):
+    # Ensure x and y coordinates are within the bounds of the image
+    clipped_locations = []
+    for loc in locations:
+        x = min(max(loc[0], 0), width - 1)  # Clip x-coordinate to be within [0, width-1]
+        y = min(max(loc[1], 0), height - 1)  # Clip y-coordinate to be within [0, height-1]
+        clipped_locations.append((x, y))
+    return clipped_locations
