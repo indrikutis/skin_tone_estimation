@@ -158,9 +158,9 @@ def plot_sclera(image, sclera_coords, masked_image, l_avg_rgb, r_avg_rgb, title)
 
     y_min, x_min = sclera_coords.min(axis=0)
     y_max, x_max = sclera_coords.max(axis=0)
-
+    #x_max = x_max + 90
     # Add a margin to the bounding box
-    margin = 5  
+    margin = 5
     y_min = max(y_min - margin, 0)
     x_min = max(x_min - margin, 0)
     y_max = min(y_max + margin, image.shape[0])
@@ -170,9 +170,12 @@ def plot_sclera(image, sclera_coords, masked_image, l_avg_rgb, r_avg_rgb, title)
 
     # plot the cropped region
     plt.figure(figsize=(15, 7))
-    plt.title(title, fontsize=15)
+    # plt.title(title, fontsize=15)
     plt.imshow(cv2.cvtColor(cropped_region, cv2.COLOR_BGR2RGB))
     plt.axis('off')
+
+    # save the figure
+    # plt.savefig(title)
 
     fig, ax = plt.subplots(1, 2, figsize=(6, 3))
     
@@ -185,6 +188,7 @@ def plot_sclera(image, sclera_coords, masked_image, l_avg_rgb, r_avg_rgb, title)
     ax[1].axis('off')
 
     plt.show()
+    
 
 
 def masked_moving_average(image, mask, patch_size=5):
@@ -413,4 +417,24 @@ def plot_images(image, image_corrected_exposure, corrected_image, corrected_expo
     plt.axis('off')
 
 
+    plt.show()
+
+def plot_gray_scale_histograms(rgb_array, title):
+    """ Plot the grayscale histogram of the input RGB array.
+
+    Args:
+        rgb_array (numpy.ndarray): Input RGB array.
+        title (str): Title for the plot.
+    """
+    # Convert to grayscale using the formula
+    grayscale_values = 0.2989 * rgb_array[:, 0] + 0.5870 * rgb_array[:, 1] + 0.1140 * rgb_array[:, 2]
+
+    # Plot the grayscale histogram
+    plt.hist(grayscale_values, bins=100, color='gray', edgecolor='gray')
+    plt.ylim(0, 500)
+
+    # plt.title(title)
+    plt.xlabel('Gray Intensity Value')
+    plt.ylabel('Frequency')
+    plt.savefig(title)
     plt.show()

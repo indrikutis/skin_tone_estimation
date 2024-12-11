@@ -265,7 +265,7 @@ def display_images(file_path):
     plt.show()
 
 
-def calculate_patch_avg_color(img, mask, coords, window_size=10, stride=5):
+def calculate_patch_avg_color(img, mask, coords, window_size=10, stride=5, side=""):
     """
     Calculate the average RGB color using a sliding window over the specified coordinates,
     and plot each window along with its RGB value.
@@ -316,15 +316,27 @@ def calculate_patch_avg_color(img, mask, coords, window_size=10, stride=5):
         avg_color = None
 
 
-    # Display the accumulated patches
+    # # Display the accumulated patches
     # plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     # plt.show()
 
-    # Display the image with all windows highlighted
+    # # Apply a mask to the image
+    # binary_mask = (mask > 0).astype(np.uint8) * 255
+
+    # # Convert the single-channel mask to 3 channels to match the image shape
+    # mask_3channel = cv2.merge([binary_mask, binary_mask, binary_mask])
+
+    # # Apply the mask to the image
+    # masked_image = cv2.bitwise_and(img_with_windows, mask_3channel)
+
+
+    # # Display the image with all windows highlighted
     # plt.figure(figsize=(4, 4))
-    # plt.imshow(img_with_windows)
-    # plt.title("Image with Highlighted Windows")
+    # plt.imshow(masked_image)
+    # # plt.title("Image with Highlighted Windows")
     # plt.axis('off')
+    # path = "/home/dasec-notebook/Thesis/visualization/PXL_20220922_200205248_" + str(side) + ".png"
+    # plt.savefig(path, bbox_inches='tight', pad_inches=0)
     # plt.show()
 
 
@@ -349,8 +361,8 @@ def calculate_mean_cheek_color(img, mask, landmarks):
     left_cheek_coords, right_cheek_coords = extract_cheek_patches(landmarks)
 
     # Calculate average colors for left and right cheeks
-    left_cheek_color = calculate_patch_avg_color(img, mask, left_cheek_coords)
-    right_cheek_color = calculate_patch_avg_color(img, mask, right_cheek_coords)
+    left_cheek_color = calculate_patch_avg_color(img, mask, left_cheek_coords, side = "left")
+    right_cheek_color = calculate_patch_avg_color(img, mask, right_cheek_coords, side = "right")
 
     # Calculate overall mean color if both cheeks have valid colors
     if left_cheek_color is not None and right_cheek_color is not None:
@@ -367,6 +379,11 @@ def calculate_mean_cheek_color(img, mask, landmarks):
 
 
 def extract_skin_patch_RGBs(image_paths, output_json_file):
+    """ Extract the mean cheek colors from a list of images and save the data to a JSON file.
+
+    Args:
+        image_paths (list): List of image paths.
+    """
 
     ofiq_zmq = OfiqZmq('/home/dasec-notebook/Thesis/OFIQ-Project')
 
@@ -379,6 +396,9 @@ def extract_skin_patch_RGBs(image_paths, output_json_file):
         image_filename = os.path.basename(img_path)
 
         result = ofiq_zmq.process_image(img_path)
+        if result is None:
+            print(f"Error processing image: {img_path}")
+            continue
         img = result['aligned_face'][0]
 
         landmarks = np.array([[point.x, point.y] for point in result['aligned_face_landmarks'][1]])
@@ -573,3 +593,94 @@ def mode(values):
     modes = [value for value, count in value_counts.items() if count == max_count]
     
     return modes
+
+
+
+
+def get_image_paths(root_dir, valid_extensions=("jpg", "jpeg", "png", "bmp", "tiff")):
+    """ Get a list of image paths from the specified directory.
+
+    Args:
+        root_dir (str): The root directory to search for images.
+        valid_extensions (tuple): The valid image extensions (default is ("jpg", "jpeg", "png", "bmp", "tiff")).
+
+    Returns:
+        list: List of image paths.
+    """
+
+    image_paths = []
+    
+    for root, _, files in os.walk(root_dir):
+        for file in files:
+            if file.lower().endswith(valid_extensions):
+                image_paths.append(os.path.join(root, file))
+    
+    return image_paths
+
+
+def filter_image_paths(image_paths, txt_file_path, root_folder):
+    """ Filter image paths based on a list of valid relative paths in a text file.
+
+    Args:
+        image_paths (list): List of image paths.
+        txt_file_path (str): Path to the text file containing valid relative paths.
+        root_folder (str): Root folder containing the image paths.
+
+    Returns:
+        list: Filtered list of image paths.
+    """
+
+    with open(txt_file_path, "r") as file:
+        valid_relative_paths = set(line.strip() for line in file)
+    
+    filtered_paths = [
+        path for path in image_paths
+        if os.path.relpath(path, root_folder).replace("\\", "/") in valid_relative_paths
+    ]
+    
+    return filtered_paths
+
+
+def split_json_by_paths(json_file, indoor_txt, outdoor_txt, output_indoor_json, output_outdoor_json):
+    """ Split a JSON file into indoor and outdoor datasets based on paths in .txt files.
+
+    Args:
+        json_file (str): The path to the JSON file.
+        indoor_txt (str): The path to the indoor .txt file.
+        outdoor_txt (str): The path to the outdoor .txt file.
+        output_indoor_json (str): The path to save the indoor JSON file.
+        output_outdoor_json (str): The path to save the outdoor JSON file.
+    """
+
+    with open(json_file, "r") as file:
+        data = json.load(file)
+    
+    with open(indoor_txt, "r") as file:
+        indoor_paths = set(line.strip() for line in file)
+    
+    with open(outdoor_txt, "r") as file:
+        outdoor_paths = set(line.strip() for line in file)
+    
+    # Initialize dictionaries for indoor and outdoor datasets
+    indoor_data = {}
+    outdoor_data = {}
+    
+    # Split data based on paths
+    for subject_id, images in data.items():
+        for image_name, attributes in images.items():
+            relative_path = f"{subject_id}/{image_name}"
+            if relative_path in indoor_paths:
+                if subject_id not in indoor_data:
+                    indoor_data[subject_id] = {}
+                indoor_data[subject_id][image_name] = attributes
+            elif relative_path in outdoor_paths:
+                if subject_id not in outdoor_data:
+                    outdoor_data[subject_id] = {}
+                outdoor_data[subject_id][image_name] = attributes
+    
+    # Save indoor and outdoor JSON files
+    with open(output_indoor_json, "w") as file:
+        json.dump(indoor_data, file, indent=4)
+    
+    with open(output_outdoor_json, "w") as file:
+        json.dump(outdoor_data, file, indent=4)
