@@ -1,0 +1,26 @@
+Model: CHROMA_FIT_CSEC_data_original
+Train loss: 0.8353
+Train accuracy: 0.8363
+Test loss: 1.8054
+Test accuracy: 0.4054
+
+Log Loss: 1.6188
+Mean Absolute Error: 0.1782
+Mean Squared Error: 0.0913
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       148
+           1       0.40      0.34      0.37       148
+           2       0.41      0.40      0.40       148
+           3       0.35      0.67      0.46       148
+           4       0.63      0.35      0.45       148
+           5       0.31      0.38      0.34       148
+           6       0.33      0.65      0.44       148
+           7       0.84      0.45      0.59       148
+
+    accuracy                           0.41      1184
+   macro avg       0.41      0.41      0.38      1184
+weighted avg       0.41      0.41      0.38      1184
+
+==================================================
