@@ -1,0 +1,116 @@
+Model: MultiOutputRegressor
+Train accuracy: 1.0000
+Test accuracy: 0.1173
+
+Test MSE: 6147.81022519055, Train MSE: 9.282412494968095e-05
+, Test MAE: 63.23466861982149, Train MAE: 0.005826129158185664
+, Test R2: -0.10022374242544174, Train R2: 1.0
+, Test Accuracy: 0.11730205278592376, Train Accuracy: 1.0
+, Test Accuracy MST ±1: 0.3460410557184751, Train Accuracy MST ±1: 1.0
+, Test Accuracy MST ±2: 0.5219941348973607, Train Accuracy MST ±2: 1.0
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00        38
+           2       0.00      0.00      0.00        71
+           3       0.00      0.00      0.00        22
+           4       0.14      0.53      0.22        30
+           5       0.14      0.36      0.20        58
+           6       0.04      0.11      0.06        27
+           7       0.00      0.00      0.00        12
+           8       0.00      0.00      0.00        23
+           9       0.00      0.00      0.00        34
+          10       0.00      0.00      0.00        26
+
+    accuracy                           0.12       341
+   macro avg       0.03      0.10      0.05       341
+weighted avg       0.04      0.12      0.06       341
+
+==================================================
+Model: MLPRegressor
+Train accuracy: 0.0920
+Test accuracy: 0.0968
+
+Test MSE: 7020.824067537401, Train MSE: 2651.1408596650067
+, Test MAE: 73.24649926869328, Train MAE: 42.06090634597361
+, Test R2: -0.2565492076609926, Train R2: 0.1241091298254982
+, Test Accuracy: 0.0967741935483871, Train Accuracy: 0.09195402298850575
+, Test Accuracy MST ±1: 0.3020527859237537, Train Accuracy MST ±1: 0.4329501915708812
+, Test Accuracy MST ±2: 0.4574780058651026, Train Accuracy MST ±2: 0.7279693486590039
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.50      0.03      0.05        38
+           2       0.00      0.00      0.00        71
+           3       0.00      0.00      0.00        22
+           4       0.00      0.00      0.00        30
+           5       0.16      0.40      0.22        58
+           6       0.07      0.33      0.11        27
+           7       0.00      0.00      0.00        12
+           8       0.00      0.00      0.00        23
+           9       0.00      0.00      0.00        34
+          10       0.00      0.00      0.00        26
+
+    accuracy                           0.10       341
+   macro avg       0.07      0.08      0.04       341
+weighted avg       0.09      0.10      0.05       341
+
+==================================================
+Model: MultiOutputRegressor
+Train accuracy: 0.4368
+Test accuracy: 0.0733
+
+Test MSE: 9283.74330405988, Train MSE: 4264.613677101076
+, Test MAE: 65.75804976522913, Train MAE: 38.05459021411261
+, Test R2: -0.6628964770907476, Train R2: -0.38742600599909266
+, Test Accuracy: 0.07331378299120235, Train Accuracy: 0.4367816091954023
+, Test Accuracy MST ±1: 0.35777126099706746, Train Accuracy MST ±1: 0.6436781609195402
+, Test Accuracy MST ±2: 0.6392961876832844, Train Accuracy MST ±2: 0.6973180076628352
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00        38
+           2       0.60      0.04      0.08        71
+           3       0.07      1.00      0.12        22
+           4       0.00      0.00      0.00        30
+           5       0.00      0.00      0.00        58
+           6       0.00      0.00      0.00        27
+           7       0.00      0.00      0.00        12
+           8       0.00      0.00      0.00        23
+           9       0.00      0.00      0.00        34
+          10       0.00      0.00      0.00        26
+
+    accuracy                           0.07       341
+   macro avg       0.07      0.10      0.02       341
+weighted avg       0.13      0.07      0.02       341
+
+==================================================
+Model: MultiOutputRegressor
+Train accuracy: 0.4789
+Test accuracy: 0.1261
+
+Test MSE: 5969.717351216074, Train MSE: 363.25706444175194
+, Test MAE: 65.74758614589264, Train MAE: 14.439786497728155
+, Test R2: -0.06924627415955409, Train R2: 0.8809721848111859
+, Test Accuracy: 0.12609970674486803, Train Accuracy: 0.4789272030651341
+, Test Accuracy MST ±1: 0.3020527859237537, Train Accuracy MST ±1: 0.8084291187739464
+, Test Accuracy MST ±2: 0.44868035190615835, Train Accuracy MST ±2: 0.9808429118773946
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.16      0.11      0.13        38
+           2       0.50      0.03      0.05        71
+           3       0.00      0.00      0.00        22
+           4       0.11      0.13      0.12        30
+           5       0.20      0.41      0.27        58
+           6       0.06      0.33      0.10        27
+           7       0.00      0.00      0.00        12
+           8       0.00      0.00      0.00        23
+           9       0.00      0.00      0.00        34
+          10       0.00      0.00      0.00        26
+
+    accuracy                           0.13       341
+   macro avg       0.10      0.10      0.07       341
+weighted avg       0.17      0.13      0.09       341
+
+==================================================

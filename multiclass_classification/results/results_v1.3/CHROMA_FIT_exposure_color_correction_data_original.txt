@@ -1,0 +1,83 @@
+Model: RandomForestClassifier
+Train accuracy: 0.7031
+Test accuracy: 0.5156
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00         1
+           2       0.74      0.80      0.77        35
+           3       0.00      0.00      0.00         9
+           4       0.00      0.00      0.00         3
+           6       0.25      0.29      0.27         7
+           7       0.00      0.00      0.00         5
+           8       0.23      0.75      0.35         4
+           9       0.00      0.00      0.00         0
+
+    accuracy                           0.52        64
+   macro avg       0.15      0.23      0.17        64
+weighted avg       0.44      0.52      0.47        64
+
+==================================================
+Model: LogisticRegression
+Train accuracy: 0.5022
+Test accuracy: 0.2344
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00         1
+           2       0.74      0.40      0.52        35
+           3       0.00      0.00      0.00         9
+           4       0.00      0.00      0.00         3
+           6       0.00      0.00      0.00         7
+           7       0.00      0.00      0.00         5
+           8       0.25      0.25      0.25         4
+           9       0.00      0.00      0.00         0
+
+    accuracy                           0.23        64
+   macro avg       0.12      0.08      0.10        64
+weighted avg       0.42      0.23      0.30        64
+
+==================================================
+Model: SVC
+Train accuracy: 0.5240
+Test accuracy: 0.4219
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00         1
+           2       0.52      0.74      0.61        35
+           3       0.00      0.00      0.00         9
+           4       0.00      0.00      0.00         3
+           6       0.07      0.14      0.10         7
+           7       0.00      0.00      0.00         5
+           8       0.00      0.00      0.00         4
+
+    accuracy                           0.42        64
+   macro avg       0.08      0.13      0.10        64
+weighted avg       0.29      0.42      0.34        64
+
+==================================================
+Model: MLPClassifier
+Train accuracy: 0.6419
+Test accuracy: 0.1875
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.00      0.00      0.00         1
+           2       0.75      0.17      0.28        35
+           3       0.00      0.00      0.00         9
+           4       0.00      0.00      0.00         3
+           6       0.10      0.57      0.17         7
+           7       0.00      0.00      0.00         5
+           8       0.22      0.50      0.31         4
+           9       0.00      0.00      0.00         0
+
+    accuracy                           0.19        64
+   macro avg       0.13      0.16      0.10        64
+weighted avg       0.44      0.19      0.19        64
+
+==================================================

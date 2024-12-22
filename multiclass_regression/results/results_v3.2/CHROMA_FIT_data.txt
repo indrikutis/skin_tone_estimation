@@ -1,0 +1,27 @@
+Model: CHROMA_FIT_data
+Train loss: 0.3555
+Train accuracy: 0.9110
+Test loss: 0.5094
+Test accuracy: 0.8514
+
+Log Loss: 0.4453
+Mean Absolute Error: 0.0545
+Mean Squared Error: 0.0248
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98        30
+           1       0.64      0.41      0.50        22
+           2       0.73      0.73      0.73        33
+           3       0.77      1.00      0.87        33
+           4       0.78      0.89      0.83        28
+           5       0.88      0.61      0.72        36
+           6       0.89      0.93      0.91        27
+           7       0.92      1.00      0.96        35
+           8       1.00      1.00      1.00        32
+
+    accuracy                           0.85       276
+   macro avg       0.84      0.84      0.83       276
+weighted avg       0.85      0.85      0.84       276
+
+==================================================
