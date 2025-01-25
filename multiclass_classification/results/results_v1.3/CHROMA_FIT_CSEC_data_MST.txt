@@ -91,8 +91,8 @@ weighted avg       0.14      0.16      0.12       341
 
 ==================================================
 Model: RandomForestClassifier
-Train accuracy: 0.6447
-Test accuracy: 0.1290
+Train  accuracy: 0.6447
+Test  accuracy: 0.1290
 
 Classification Report:
               precision    recall  f1-score   support
@@ -114,8 +114,8 @@ weighted avg       0.05      0.13      0.07       341
 
 ==================================================
 Model: LogisticRegression
-Train accuracy: 0.5314
-Test accuracy: 0.1818
+Train  accuracy: 0.5314
+Test  accuracy: 0.1818
 
 Classification Report:
               precision    recall  f1-score   support
@@ -137,8 +137,8 @@ weighted avg       0.10      0.18      0.11       341
 
 ==================================================
 Model: SVC
-Train accuracy: 0.5094
-Test accuracy: 0.2111
+Train  accuracy: 0.5094
+Test  accuracy: 0.2111
 
 Classification Report:
               precision    recall  f1-score   support
@@ -160,8 +160,8 @@ weighted avg       0.07      0.21      0.08       341
 
 ==================================================
 Model: MLPClassifier
-Train accuracy: 0.6509
-Test accuracy: 0.1584
+Train  accuracy: 0.6509
+Test  accuracy: 0.1584
 
 Classification Report:
               precision    recall  f1-score   support
