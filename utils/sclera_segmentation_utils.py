@@ -90,7 +90,7 @@ def clip_coordinates(locations, height, width):
     # Ensure x and y coordinates are within the bounds of the image
     clipped_locations = []
     for loc in locations:
-        x = min(max(loc[0], 0), width - 1)  # Clip x-coordinate to be within [0, width-1]
-        y = min(max(loc[1], 0), height - 1)  # Clip y-coordinate to be within [0, height-1]
+        x = min(max(loc[0], 0), width - 1) 
+        y = min(max(loc[1], 0), height - 1)  
         clipped_locations.append((x, y))
     return clipped_locations

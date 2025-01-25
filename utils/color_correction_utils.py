@@ -174,6 +174,14 @@ def plot_sclera(image, sclera_coords, masked_image, l_avg_rgb, r_avg_rgb, title)
     plt.imshow(cv2.cvtColor(cropped_region, cv2.COLOR_BGR2RGB))
     plt.axis('off')
 
+
+    cropped_original_eyes = image[y_min-20:y_max+20, x_min-5:x_max]
+
+    plt.figure(figsize=(15, 7))
+    # plt.title(title, fontsize=15)
+    plt.imshow(cropped_original_eyes)
+    plt.axis('off')
+
     # save the figure
     # plt.savefig(title)
 
@@ -431,7 +439,7 @@ def plot_gray_scale_histograms(rgb_array, title):
 
     # Plot the grayscale histogram
     plt.hist(grayscale_values, bins=100, color='gray', edgecolor='gray')
-    plt.ylim(0, 500)
+    plt.ylim(0, 10)
 
     # plt.title(title)
     plt.xlabel('Gray Intensity Value')
