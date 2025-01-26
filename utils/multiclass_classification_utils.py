@@ -6,7 +6,6 @@ import PIL.Image
 import cv2
 import scipy.ndimage
 from pathlib import Path
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
@@ -14,35 +13,21 @@ import json
 import random
 from imblearn.over_sampling import SMOTE
 from sklearn.metrics import classification_report, accuracy_score
-from imblearn.over_sampling import RandomOverSampler
 from collections import Counter
-from sklearn.model_selection import cross_validate
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-from sklearn.multioutput import MultiOutputRegressor
 from sklearn.metrics import roc_curve, auc
 import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.inspection import permutation_importance
 from sklearn.utils import resample
-from sklearn.preprocessing import MultiLabelBinarizer
-from imblearn.over_sampling import SMOTE
-import numpy as np
-from collections import Counter
-from sklearn.utils import resample
-from imblearn.over_sampling import SMOTE
-import numpy as np
-from collections import Counter
 from scipy.stats import zscore
 from sklearn.cluster import KMeans
-from imblearn.over_sampling import SMOTE
-import numpy as np
 from sklearn.decomposition import PCA
 import pandas as pd
 
 
-sys.path.append('../')
+sys.path.append("../")
 from utils import baseline_utils
 
 
@@ -56,11 +41,12 @@ SWATCHES_MAPPING = {
     7: [130, 92, 67],
     8: [96, 65, 52],
     9: [58, 49, 42],
-    10: [41, 36, 32]
+    10: [41, 36, 32],
 }
 
+
 def align_face_ffhq(img, landmarks, output_size, transform_size, enable_padding):
-    """ Aligns a face in an image using FFHQ alignment.
+    """Aligns a face in an image using FFHQ alignment.
 
     Args:
         img (PIL.Image): The input image.
@@ -74,7 +60,7 @@ def align_face_ffhq(img, landmarks, output_size, transform_size, enable_padding)
     """
 
     lm = np.array([[p.x, p.y] for p in landmarks.parts()])
-    
+
     # Calculate auxiliary vectors.
     eye_left = np.mean(lm[36:42], axis=0)
     eye_right = np.mean(lm[42:48], axis=0)
@@ -97,49 +83,87 @@ def align_face_ffhq(img, landmarks, output_size, transform_size, enable_padding)
     # Shrink.
     shrink = int(np.floor(qsize / output_size * 0.5))
     if shrink > 1:
-        rsize = (int(np.rint(float(img.size[0]) / shrink)), int(np.rint(float(img.size[1]) / shrink)))
+        rsize = (
+            int(np.rint(float(img.size[0]) / shrink)),
+            int(np.rint(float(img.size[1]) / shrink)),
+        )
         img = img.resize(rsize, PIL.Image.Resampling.LANCZOS)
         quad /= shrink
         qsize /= shrink
 
     # Crop.
     border = max(int(np.rint(qsize * 0.1)), 3)
-    crop = (int(np.floor(min(quad[:, 0]))), int(np.floor(min(quad[:, 1]))), 
-            int(np.ceil(max(quad[:, 0]))), int(np.ceil(max(quad[:, 1]))))
-    crop = (max(crop[0] - border, 0), max(crop[1] - border, 0), 
-            min(crop[2] + border, img.size[0]), min(crop[3] + border, img.size[1]))
+    crop = (
+        int(np.floor(min(quad[:, 0]))),
+        int(np.floor(min(quad[:, 1]))),
+        int(np.ceil(max(quad[:, 0]))),
+        int(np.ceil(max(quad[:, 1]))),
+    )
+    crop = (
+        max(crop[0] - border, 0),
+        max(crop[1] - border, 0),
+        min(crop[2] + border, img.size[0]),
+        min(crop[3] + border, img.size[1]),
+    )
     if crop[2] - crop[0] < img.size[0] or crop[3] - crop[1] < img.size[1]:
         img = img.crop(crop)
         quad -= crop[0:2]
 
     # Pad.
-    pad = (int(np.floor(min(quad[:, 0]))), int(np.floor(min(quad[:, 1]))), 
-           int(np.ceil(max(quad[:, 0]))), int(np.ceil(max(quad[:, 1]))))
-    pad = (max(-pad[0] + border, 0), max(-pad[1] + border, 0), 
-           max(pad[2] - img.size[0] + border, 0), max(pad[3] - img.size[1] + border, 0))
+    pad = (
+        int(np.floor(min(quad[:, 0]))),
+        int(np.floor(min(quad[:, 1]))),
+        int(np.ceil(max(quad[:, 0]))),
+        int(np.ceil(max(quad[:, 1]))),
+    )
+    pad = (
+        max(-pad[0] + border, 0),
+        max(-pad[1] + border, 0),
+        max(pad[2] - img.size[0] + border, 0),
+        max(pad[3] - img.size[1] + border, 0),
+    )
     if enable_padding and max(pad) > border - 4:
         pad = np.maximum(pad, int(np.rint(qsize * 0.3)))
-        img = np.pad(np.float32(img), ((pad[1], pad[3]), (pad[0], pad[2]), (0, 0)), 'reflect')
+        img = np.pad(
+            np.float32(img), ((pad[1], pad[3]), (pad[0], pad[2]), (0, 0)), "reflect"
+        )
         h, w, _ = img.shape
         y, x, _ = np.ogrid[:h, :w, :1]
-        mask = np.maximum(1.0 - np.minimum(np.float32(x) / pad[0], np.float32(w-1-x) / pad[2]),
-                          1.0 - np.minimum(np.float32(y) / pad[1], np.float32(h-1-y) / pad[3]))
+        mask = np.maximum(
+            1.0 - np.minimum(np.float32(x) / pad[0], np.float32(w - 1 - x) / pad[2]),
+            1.0 - np.minimum(np.float32(y) / pad[1], np.float32(h - 1 - y) / pad[3]),
+        )
         blur = qsize * 0.02
-        img += (scipy.ndimage.gaussian_filter(img, [blur, blur, 0]) - img) * np.clip(mask * 3.0 + 1.0, 0.0, 1.0)
+        img += (scipy.ndimage.gaussian_filter(img, [blur, blur, 0]) - img) * np.clip(
+            mask * 3.0 + 1.0, 0.0, 1.0
+        )
         img += (np.median(img, axis=(0, 1)) - img) * np.clip(mask, 0.0, 1.0)
-        img = PIL.Image.fromarray(np.uint8(np.clip(np.rint(img), 0, 255)), 'RGB')
+        img = PIL.Image.fromarray(np.uint8(np.clip(np.rint(img), 0, 255)), "RGB")
         quad += pad[:2]
 
     # Transform.
     # Final Resize
-    img = img.transform((transform_size, transform_size), PIL.Image.QUAD, (quad + 0.5).flatten(), PIL.Image.BILINEAR)
+    img = img.transform(
+        (transform_size, transform_size),
+        PIL.Image.QUAD,
+        (quad + 0.5).flatten(),
+        PIL.Image.BILINEAR,
+    )
     if output_size < transform_size:
         img = img.resize((output_size, output_size), PIL.Image.Resampling.LANCZOS)
 
     return img
 
-def process_images(input_dir, output_dir, output_size, shape_predictor_path, transform_size, enable_padding):
-    """ Process images in the input directory and save aligned images to the output directory.
+
+def process_images(
+    input_dir,
+    output_dir,
+    output_size,
+    shape_predictor_path,
+    transform_size,
+    enable_padding,
+):
+    """Process images in the input directory and save aligned images to the output directory.
 
     Args:
         input_dir (str): The input directory containing images to process.
@@ -147,7 +171,7 @@ def process_images(input_dir, output_dir, output_size, shape_predictor_path, tra
         output_size (int): The size of the output image.
         shape_predictor_path (str): The path to the shape predictor model.
         transform_size (int): The size of the transformed image.
-        enable_padding (bool): Whether to enable padding.    
+        enable_padding (bool): Whether to enable padding.
     """
 
     output_dir = Path(output_dir)
@@ -158,8 +182,13 @@ def process_images(input_dir, output_dir, output_size, shape_predictor_path, tra
     predictor = dlib.shape_predictor(shape_predictor_path)
 
     # Iterate over all image files in the input directory
-    for img_path in Path(input_dir).rglob("*.*"):  
-        if img_path.suffix.lower() not in {".jpg", ".jpeg", ".png", ".JPG"}:  # Filter image formats
+    for img_path in Path(input_dir).rglob("*.*"):
+        if img_path.suffix.lower() not in {
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".JPG",
+        }:  # Filter image formats
             continue
 
         try:
@@ -174,7 +203,9 @@ def process_images(input_dir, output_dir, output_size, shape_predictor_path, tra
 
             # Use the first detected face for alignment
             landmarks = predictor(img_cv, detections[0])
-            aligned_img = align_face_ffhq(img, landmarks, output_size, transform_size, enable_padding)
+            aligned_img = align_face_ffhq(
+                img, landmarks, output_size, transform_size, enable_padding
+            )
 
             relative_path = img_path.relative_to(input_dir)
             output_path = output_dir / relative_path
@@ -187,8 +218,9 @@ def process_images(input_dir, output_dir, output_size, shape_predictor_path, tra
         except Exception as e:
             print(f"Error processing {img_path}: {e}")
 
-def preprocess_data(data, swatches = False):
-    """ Preprocesses the data for training a model.
+
+def preprocess_data(data, swatches=False):
+    """Preprocesses the data for training a model.
 
     Args:
         data (dict): The input data dictionary.
@@ -208,21 +240,32 @@ def preprocess_data(data, swatches = False):
         for k, features in value.items():
             if k != "MST_value":
 
+                left_cheek_color = features.get("CSEC_cheek_colors", {}).get(
+                    "left_cheek_color", [0, 0, 0]
+                ) or [0, 0, 0]
+                right_cheek_color = features.get("CSEC_cheek_colors", {}).get(
+                    "right_cheek_color", [0, 0, 0]
+                ) or [0, 0, 0]
+                left_sclera_color = features.get("sclera_RGB", {}).get(
+                    "left_sclera_color", [0, 0, 0]
+                ) or [0, 0, 0]
+                right_sclera_color = features.get("sclera_RGB", {}).get(
+                    "right_sclera_color", [0, 0, 0]
+                ) or [0, 0, 0]
+                fiqa_exposure = (
+                    features.get("FIQA_exposure", {}).get("Prob_Class_0", 0.0) or 0.0
+                )
+                illumination_uniformity = (
+                    features.get("OFIQ_illumination_uniformity", 0.0) or 0.0
+                )
 
-                left_cheek_color = features.get("CSEC_cheek_colors", {}).get("left_cheek_color", [0, 0, 0]) or [0, 0, 0]
-                right_cheek_color = features.get("CSEC_cheek_colors", {}).get("right_cheek_color", [0, 0, 0]) or [0, 0, 0]
-                left_sclera_color = features.get("sclera_RGB", {}).get("left_sclera_color", [0, 0, 0]) or [0, 0, 0]
-                right_sclera_color = features.get("sclera_RGB", {}).get("right_sclera_color", [0, 0, 0]) or [0, 0, 0]
-                fiqa_exposure = features.get("FIQA_exposure", {}).get("Prob_Class_0", 0.0) or 0.0
-                illumination_uniformity = features.get("OFIQ_illumination_uniformity", 0.0) or 0.0
-                
                 # target = SWATCHES_MAPPING[mst_value]
 
                 if swatches:
                     target = SWATCHES_MAPPING[mst_value]
                 else:
                     target = mst_value
-                
+
                 feature_vector = (
                     left_cheek_color
                     + right_cheek_color
@@ -232,15 +275,17 @@ def preprocess_data(data, swatches = False):
                 )
                 X.append(feature_vector)
                 y.append(target)
-                
 
     X = np.array(X)
     y = np.array(y)
 
     return X, y
 
-def save_results(output_file, model_name, train_accuracy, test_accuracy, report, other_metrics=None):
-    """ Saves the classification results to a file.
+
+def save_results(
+    output_file, model_name, train_accuracy, test_accuracy, report, other_metrics=None
+):
+    """Saves the classification results to a file.
 
     Args:
         output_file (str): The output file path.
@@ -250,7 +295,7 @@ def save_results(output_file, model_name, train_accuracy, test_accuracy, report,
     """
 
     # Append results to the output file
-    with open(output_file, "a") as f:  
+    with open(output_file, "a") as f:
         f.write(f"Model: {model_name}\n")
         f.write(f"Train accuracy: {train_accuracy:.4f}\n")
         f.write(f"Test accuracy: {test_accuracy:.4f}\n\n")
@@ -258,13 +303,13 @@ def save_results(output_file, model_name, train_accuracy, test_accuracy, report,
             f.write(other_metrics)
         f.write("Classification Report:\n")
         f.write(report)
-        f.write("\n" + "="*50 + "\n")  # Separator between models
+        f.write("\n" + "=" * 50 + "\n")  # Separator between models
 
     print(f"Results for {model_name} saved to {output_file}")
 
 
 def remove_testing_images_from_training(training_data, sampled_testing_paths_set):
-    """ Removes the testing images from the training data.
+    """Removes the testing images from the training data.
 
     Args:
         training_data (dict): The training data dictionary.
@@ -275,11 +320,11 @@ def remove_testing_images_from_training(training_data, sampled_testing_paths_set
     """
 
     filtered_training_data = {}
-    
+
     for subject, images in training_data.items():
         filtered_training_data[subject] = {}
         for image_name, image_data in images.items():
-            if image_name != "MST_value":  
+            if image_name != "MST_value":
                 path = f"{subject}/{image_name}"
 
                 # If the image is not in the sampled testing paths, keep it in the training data
@@ -288,11 +333,12 @@ def remove_testing_images_from_training(training_data, sampled_testing_paths_set
             else:
                 # Keep the MST_value entry
                 filtered_training_data[subject]["MST_value"] = images["MST_value"]
-    
+
     return filtered_training_data
 
+
 def filter_testing_data(testing_data, sampled_testing_paths_set):
-    """ Filters the testing data to only include the sampled testing paths.
+    """Filters the testing data to only include the sampled testing paths.
 
     Args:
         testing_data (_type_): _description_
@@ -303,21 +349,22 @@ def filter_testing_data(testing_data, sampled_testing_paths_set):
     """
 
     filtered_testing_data = {}
-    
+
     for subject, images in testing_data.items():
         filtered_testing_data[subject] = {}
         for image_name, image_data in images.items():
-            if image_name != "MST_value":  # Skip the MST_value entry
+            if image_name != "MST_value":
                 path = f"{subject}/{image_name}"
-                
+
                 # If the image is in the sampled testing paths, keep it
                 if path in sampled_testing_paths_set:
                     filtered_testing_data[subject][image_name] = image_data
             else:
                 # Keep the MST_value entry
                 filtered_testing_data[subject]["MST_value"] = images["MST_value"]
-    
+
     return filtered_testing_data
+
 
 def oversampling_SMOTE(X, y):
     class_counts = Counter(y)
@@ -330,12 +377,13 @@ def oversampling_SMOTE(X, y):
         mask = y == cls
         X = np.concatenate([X, X[mask]])
         y = np.concatenate([y, y[mask]])
-        
+
     # Apply SMOTE to balance the classes
     smote = SMOTE(k_neighbors=1)
     X, y = smote.fit_resample(X, y)
 
-    return X,y
+    return X, y
+
 
 def oversampling_SMOTE_multilabel(X, y):
     """Oversample the minority classes using SMOTE for multi-label classification.
@@ -356,7 +404,7 @@ def oversampling_SMOTE_multilabel(X, y):
 
     # Process each label independently
     for i in range(y.shape[1]):
-        y_label = y[:, i]  
+        y_label = y[:, i]
         class_counts = Counter(y_label)
 
         # Identify minority classes with very few samples
@@ -365,10 +413,12 @@ def oversampling_SMOTE_multilabel(X, y):
         # Duplicate samples for minority classes
         X_augmented, y_label_augmented = X, y_label
         for cls in minority_classes:
-            mask = (y_label == cls)
+            mask = y_label == cls
             if mask.sum() > 0:  # Ensure the mask is valid
                 X_augmented = np.concatenate([X_augmented, X[mask]], axis=0)
-                y_label_augmented = np.concatenate([y_label_augmented, y_label[mask]], axis=0)
+                y_label_augmented = np.concatenate(
+                    [y_label_augmented, y_label[mask]], axis=0
+                )
 
         # Apply SMOTE to the current label
         smote = SMOTE(k_neighbors=1)
@@ -381,14 +431,15 @@ def oversampling_SMOTE_multilabel(X, y):
         else:
             if X_res.shape[0] != X_resampled.shape[0]:
                 raise ValueError("Mismatch in sample count after resampling!")
-            
-            y_resampled = np.concatenate([y_resampled, y_label_res[:, np.newaxis]], axis=1)
+
+            y_resampled = np.concatenate(
+                [y_resampled, y_label_res[:, np.newaxis]], axis=1
+            )
 
     return X_resampled, y_resampled
 
 
-
-def remove_outliers(X,y):
+def remove_outliers(X, y):
     """Remove outliers from the feature matrix X and the target matrix y.
 
     Args:
@@ -405,7 +456,7 @@ def remove_outliers(X,y):
 
     threshold = 3
     outliers = np.where(z_scores > threshold)
-    outlier_indices = np.unique(outliers[0])  # unique rows with outliers
+    outlier_indices = np.unique(outliers[0])
 
     # Remove outliers from the feature matrix X and the target matrix y
     X = np.delete(X, outlier_indices, axis=0)
@@ -416,9 +467,10 @@ def remove_outliers(X,y):
 
     return X, y
 
-def prepare_data_with_split(data_path, swatches = False):
-    """ Prepare the data for training and testing by splitting the data into training and testing sets.
-    
+
+def prepare_data_with_split(data_path, swatches=False):
+    """Prepare the data for training and testing by splitting the data into training and testing sets.
+
     Args:
         data_path (str): The path to the data file.
         swatches (bool): Whether to use swatches as the target labels (default
@@ -442,15 +494,28 @@ def prepare_data_with_split(data_path, swatches = False):
     else:
         X_train, y_train = oversampling_SMOTE(X_train, y_train)
 
-    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X_train, y_train, test_size=0.2, random_state=42
+    )
 
-    X_train, X_test, y_train, y_test = preprocess_data_with_imputation_and_scaling(X_train, X_test, y_train, y_test)
+    X_train, X_test, y_train, y_test = preprocess_data_with_imputation_and_scaling(
+        X_train, X_test, y_train, y_test
+    )
 
-    print("prepare_data_with_split ", X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+    print(
+        "prepare_data_with_split ",
+        X_train.shape,
+        X_test.shape,
+        y_train.shape,
+        y_test.shape,
+    )
     return X_train, X_test, y_train, y_test
 
-def prepare_data_with_original(training_data_path, testing_data_path, nr_of_test_images, swatches = False):
-    """ Prepare the data for training and testing by splitting the data into training and testing sets.
+
+def prepare_data_with_original(
+    training_data_path, testing_data_path, nr_of_test_images, swatches=False
+):
+    """Prepare the data for training and testing by splitting the data into training and testing sets.
 
     Args:
         training_data_path (str): The path to the training data file.
@@ -471,15 +536,17 @@ def prepare_data_with_original(training_data_path, testing_data_path, nr_of_test
     testing_paths = []
     for subject, images in testing_data.items():
         for image_name, image_data in images.items():
-            if image_name != "MST_value": 
+            if image_name != "MST_value":
                 testing_paths.append(f"{subject}/{image_name}")
 
-    random.seed(42)  
+    random.seed(42)
     sampled_testing_paths = random.sample(testing_paths, nr_of_test_images)
 
     sampled_testing_paths_set = set(sampled_testing_paths)
 
-    filtered_training_data = remove_testing_images_from_training(training_data, sampled_testing_paths_set)
+    filtered_training_data = remove_testing_images_from_training(
+        training_data, sampled_testing_paths_set
+    )
     filtered_testing_data = filter_testing_data(testing_data, sampled_testing_paths_set)
 
     X_train, y_train = preprocess_data(filtered_training_data, swatches)
@@ -496,12 +563,15 @@ def prepare_data_with_original(training_data_path, testing_data_path, nr_of_test
     # else:
     #     X_test, y_test = oversampling_SMOTE(X_test, y_test)
 
-    X_train, X_test, y_train, y_test = preprocess_data_with_imputation_and_scaling(X_train, X_test, y_train, y_test)
+    X_train, X_test, y_train, y_test = preprocess_data_with_imputation_and_scaling(
+        X_train, X_test, y_train, y_test
+    )
 
     return X_train, X_test, y_train, y_test
 
-def prepare_data_with_MST(training_data_path, testing_data_path, swatches = False):
-    """ Prepare the data for training and testing by splitting the data into training and testing sets.
+
+def prepare_data_with_MST(training_data_path, testing_data_path, swatches=False):
+    """Prepare the data for training and testing by splitting the data into training and testing sets.
 
     Args:
         training_data_path (str): The path to the training data file.
@@ -530,15 +600,16 @@ def prepare_data_with_MST(training_data_path, testing_data_path, swatches = Fals
     #     X_test, y_test = oversampling_SMOTE_multilabel(X_test, y_test)
     # else:
     #     X_test, y_test = oversampling_SMOTE(X_test, y_test)
-    
 
-    X_train, X_test, y_train, y_test = preprocess_data_with_imputation_and_scaling(X_train, X_test, y_train, y_test)
+    X_train, X_test, y_train, y_test = preprocess_data_with_imputation_and_scaling(
+        X_train, X_test, y_train, y_test
+    )
 
     return X_train, X_test, y_train, y_test
 
 
 def SMOTE_fitting(X, y):
-    """ Balance the classes using SMOTE.
+    """Balance the classes using SMOTE.
 
     Args:
         X (np.array): Feature matrix.
@@ -548,7 +619,7 @@ def SMOTE_fitting(X, y):
         np.array: The resampled feature matrix.
         np.array: The resampled target matrix.
     """
-    
+
     class_counts = Counter(y)
 
     # Identify minority classes with very few samples
@@ -559,12 +630,13 @@ def SMOTE_fitting(X, y):
         mask = y == cls
         X = np.concatenate([X, X[mask]])
         y = np.concatenate([y, y[mask]])
-        
+
     # Apply SMOTE to balance the classes
     smote = SMOTE(k_neighbors=1)
     X, y = smote.fit_resample(X, y)
 
     return X, y
+
 
 def generate_synthetic_data(X, y, num_samples=100, noise_level=0.01):
     """Generate synthetic data by adding Gaussian noise to the original data.
@@ -581,16 +653,16 @@ def generate_synthetic_data(X, y, num_samples=100, noise_level=0.01):
     synthetic_X = []
     synthetic_y = []
     for _ in range(num_samples):
-        idx = np.random.randint(0, len(X))  
-        noise = np.random.normal(0, noise_level, size=X.shape[1])  
+        idx = np.random.randint(0, len(X))
+        noise = np.random.normal(0, noise_level, size=X.shape[1])
         synthetic_X.append(X[idx] + noise)
         synthetic_y.append(y[idx])
     return np.vstack([X, np.array(synthetic_X)]), np.vstack([y, np.array(synthetic_y)])
 
 
-def generate_cluster_based_samples(X, y, threshold = 40):
-    """ Generate synthetic samples by oversampling sparse clusters.
-    
+def generate_cluster_based_samples(X, y, threshold=40):
+    """Generate synthetic samples by oversampling sparse clusters.
+
 
     Args:
         X (_type_): Feature matrix.
@@ -623,7 +695,6 @@ def generate_cluster_based_samples(X, y, threshold = 40):
     return X, y
 
 
-
 def balance_regression_data(X, y, target_size=None, n_clusters=10, threshold=40):
     """
     Balance regression data using clustering and oversampling.
@@ -645,7 +716,9 @@ def balance_regression_data(X, y, target_size=None, n_clusters=10, threshold=40)
 
     # Determine target size per cluster
     cluster_counts = Counter(clusters)
-    max_cluster_size = max(cluster_counts.values()) if target_size is None else target_size
+    max_cluster_size = (
+        max(cluster_counts.values()) if target_size is None else target_size
+    )
 
     X_balanced = []
     y_balanced = []
@@ -658,9 +731,15 @@ def balance_regression_data(X, y, target_size=None, n_clusters=10, threshold=40)
         if count < threshold:
             # Oversample smaller clusters by duplicating samples
             num_to_add = max_cluster_size - count
-            oversampled_indices = np.random.choice(len(X_cluster), num_to_add, replace=True)
-            X_balanced.append(np.concatenate([X_cluster, X_cluster[oversampled_indices]]))
-            y_balanced.append(np.concatenate([y_cluster, y_cluster[oversampled_indices]]))
+            oversampled_indices = np.random.choice(
+                len(X_cluster), num_to_add, replace=True
+            )
+            X_balanced.append(
+                np.concatenate([X_cluster, X_cluster[oversampled_indices]])
+            )
+            y_balanced.append(
+                np.concatenate([y_cluster, y_cluster[oversampled_indices]])
+            )
         else:
             # Keep the original data for larger clusters
             X_balanced.append(X_cluster)
@@ -673,16 +752,15 @@ def balance_regression_data(X, y, target_size=None, n_clusters=10, threshold=40)
     return X_balanced, y_balanced
 
 
-
 def preprocess_data_with_imputation_and_scaling(X_train, X_test, y_train, y_test):
-    """ Preprocess the data by imputing missing values and scaling the features.
+    """Preprocess the data by imputing missing values and scaling the features.
 
     Args:
         X_train (np.array): The training feature matrix.
         X_test (np.array): The testing feature matrix.
         y_train (np.array): The training target matrix.
         y_test (np.array): The testing target matrix
-        
+
     Returns:
         np.array: The training feature matrix.
         np.array: The testing feature matrix.
@@ -691,7 +769,7 @@ def preprocess_data_with_imputation_and_scaling(X_train, X_test, y_train, y_test
     """
 
     # Impute missing values
-    imputer = SimpleImputer(strategy='mean')
+    imputer = SimpleImputer(strategy="mean")
     X_train = imputer.fit_transform(X_train)
     X_test = imputer.transform(X_test)
 
@@ -703,7 +781,7 @@ def preprocess_data_with_imputation_and_scaling(X_train, X_test, y_train, y_test
     # Step 3: Apply PCA for dimensionality reduction
     # pca = PCA(n_components=0.95)  # Retain 95% of the variance
     # X_train = pca.fit_transform(X_train)
-    # X_test = pca.transform(X_test)  
+    # X_test = pca.transform(X_test)
 
     # X_train, y_train = balance_regression_data(X_train, y_train, 60)
     # X_test, y_test = balance_regression_data(X_test, y_test, 60)
@@ -719,8 +797,10 @@ def preprocess_data_with_imputation_and_scaling(X_train, X_test, y_train, y_test
     return X_train, X_test, y_train, y_test
 
 
-def train_model_classification(model, experiment, output_file, X_train, X_test, y_train, y_test, swatches = False):
-    """ Train a classification model and evaluate its performance.
+def train_model_classification(
+    model, experiment, output_file, X_train, X_test, y_train, y_test, swatches=False
+):
+    """Train a classification model and evaluate its performance.
 
     Args:
         model (object): The classification model.
@@ -736,71 +816,102 @@ def train_model_classification(model, experiment, output_file, X_train, X_test, 
     model.fit(X_train, y_train)
     y_pred_test = model.predict(X_test)
     y_pred_train = model.predict(X_train)
-    print(f"Random Forest {experiment}, Test accuracy: {accuracy_score(y_test, y_pred_test)}, Train Accuracy: {accuracy_score(y_train, y_pred_train)}")
-    
+    print(
+        f"Random Forest {experiment}, Test accuracy: {accuracy_score(y_test, y_pred_test)}, Train Accuracy: {accuracy_score(y_train, y_pred_train)}"
+    )
+
     if swatches:
         y_train, y_pred_train = RGB_predictions_to_MST(y_train, y_pred_train)
         y_test, y_pred_test = RGB_predictions_to_MST(y_test, y_pred_test)
-    
+
     train_accuracy = accuracy_score(y_train, y_pred_train)
     test_accuracy = accuracy_score(y_test, y_pred_test)
 
     report_log_reg = classification_report(y_test, y_pred_test)
-    save_results(output_file, type(model).__name__, train_accuracy, test_accuracy, report_log_reg)
-
-
+    save_results(
+        output_file, type(model).__name__, train_accuracy, test_accuracy, report_log_reg
+    )
 
     # Plot feature importance
 
-    permutation_importance_path =  os.path.dirname(output_file) + "/permutation_importance"
-    result = permutation_importance(model, X_test, y_test, n_repeats=10, random_state=42)
+    permutation_importance_path = (
+        os.path.dirname(output_file) + "/permutation_importance"
+    )
+    result = permutation_importance(
+        model, X_test, y_test, n_repeats=10, random_state=42
+    )
 
     # Plot the importance scores
     plt.figure(figsize=(10, 6))
     # plt.title(f"Permutation Importance for {type(model).__name__}")
-    plt.barh(range(X_train.shape[1]), result.importances_mean, align='center',  color='#52238d', height = 0.6)
-    plt.yticks(range(X_train.shape[1]), X_train.columns if hasattr(X_train, 'columns') else np.arange(X_train.shape[1]))
-    plt.xlabel('Permutation Importance')
+    plt.barh(
+        range(X_train.shape[1]),
+        result.importances_mean,
+        align="center",
+        color="#52238d",
+        height=0.6,
+    )
+    plt.yticks(
+        range(X_train.shape[1]),
+        X_train.columns if hasattr(X_train, "columns") else np.arange(X_train.shape[1]),
+    )
+    plt.xlabel("Permutation Importance")
     plt.xlim(-0.5, 0.5)
 
-    plt.savefig(os.path.join(permutation_importance_path, f"{experiment}_{type(model).__name__}_permutation_importance.png"))
+    plt.savefig(
+        os.path.join(
+            permutation_importance_path,
+            f"{experiment}_{type(model).__name__}_permutation_importance.png",
+        )
+    )
     # plt.show()
 
     # Plot confusion matrix
 
-    confusion_matrix_path =  os.path.dirname(output_file) + "/confusion_matrix"
+    confusion_matrix_path = os.path.dirname(output_file) + "/confusion_matrix"
 
     # Compute the confusion matrix
-    conf_matrix = confusion_matrix(y_test, y_pred_test, labels=range(1, 10), normalize="true")
-    conf_matrix = np.round(conf_matrix, 2) 
+    conf_matrix = confusion_matrix(
+        y_test, y_pred_test, labels=range(1, 10), normalize="true"
+    )
+    conf_matrix = np.round(conf_matrix, 2)
 
-    display_labels = [str(i) for i in range(1, 10)]  
+    display_labels = [str(i) for i in range(1, 10)]
 
     # Display the confusion matrix
-    disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=display_labels)
+    disp = ConfusionMatrixDisplay(
+        confusion_matrix=conf_matrix, display_labels=display_labels
+    )
     disp.plot(cmap="Purples")
     # plt.title("Confusion Matrix: Ground Truth vs Predicted MST")
-    plt.savefig(os.path.join(confusion_matrix_path, f"{experiment}_{type(model).__name__}_normalize.png"))
+    plt.savefig(
+        os.path.join(
+            confusion_matrix_path, f"{experiment}_{type(model).__name__}_normalize.png"
+        )
+    )
     # plt.show()
 
     conf_matrix = confusion_matrix(y_test, y_pred_test, labels=range(1, 10))
-    conf_matrix = np.round(conf_matrix, 2) 
+    conf_matrix = np.round(conf_matrix, 2)
+
+    display_labels = [str(i) for i in range(1, 10)]
 
     # Display the confusion matrix
-    display_labels = [str(i) for i in range(1, 10)]  
-
-    # Display the confusion matrix
-    disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=display_labels)
+    disp = ConfusionMatrixDisplay(
+        confusion_matrix=conf_matrix, display_labels=display_labels
+    )
     disp.plot(cmap="Purples")
     # plt.title("Confusion Matrix: Ground Truth vs Predicted MST")
-    plt.savefig(os.path.join(confusion_matrix_path, f"{experiment}_{type(model).__name__}.png"))
+    plt.savefig(
+        os.path.join(confusion_matrix_path, f"{experiment}_{type(model).__name__}.png")
+    )
     # plt.show()
 
 
-
-
-def train_model_regression(model, experiment, output_file, X_train, X_test, y_train, y_test, swatches=False):
-    """ Train a regression model and evaluate its performance.
+def train_model_regression(
+    model, experiment, output_file, X_train, X_test, y_train, y_test, swatches=False
+):
+    """Train a regression model and evaluate its performance.
 
     Args:
         model (object): The regression model.
@@ -818,21 +929,16 @@ def train_model_regression(model, experiment, output_file, X_train, X_test, y_tr
     # Predict on the test and train set
     y_pred_test = model.predict(X_test)
     y_pred_train = model.predict(X_train)
-    
+
     # Calculate Regression Metrics (MSE, MAE, R2)
     mse_test = mean_squared_error(y_test, y_pred_test)
     mse_train = mean_squared_error(y_train, y_pred_train)
-    
+
     mae_test = mean_absolute_error(y_test, y_pred_test)
     mae_train = mean_absolute_error(y_train, y_pred_train)
-    
+
     r2_test = r2_score(y_test, y_pred_test)
     r2_train = r2_score(y_train, y_pred_train)
-
-    # Print the regression evaluation metrics
-    # print(f"Random Forest {experiment}, Test MSE: {mse_test}, Train MSE: {mse_train}")
-    # print(f"Random Forest {experiment}, Test MAE: {mae_test}, Train MAE: {mae_train}")
-    # print(f"Random Forest {experiment}, Test R2: {r2_test}, Train R2: {r2_train}")
 
     # If swatches are enabled, map predictions back to MST values
     if swatches:
@@ -842,54 +948,83 @@ def train_model_regression(model, experiment, output_file, X_train, X_test, y_tr
         train_accuracy = accuracy_score(y_train, y_pred_train)
         test_accuracy = accuracy_score(y_test, y_pred_test)
 
-        train_accuracy_MST_1 = calculate_accuracy_with_tolerance(y_train, y_pred_train, tolerance=1)
-        test_accuracy_MST_1 = calculate_accuracy_with_tolerance(y_test, y_pred_test, tolerance=1)
+        train_accuracy_MST_1 = calculate_accuracy_with_tolerance(
+            y_train, y_pred_train, tolerance=1
+        )
+        test_accuracy_MST_1 = calculate_accuracy_with_tolerance(
+            y_test, y_pred_test, tolerance=1
+        )
 
-        train_accuracy_MST_2 = calculate_accuracy_with_tolerance(y_train, y_pred_train, tolerance=2)
-        test_accuracy_MST_2 = calculate_accuracy_with_tolerance(y_test, y_pred_test, tolerance=2)
+        train_accuracy_MST_2 = calculate_accuracy_with_tolerance(
+            y_train, y_pred_train, tolerance=2
+        )
+        test_accuracy_MST_2 = calculate_accuracy_with_tolerance(
+            y_test, y_pred_test, tolerance=2
+        )
 
         report_log_reg = classification_report(y_test, y_pred_test)
 
         # MSE, MAE, R2 string
         metrics_string = f"Test MSE: {mse_test}, Train MSE: {mse_train}\n, Test MAE: {mae_test}, Train MAE: {mae_train}\n, Test R2: {r2_test}, Train R2: {r2_train}\n, Test Accuracy: {test_accuracy}, Train Accuracy: {train_accuracy}\n, Test Accuracy MST ±1: {test_accuracy_MST_1}, Train Accuracy MST ±1: {train_accuracy_MST_1}\n, Test Accuracy MST ±2: {test_accuracy_MST_2}, Train Accuracy MST ±2: {train_accuracy_MST_2}\n"
-        save_results(output_file, type(model).__name__, train_accuracy, test_accuracy, report_log_reg, metrics_string)
+        save_results(
+            output_file,
+            type(model).__name__,
+            train_accuracy,
+            test_accuracy,
+            report_log_reg,
+            metrics_string,
+        )
 
         # Plot confusion matrix
 
-        confusion_matrix_path =  os.path.dirname(output_file) + "/confusion_matrix_lgb_regressor"
+        confusion_matrix_path = (
+            os.path.dirname(output_file) + "/confusion_matrix_lgb_regressor"
+        )
 
         # Compute the confusion matrix
-        conf_matrix = confusion_matrix(y_test, y_pred_test, labels=range(1, 10), normalize="true")
-        conf_matrix = np.round(conf_matrix, 2) 
+        conf_matrix = confusion_matrix(
+            y_test, y_pred_test, labels=range(1, 10), normalize="true"
+        )
+        conf_matrix = np.round(conf_matrix, 2)
         # Display the confusion matrix
-        display_labels = [str(i) for i in range(1, 10)]  
+        display_labels = [str(i) for i in range(1, 10)]
 
         # Display the confusion matrix
-        disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=display_labels)
+        disp = ConfusionMatrixDisplay(
+            confusion_matrix=conf_matrix, display_labels=display_labels
+        )
         disp.plot(cmap="Purples")
         # plt.title("Confusion Matrix: Ground Truth vs Predicted MST")
-        plt.savefig(os.path.join(confusion_matrix_path, f"{experiment}_{type(model).__name__}_normalize.png"))
+        plt.savefig(
+            os.path.join(
+                confusion_matrix_path,
+                f"{experiment}_{type(model).__name__}_normalize.png",
+            )
+        )
         # plt.show()
-
-
 
         # Compute the confusion matrix
         conf_matrix = confusion_matrix(y_test, y_pred_test, labels=range(1, 10))
-        conf_matrix = np.round(conf_matrix, 2)  
+        conf_matrix = np.round(conf_matrix, 2)
         # Display the confusion matrix
-        display_labels = [str(i) for i in range(1, 10)]  
+        display_labels = [str(i) for i in range(1, 10)]
 
         # Display the confusion matrix
-        disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=display_labels)
+        disp = ConfusionMatrixDisplay(
+            confusion_matrix=conf_matrix, display_labels=display_labels
+        )
         disp.plot(cmap="Purples")
         # plt.title("Confusion Matrix: Ground Truth vs Predicted MST")
-        plt.savefig(os.path.join(confusion_matrix_path, f"{experiment}_{type(model).__name__}.png"))
+        plt.savefig(
+            os.path.join(
+                confusion_matrix_path, f"{experiment}_{type(model).__name__}.png"
+            )
+        )
         # plt.show()
 
 
-
 def RGB_predictions_to_MST(y_true, y_pred):
-    """ Convert RGB predictions to MST labels.
+    """Convert RGB predictions to MST labels.
 
     Args:
         y_true (np.array): The true RGB labels.
@@ -899,14 +1034,15 @@ def RGB_predictions_to_MST(y_true, y_pred):
         np.array: The predicted MST labels
     """
 
+    REVERSE_SWATCHES_MAPPING = {
+        tuple(value): key for key, value in SWATCHES_MAPPING.items()
+    }
 
-    REVERSE_SWATCHES_MAPPING = {tuple(value): key for key, value in SWATCHES_MAPPING.items()}
-
-    mst_orb_dir = '/home/dasec-notebook/Thesis/Datasets/MST Orbs/orbs'
+    mst_orb_dir = "/home/dasec-notebook/Thesis/Datasets/MST Orbs/orbs"
 
     mst_orb_salient_colors = {}
     for filename in os.listdir(mst_orb_dir):
-        if filename.endswith(".png"): 
+        if filename.endswith(".png"):
             image_path = os.path.join(mst_orb_dir, filename)
             salient_colors = baseline_utils.extract_salient_colors(image_path)
             mst_orb_salient_colors[filename] = salient_colors
@@ -917,19 +1053,23 @@ def RGB_predictions_to_MST(y_true, y_pred):
     for i, y in enumerate(y_pred):
         true_MST = REVERSE_SWATCHES_MAPPING.get(tuple(y_true[i]), None)
         if true_MST is None:
-            true_MST, _ = baseline_utils.calculate_best_mst_orb(y_true[i], mst_orb_salient_colors)
+            true_MST, _ = baseline_utils.calculate_best_mst_orb(
+                y_true[i], mst_orb_salient_colors
+            )
             true_MST = int(true_MST)
-            # print(f"True MST not found for RGB: {y_true[i]}, mapped to {true_MST}")
         formatted_y_true.append(true_MST)
-        
+
         # Map predicted RGB to MST label
-        predicted_MST, _ = baseline_utils.calculate_best_mst_orb(y_pred[i], mst_orb_salient_colors)
+        predicted_MST, _ = baseline_utils.calculate_best_mst_orb(
+            y_pred[i], mst_orb_salient_colors
+        )
         formatted_y_pred.append(int(predicted_MST))
 
     return formatted_y_true, formatted_y_pred
 
+
 def RGB_predictions_euclidian_to_MST(y_true, y_pred):
-    """ Convert RGB predictions to MST labels using Euclidean distance.
+    """Convert RGB predictions to MST labels using Euclidean distance.
 
     Args:
         y_true (_type_): The true RGB labels.
@@ -940,7 +1080,9 @@ def RGB_predictions_euclidian_to_MST(y_true, y_pred):
         _type_: The predicted MST labels
     """
     # Create reverse mapping from RGB to MST index for easy lookup
-    REVERSE_SWATCHES_MAPPING = {tuple(value): key for key, value in SWATCHES_MAPPING.items()}
+    REVERSE_SWATCHES_MAPPING = {
+        tuple(value): key for key, value in SWATCHES_MAPPING.items()
+    }
 
     # Calculate Euclidean distance between RGB values
     def euclidean_distance(rgb1, rgb2):
@@ -952,17 +1094,17 @@ def RGB_predictions_euclidian_to_MST(y_true, y_pred):
     for i, y in enumerate(y_pred):
         true_MST = REVERSE_SWATCHES_MAPPING.get(tuple(y_true[i]), None)
         formatted_y_true.append(true_MST)
-        
+
         # Find the closest MST swatch for the predicted RGB value
         closest_MST = None
-        min_distance = float('inf')
+        min_distance = float("inf")
 
         for mst_index, swatch_rgb in SWATCHES_MAPPING.items():
             distance = euclidean_distance(y_pred[i], swatch_rgb)
             if distance < min_distance:
                 min_distance = distance
                 closest_MST = mst_index
-        
+
         formatted_y_pred.append(closest_MST)
 
     return formatted_y_true, formatted_y_pred
@@ -987,15 +1129,16 @@ def calculate_accuracy_with_tolerance(y_true, y_pred, tolerance=2):
         if abs(true - pred) <= tolerance:
             correct_predictions += 1
 
-    accuracy = (correct_predictions / total_predictions)
+    accuracy = correct_predictions / total_predictions
 
     return accuracy
+
 
 from sklearn.preprocessing import label_binarize
 
 
 def plot_multiclass_roc_curve(model, X_train, X_test, y_train, y_test):
-    """ Plot the ROC curve for a multiclass classification model.
+    """Plot the ROC curve for a multiclass classification model.
 
     Args:
         model: The trained classification model.
@@ -1015,14 +1158,16 @@ def plot_multiclass_roc_curve(model, X_train, X_test, y_train, y_test):
     y_test_bin = label_binarize(y_test, classes=range(1, n_classes + 1))
 
     model.fit(X_train, y_train)
-    
+
     # Check if model supports probabilities (predict_proba), else use decision_function
     if hasattr(model, "predict_proba"):
-        y_scores = model.predict_proba(X_test)  
+        y_scores = model.predict_proba(X_test)
     elif hasattr(model, "decision_function"):
-        y_scores = model.decision_function(X_test)  
+        y_scores = model.decision_function(X_test)
     else:
-        raise ValueError("Model must support predict_proba or decision_function for ROC curve.")
+        raise ValueError(
+            "Model must support predict_proba or decision_function for ROC curve."
+        )
 
     # Plot ROC curve for each class
     plt.figure(figsize=(10, 8))
@@ -1033,12 +1178,16 @@ def plot_multiclass_roc_curve(model, X_train, X_test, y_train, y_test):
     for i in range(n_classes):
         fpr, tpr, _ = roc_curve(y_test_bin[:, i], y_scores[:, i])
         roc_auc = auc(fpr, tpr)
-        plt.plot(fpr, tpr, color=colors(i), lw=2, label=f'Class {i+1} (AUC = {roc_auc:.2f})')
+        plt.plot(
+            fpr, tpr, color=colors(i), lw=2, label=f"Class {i+1} (AUC = {roc_auc:.2f})"
+        )
 
     # Plot diagonal line (random guess)
-    plt.plot([0, 1], [0, 1], color='gray', linestyle='--', lw=2)
+    plt.plot([0, 1], [0, 1], color="gray", linestyle="--", lw=2)
 
-    print(type(model).__name__,)
+    print(
+        type(model).__name__,
+    )
     plt.xlabel("False Positive Rate")
     plt.ylabel("True Positive Rate")
     # plt.title("Multiclass ROC Curve")
@@ -1047,8 +1196,10 @@ def plot_multiclass_roc_curve(model, X_train, X_test, y_train, y_test):
     plt.show()
 
 
-def plot_confusion_matrix(model, X_train, y_train, X_test, y_test, classes=None, normalize=False):
-    """  Plots the confusion matrix for a classification model.
+def plot_confusion_matrix(
+    model, X_train, y_train, X_test, y_test, classes=None, normalize=False
+):
+    """Plots the confusion matrix for a classification model.
 
     Args:
         model: The trained classification model.
@@ -1065,27 +1216,36 @@ def plot_confusion_matrix(model, X_train, y_train, X_test, y_test, classes=None,
     classes = np.unique(y_train)
 
     y_pred = model.predict(X_test)
-    
+
     # Compute the confusion matrix
     cm = confusion_matrix(y_test, y_pred)
-    
+
     # Normalize the confusion matrix if specified
     if normalize:
-        cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-    
+        cm = cm.astype("float") / cm.sum(axis=1)[:, np.newaxis]
+
     # Create a heatmap of the confusion matrix
     plt.figure(figsize=(8, 6))
-    sns.heatmap(cm, annot=True, fmt=".2f" if normalize else "d", cmap="Blues", 
-                xticklabels=classes, yticklabels=classes, cbar=False)
-    plt.title('Confusion Matrix')
-    plt.xlabel('Predicted Labels')
-    plt.ylabel('True Labels')
+    sns.heatmap(
+        cm,
+        annot=True,
+        fmt=".2f" if normalize else "d",
+        cmap="Blues",
+        xticklabels=classes,
+        yticklabels=classes,
+        cbar=False,
+    )
+    plt.title("Confusion Matrix")
+    plt.xlabel("Predicted Labels")
+    plt.ylabel("True Labels")
     plt.show()
+
 
 from matplotlib.patches import Ellipse
 
+
 def plot_confidence_ellipse(ax, X, color, label=None):
-    """ Plots a confidence ellipse for the given data points
+    """Plots a confidence ellipse for the given data points
 
     Args:
         ax: The axis to plot the ellipse on
@@ -1095,15 +1255,23 @@ def plot_confidence_ellipse(ax, X, color, label=None):
     """
     if X.shape[0] < 2:  # Can't compute covariance with fewer than 2 points
         return
-    cov = np.cov(X, rowvar=False) 
-    mean = np.mean(X, axis=0)  
-    
+    cov = np.cov(X, rowvar=False)
+    mean = np.mean(X, axis=0)
+
     eigenvalues, eigenvectors = np.linalg.eigh(cov)
     order = eigenvalues.argsort()[::-1]
     eigenvalues = eigenvalues[order]
     eigenvectors = eigenvectors[:, order]
-    
+
     angle = np.degrees(np.arctan2(eigenvectors[1, 0], eigenvectors[0, 0]))
-    width, height = 2 * np.sqrt(eigenvalues[:2]) 
-    ellipse = Ellipse(xy=mean, width=width, height=height, angle=angle, color=color, alpha=0.3, label=label)
+    width, height = 2 * np.sqrt(eigenvalues[:2])
+    ellipse = Ellipse(
+        xy=mean,
+        width=width,
+        height=height,
+        angle=angle,
+        color=color,
+        alpha=0.3,
+        label=label,
+    )
     ax.add_patch(ellipse)

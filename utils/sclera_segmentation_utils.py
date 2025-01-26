@@ -3,9 +3,8 @@ from skimage import color
 from skimage.io import imread
 
 
-
 def rgb_to_xyy(rgb):
-    """ Convert RGB color to xyY color space.
+    """Convert RGB color to xyY color space.
 
     Args:
         rgb (np.array): RGB color values in the range [0, 255].
@@ -13,19 +12,19 @@ def rgb_to_xyy(rgb):
     Returns:
         np.array: xyY color values.
     """
-    rgb = rgb / 255.0 
+    rgb = rgb / 255.0
     xyz = color.rgb2xyz(rgb)
-    
+
     # Convert XYZ to xyY
     x = xyz[0] / (xyz[0] + xyz[1] + xyz[2])
     y = xyz[1] / (xyz[0] + xyz[1] + xyz[2])
-    Y = xyz[1]  
-    
+    Y = xyz[1]
+
     return np.array([x, y, Y])
 
-def get_average_sclera_color(image_path, l_locations, r_locations):
 
-    """ Get the average sclera color from the image.
+def get_average_sclera_color(image_path, l_locations, r_locations):
+    """Get the average sclera color from the image.
 
     Args:
         image_path (str): Path to the image.
@@ -47,23 +46,27 @@ def get_average_sclera_color(image_path, l_locations, r_locations):
 
     # Get the pixel values for the left sclera, if present
     if l_locations is not None and l_locations.size > 0:
-        h, w = image.shape[:2] 
-        valid_l_locations = (l_locations[:, 0] < w) & (l_locations[:, 1] < h)  
-        l_values = image[l_locations[valid_l_locations, 1], l_locations[valid_l_locations, 0]] 
+        h, w = image.shape[:2]
+        valid_l_locations = (l_locations[:, 0] < w) & (l_locations[:, 1] < h)
+        l_values = image[
+            l_locations[valid_l_locations, 1], l_locations[valid_l_locations, 0]
+        ]
 
     # Get the pixel values for the right sclera, if present
     if r_locations is not None and r_locations.size > 0:
-        valid_r_locations = (r_locations[:, 0] < w) & (r_locations[:, 1] < h)  
-        r_values = image[r_locations[valid_r_locations, 1], r_locations[valid_r_locations, 0]]  
+        valid_r_locations = (r_locations[:, 0] < w) & (r_locations[:, 1] < h)
+        r_values = image[
+            r_locations[valid_r_locations, 1], r_locations[valid_r_locations, 0]
+        ]
 
     # Calculate the average sclera color
     if len(l_values) > 0 and len(r_values) > 0:
         avg_left = np.mean(l_values, axis=0)
         avg_right = np.mean(r_values, axis=0)
         avg_sclera_color = (avg_left + avg_right) / 2
-    elif len(l_values) > 0:  
+    elif len(l_values) > 0:
         avg_sclera_color = np.mean(l_values, axis=0)
-    elif len(r_values) > 0: 
+    elif len(r_values) > 0:
         avg_sclera_color = np.mean(r_values, axis=0)
     else:
         return None
@@ -75,22 +78,45 @@ def get_average_sclera_color(image_path, l_locations, r_locations):
 
 
 def convert_to_native_types(obj):
+    """ Convert NumPy arrays, NumPy int64, dictionaries, and lists to native Python
+
+    Args:
+        obj (obj): Object to convert
+
+    Returns:
+        obj: Native Python object
+    """
     if isinstance(obj, np.ndarray):
-        return obj.tolist()  # Convert NumPy arrays to lists
+        return obj.tolist() 
     elif isinstance(obj, np.int64):
-        return int(obj)  # Convert np.int64 to regular int
+        return int(obj) 
     elif isinstance(obj, dict):
-        return {key: convert_to_native_types(value) for key, value in obj.items()}  # Recursively convert dict
+        return {
+            key: convert_to_native_types(value) for key, value in obj.items()
+        }  
     elif isinstance(obj, list):
-        return [convert_to_native_types(item) for item in obj]  # Recursively convert list
+        return [
+            convert_to_native_types(item) for item in obj
+        ] 
     else:
-        return obj  # Return other types as they are
+        return obj 
+
 
 def clip_coordinates(locations, height, width):
+    """Clip the coordinates to ensure they are within the bounds of the image.
+
+    Args:
+        locations (list): List of pixel coordinates.
+        height (int): Height of the image.
+        width (int): Width of the image.
+
+    Returns:
+        list: Clipped pixel coordinates.
+    """
     # Ensure x and y coordinates are within the bounds of the image
     clipped_locations = []
     for loc in locations:
-        x = min(max(loc[0], 0), width - 1) 
-        y = min(max(loc[1], 0), height - 1)  
+        x = min(max(loc[0], 0), width - 1)
+        y = min(max(loc[1], 0), height - 1)
         clipped_locations.append((x, y))
     return clipped_locations

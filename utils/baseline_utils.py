@@ -9,10 +9,9 @@ from collections import defaultdict
 from sklearn.cluster import KMeans
 import json
 from collections import Counter
-
-
 import sys
-sys.path.append('/home/dasec-notebook/Thesis/OFIQ-Project/python')
+
+sys.path.append("/home/dasec-notebook/Thesis/OFIQ-Project/python")
 
 from ofiq_zmq import OfiqZmq
 
@@ -44,23 +43,16 @@ def image_crop(img, left_crop, right_crop, top_crop, bottom_crop, save_path=None
         ndarray: The cropped image array.
     """
 
-    # Step 1: Initial crop
-    # left_crop = 2600  # 2100
-    # right_crop = width - 2600 # 2400
-    # top_crop = 900 # 700
-    # bottom_crop = height - 1200 # 850
-
     # Ensure cropping dimensions are valid
     if left_crop >= right_crop or top_crop >= bottom_crop:
         print("Error: Cropping dimensions are larger than the image size.")
         return
 
     if save_path is not None:
-        cv2.imwrite(save_path, img[top_crop: bottom_crop, left_crop: right_crop])
+        cv2.imwrite(save_path, img[top_crop:bottom_crop, left_crop:right_crop])
         print(f"Image saved to {save_path}")
 
-
-    return img[top_crop: bottom_crop, left_crop: right_crop]
+    return img[top_crop:bottom_crop, left_crop:right_crop]
 
 
 def is_indoor(image_path):
@@ -73,11 +65,8 @@ def is_indoor(image_path):
         bool: True if the image is taken indoors, False otherwise.
     """
     image = cv2.imread(image_path)
-
-    # Convert to HSV color space for better color segmentation
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-    # Define HSV ranges for grey (indoor) and green/blue (outdoor)
     grey_lower = np.array([0, 0, 70])
     grey_upper = np.array([180, 30, 220])
 
@@ -92,7 +81,7 @@ def is_indoor(image_path):
     blue_mask = cv2.inRange(hsv_image, blue_lower, blue_upper)
 
     # Calculate the proportion of each mask in the image
-    grey_ratio = np.sum(grey_mask) / (100 * 100)  
+    grey_ratio = np.sum(grey_mask) / (100 * 100)
     green_ratio = np.sum(green_mask) / (100 * 100)
     blue_ratio = np.sum(blue_mask) / (100 * 100)
 
@@ -101,7 +90,7 @@ def is_indoor(image_path):
         return True  # Indoor
     else:
         return False  # Outdoor
-    
+
 
 def extract_cheek_patches(landmarks):
     """Extract the coordinates for the left and right cheek patches.
@@ -124,28 +113,46 @@ def extract_cheek_patches(landmarks):
     left_eye_points = landmarks[left_eye_indices]
     right_eye_points = landmarks[right_eye_indices]
     middle_nose_points = landmarks[middle_nose_indices]
- 
 
     # Get bounds for the left cheek patch
-    left_cheek_x_min = (np.max(left_cheek_points[:, 0]) + np.min(left_eye_points[:, 0])) / 2
-    left_cheek_x_max = np.min(np.concatenate((left_mouth_points[:, 0], left_nose_points[:, 0])))
+    left_cheek_x_min = (
+        np.max(left_cheek_points[:, 0]) + np.min(left_eye_points[:, 0])
+    ) / 2
+    left_cheek_x_max = np.min(
+        np.concatenate((left_mouth_points[:, 0], left_nose_points[:, 0]))
+    )
     left_cheek_y_min = np.min(lower_nose_points[:, 1])
-    left_cheek_y_max = np.max(np.concatenate((left_eye_points[:, 1], middle_nose_points[:, 1])))
+    left_cheek_y_max = np.max(
+        np.concatenate((left_eye_points[:, 1], middle_nose_points[:, 1]))
+    )
 
-    # print(left_cheek_x_min, left_cheek_x_max, left_cheek_y_min, left_cheek_y_max)
-    
-    # Get bounds for the right cheek patch
-    
     # Right Cheek Coordinates
-    right_cheek_x_max = (np.min(right_cheek_points[:, 0]) + np.max(right_eye_points[:, 0])) / 2
-    right_cheek_x_min = np.max(np.concatenate((right_mouth_points[:, 0], right_nose_points[:, 0])))
+    right_cheek_x_max = (
+        np.min(right_cheek_points[:, 0]) + np.max(right_eye_points[:, 0])
+    ) / 2
+    right_cheek_x_min = np.max(
+        np.concatenate((right_mouth_points[:, 0], right_nose_points[:, 0]))
+    )
     right_cheek_y_min = np.min(lower_nose_points[:, 1])
-    right_cheek_y_max = np.max(np.concatenate((right_eye_points[:, 1], middle_nose_points[:, 1])))
+    right_cheek_y_max = np.max(
+        np.concatenate((right_eye_points[:, 1], middle_nose_points[:, 1]))
+    )
 
-    left_cheek_coords = (left_cheek_x_min, left_cheek_x_max, left_cheek_y_min, left_cheek_y_max)
-    right_cheek_coords = (right_cheek_x_min, right_cheek_x_max, right_cheek_y_min, right_cheek_y_max)
+    left_cheek_coords = (
+        left_cheek_x_min,
+        left_cheek_x_max,
+        left_cheek_y_min,
+        left_cheek_y_max,
+    )
+    right_cheek_coords = (
+        right_cheek_x_min,
+        right_cheek_x_max,
+        right_cheek_y_min,
+        right_cheek_y_max,
+    )
 
     return left_cheek_coords, right_cheek_coords
+
 
 def draw_rectangles_on_image(image, left_cheek_coords, right_cheek_coords):
     """Draw rectangles on an image using the specified coordinates.
@@ -162,22 +169,32 @@ def draw_rectangles_on_image(image, left_cheek_coords, right_cheek_coords):
     right_cheek_coords = [int(coord) for coord in right_cheek_coords]
 
     if len(left_cheek_coords) == 4:
-        left_cheek_x_min, left_cheek_x_max, left_cheek_y_min, left_cheek_y_max = left_cheek_coords
-        
+        left_cheek_x_min, left_cheek_x_max, left_cheek_y_min, left_cheek_y_max = (
+            left_cheek_coords
+        )
+
         # Draw the left cheek rectangle
-        cv2.rectangle(image, 
-                      (left_cheek_x_min, left_cheek_y_min), 
-                      (left_cheek_x_max, left_cheek_y_max), 
-                      (255, 0, 0), 2) # Blue rectangle for left cheek
+        cv2.rectangle(
+            image,
+            (left_cheek_x_min, left_cheek_y_min),
+            (left_cheek_x_max, left_cheek_y_max),
+            (255, 0, 0),
+            2,
+        )  # Blue rectangle for left cheek
 
     if len(right_cheek_coords) == 4:
-        right_cheek_x_min, right_cheek_x_max, right_cheek_y_min, right_cheek_y_max = right_cheek_coords
-        
+        right_cheek_x_min, right_cheek_x_max, right_cheek_y_min, right_cheek_y_max = (
+            right_cheek_coords
+        )
+
         # Draw the right cheek rectangle
-        cv2.rectangle(image, 
-                      (right_cheek_x_min, right_cheek_y_min), 
-                      (right_cheek_x_max, right_cheek_y_max), 
-                      (0, 0, 255), 2)  # Red rectangle for right cheek
+        cv2.rectangle(
+            image,
+            (right_cheek_x_min, right_cheek_y_min),
+            (right_cheek_x_max, right_cheek_y_max),
+            (0, 0, 255),
+            2,
+        )  # Red rectangle for right cheek
 
     # Return the image with rectangles
     return image
@@ -195,14 +212,14 @@ def image_with_rect(img, landmarks):
     """
 
     # Draw landmarks on the image
-    for (x, y) in landmarks: 
-        cv2.circle(img, (int(x), int(y)), 3, (0, 255, 0), -1)  # Green circles for landmarks
+    for x, y in landmarks:
+        cv2.circle(img, (int(x), int(y)), 3, (0, 255, 0), -1)
 
     left_cheek_coords, right_cheek_coords = extract_cheek_patches(landmarks)
 
     draw_rectangles_on_image(img, left_cheek_coords, right_cheek_coords)
-    
-    return img 
+
+    return img
 
 
 def get_random_image_paths(base_dir, num_samples=15):
@@ -218,15 +235,18 @@ def get_random_image_paths(base_dir, num_samples=15):
 
     for root, dirs, files in os.walk(base_dir):
         for file in files:
-            if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff')):
+            if file.lower().endswith(
+                (".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff")
+            ):
                 image_paths.append(os.path.join(root, file))
-    
+
     num_samples = min(num_samples, len(image_paths))
-    
+
     # Randomly select the specified number of image paths
     random_image_paths = random.sample(image_paths, num_samples)
-    
+
     return random_image_paths
+
 
 def display_images(file_path):
     """Display images from a file containing image paths.
@@ -234,32 +254,31 @@ def display_images(file_path):
     Args:
         file_path (str): The path to the file containing image paths.
     """
-    
-    with open(file_path, 'r') as f:
+
+    with open(file_path, "r") as f:
         image_paths = [line.strip() for line in f if line.strip()]
 
-
     num_images = len(image_paths)
-    cols = math.ceil(math.sqrt(num_images)) 
-    rows = math.ceil(num_images / cols)      
+    cols = math.ceil(math.sqrt(num_images))
+    rows = math.ceil(num_images / cols)
 
     fig, axes = plt.subplots(rows, cols, figsize=(15, 15))
-    axes = axes.flatten()  
+    axes = axes.flatten()
 
     for i, img_path in enumerate(image_paths):
         try:
-            img = Image.open(img_path)        
-            axes[i].imshow(img)              
-            axes[i].axis('off')               
-            axes[i].set_title(img_path.split('/')[-1], fontsize=5) 
+            img = Image.open(img_path)
+            axes[i].imshow(img)
+            axes[i].axis("off")
+            axes[i].set_title(img_path.split("/")[-1], fontsize=5)
 
         except Exception as e:
             print(f"Could not load {img_path}: {e}")
-            
-            axes[i].axis('off')              
+
+            axes[i].axis("off")
 
     for j in range(i + 1, len(axes)):
-        axes[j].axis('off')
+        axes[j].axis("off")
 
     plt.tight_layout()
     plt.show()
@@ -279,35 +298,24 @@ def calculate_patch_avg_color(img, mask, coords, window_size=10, stride=5, side=
     Returns:
         list: List of mean colors for each valid window.
     """
-    x_min, x_max, y_max, y_min = (int(coord) for coord in coords)  
+    x_min, x_max, y_max, y_min = (int(coord) for coord in coords)
     patch_colors = []
 
     img = np.array(img)
-    # Create a copy of the image to draw rectangles
-    # img_with_windows = cv2.cvtColor(np.array(img), cv2.COLOR_BGR2RGB).copy()
 
     # Slide the window over the specified coordinates
     for y in range(y_min, y_max - window_size + 1, stride):
         for x in range(x_min, x_max - window_size + 1, stride):
-            
-            # Extract the window
-            window = img[y:y + window_size, x:x + window_size]
-            mask_window = mask[y:y + window_size, x:x + window_size]
 
-            mask_window_squeezed = mask_window.squeeze()  # Shape becomes (10, 10)
+            window = img[y : y + window_size, x : x + window_size]
+            mask_window = mask[y : y + window_size, x : x + window_size]
 
-            # Select only valid (unmasked) pixels
+            mask_window_squeezed = mask_window.squeeze()
+
             valid_pixels = window[mask_window_squeezed == 1]
             if valid_pixels.size > 0:
                 mean_color = np.mean(valid_pixels.reshape(-1, 3), axis=0).astype(int)
                 patch_colors.append(mean_color)
-            
-                # Visualize a window with or without mask
-                # if np.all(mask_window_squeezed == 1):
-                #     cv2.rectangle(img_with_windows, (x, y), (x + window_size, y + window_size), (0, 255, 0), 1)
-                # else:
-                #     cv2.rectangle(img_with_windows, (x, y), (x + window_size, y + window_size), (255, 0, 0), 1)
-
 
     # Calculate the mean color
     if patch_colors:
@@ -315,94 +323,81 @@ def calculate_patch_avg_color(img, mask, coords, window_size=10, stride=5, side=
     else:
         avg_color = None
 
-
-    # # Display the accumulated patches
-    # plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-    # plt.show()
-
-    # # Apply a mask to the image
-    # binary_mask = (mask > 0).astype(np.uint8) * 255
-
-    # # Convert the single-channel mask to 3 channels to match the image shape
-    # mask_3channel = cv2.merge([binary_mask, binary_mask, binary_mask])
-
-    # # Apply the mask to the image
-    # masked_image = cv2.bitwise_and(img_with_windows, mask_3channel)
-
-
-    # # Display the image with all windows highlighted
-    # plt.figure(figsize=(4, 4))
-    # plt.imshow(masked_image)
-    # # plt.title("Image with Highlighted Windows")
-    # plt.axis('off')
-    # path = "/home/dasec-notebook/Thesis/visualization/PXL_20220922_200205248_" + str(side) + ".png"
-    # plt.savefig(path, bbox_inches='tight', pad_inches=0)
-    # plt.show()
-
-
     return avg_color
 
 
 def calculate_mean_cheek_color(img, mask, landmarks):
     """
     Calculate the mean RGB color of the left and right cheek patches of an image.
-    
+
     Args:
         img_path (str): The path to the image.
         model_p (str): The path to the landmarks model.
 
     Returns:
-        dict: Dictionary containing the mean color for the left cheek, right cheek, 
+        dict: Dictionary containing the mean color for the left cheek, right cheek,
               and the combined average color.
     """
-
 
     # Extract cheek coordinates
     left_cheek_coords, right_cheek_coords = extract_cheek_patches(landmarks)
 
     # Calculate average colors for left and right cheeks
-    left_cheek_color = calculate_patch_avg_color(img, mask, left_cheek_coords, side = "left")
-    right_cheek_color = calculate_patch_avg_color(img, mask, right_cheek_coords, side = "right")
+    left_cheek_color = calculate_patch_avg_color(
+        img, mask, left_cheek_coords, side="left"
+    )
+    right_cheek_color = calculate_patch_avg_color(
+        img, mask, right_cheek_coords, side="right"
+    )
 
     # Calculate overall mean color if both cheeks have valid colors
     if left_cheek_color is not None and right_cheek_color is not None:
-        avg_cheek_color = np.mean([left_cheek_color, right_cheek_color], axis=0).astype(int)
+        avg_cheek_color = np.mean([left_cheek_color, right_cheek_color], axis=0).astype(
+            int
+        )
     else:
         avg_cheek_color = None
 
     return {
-        "left_cheek_color": left_cheek_color.tolist() if left_cheek_color is not None else None,
-        "right_cheek_color": right_cheek_color.tolist() if right_cheek_color is not None else None,
-        "avg_cheek_color": avg_cheek_color.tolist() if avg_cheek_color is not None else None
+        "left_cheek_color": (
+            left_cheek_color.tolist() if left_cheek_color is not None else None
+        ),
+        "right_cheek_color": (
+            right_cheek_color.tolist() if right_cheek_color is not None else None
+        ),
+        "avg_cheek_color": (
+            avg_cheek_color.tolist() if avg_cheek_color is not None else None
+        ),
     }
 
 
-
 def extract_skin_patch_RGBs(image_paths, output_json_file):
-    """ Extract the mean cheek colors from a list of images and save the data to a JSON file.
+    """Extract the mean cheek colors from a list of images and save the data to a JSON file.
 
     Args:
         image_paths (list): List of image paths.
     """
 
-    ofiq_zmq = OfiqZmq('/home/dasec-notebook/Thesis/OFIQ-Project')
+    ofiq_zmq = OfiqZmq("/home/dasec-notebook/Thesis/OFIQ-Project")
 
     all_patients_data = {}
 
     for img_path in image_paths:
 
         # Get the patient ID from the image path
-        patient_id = img_path.split('/')[-2] 
+        patient_id = img_path.split("/")[-2]
         image_filename = os.path.basename(img_path)
 
         result = ofiq_zmq.process_image(img_path)
         if result is None:
             print(f"Error processing image: {img_path}")
             continue
-        img = result['aligned_face'][0]
+        img = result["aligned_face"][0]
 
-        landmarks = np.array([[point.x, point.y] for point in result['aligned_face_landmarks'][1]])
-        mask = result['face_occlusion_segmentation_image'][0]
+        landmarks = np.array(
+            [[point.x, point.y] for point in result["aligned_face_landmarks"][1]]
+        )
+        mask = result["face_occlusion_segmentation_image"][0]
 
         # Calculate mean cheek colors
         cheek_colors = calculate_mean_cheek_color(img, mask, landmarks)
@@ -416,7 +411,7 @@ def extract_skin_patch_RGBs(image_paths, output_json_file):
         print(f"Processed image: {img_path}")
 
     # Save all patients' data to a single JSON file
-    with open(output_json_file, 'w') as json_file:
+    with open(output_json_file, "w") as json_file:
         json.dump(all_patients_data, json_file, indent=4)
 
     print(f"All data saved to {output_json_file}")
@@ -440,47 +435,47 @@ def plot_images_by_mst_category(MST_SUBJECT_MAPPING, base_folder):
 
             for img_file in os.listdir(subject_path):
                 img_path = os.path.join(subject_path, img_file)
-                if img_file.endswith(('jpg', 'jpeg', 'png')): 
+                if img_file.endswith(("jpg", "jpeg", "png")):
                     mst_images[mst_category].append(img_path)
 
     # Display images for each MST category
     for mst, images in mst_images.items():
         plt.figure(figsize=(15, 10))
-        plt.suptitle(f'MST Category: {mst}', fontsize=16)
+        plt.suptitle(f"MST Category: {mst}", fontsize=16)
 
         num_images = len(images)
-        cols = 12  
-        rows = (num_images // cols) + (num_images % cols > 0)  
+        cols = 12
+        rows = (num_images // cols) + (num_images % cols > 0)
 
         # Plot each image in a subplot
         for i, img_path in enumerate(images):
             img = plt.imread(img_path)
             ax = plt.subplot(rows, cols, i + 1)
             ax.imshow(img)
-            ax.axis('off') 
+            ax.axis("off")
 
-            file_name = os.path.basename(img_path) 
-            ax.set_title(file_name, fontsize=8, pad=5)  
+            file_name = os.path.basename(img_path)
+            ax.set_title(file_name, fontsize=8, pad=5)
 
-        plt.tight_layout(rect=[0, 0.03, 1, 0.95]) 
+        plt.tight_layout(rect=[0, 0.03, 1, 0.95])
         plt.show()
 
 
-
 def linear_rgb(rgb):
-    """ Convert sRGB to linear RGB values.
+    """Convert sRGB to linear RGB values.
     Args:
         rgb (tuple): The sRGB values to convert.
 
     Returns:
         ndarray: The linear RGB values.
     """
-    
+
     rgb = np.array(rgb) / 255.0
     return np.where(rgb <= 0.04045, rgb / 12.92, ((rgb + 0.055) / 1.055) ** 2.4)
 
+
 def linear_to_srgb(linear_rgb_values):
-    """ Convert linear RGB values to sRGB.
+    """Convert linear RGB values to sRGB.
     Args:
         linear_rgb_values (ndarray): The linear RGB values to convert.
 
@@ -490,19 +485,19 @@ def linear_to_srgb(linear_rgb_values):
 
     # Scale to [0, 1] range for linear RGB values
     linear_rgb = np.clip(linear_rgb_values / 255.0, 0, 1)
-    
+
     # Apply the sRGB transformation
     srgb = np.where(
         linear_rgb <= 0.0031308,
         linear_rgb * 12.92,
-        1.055 * np.power(linear_rgb, 1 / 2.4) - 0.055
+        1.055 * np.power(linear_rgb, 1 / 2.4) - 0.055,
     )
-    
-    # Scale back to [0, 255] and return as integer values
+
     return np.round(srgb * 255).astype(int)
 
+
 def extract_salient_colors(image_path, num_colors=3):
-    """ Extract the salient colors from an image using K-means clustering.
+    """Extract the salient colors from an image using K-means clustering.
 
     Args:
         image_path (str): The path to the image.
@@ -514,24 +509,25 @@ def extract_salient_colors(image_path, num_colors=3):
 
     image = Image.open(image_path).convert("RGBA")
     image_data = np.array(image)
-    
-    rgb_pixels = image_data[:, :, :3]  
-    alpha_channel = image_data[:, :, 3]  
-    
+
+    rgb_pixels = image_data[:, :, :3]
+    alpha_channel = image_data[:, :, 3]
+
     # Mask out transparent pixels (where alpha is 0)
-    non_transparent_pixels = rgb_pixels[alpha_channel > 0]  
-    
+    non_transparent_pixels = rgb_pixels[alpha_channel > 0]
+
     # Apply K-means clustering to non-transparent pixels
     kmeans = KMeans(n_clusters=num_colors, random_state=0)
     kmeans.fit(non_transparent_pixels)
-    
+
     # Cluster centers represent the salient colors
-    salient_colors = kmeans.cluster_centers_.astype(int)  
+    salient_colors = kmeans.cluster_centers_.astype(int)
 
     return salient_colors
 
+
 def compute_rmse(measurement, cluster_centers):
-    """ Compute the Root Mean Squared Error (RMSE) between a measurement and cluster centers.
+    """Compute the Root Mean Squared Error (RMSE) between a measurement and cluster centers.
 
     Args:
         measurement (ndarray): The measurement to compare.
@@ -545,24 +541,24 @@ def compute_rmse(measurement, cluster_centers):
     lowest_rmse = np.min(errors)
     best_match_index = np.argmin(errors)
 
-    return lowest_rmse, best_match_index  
+    return lowest_rmse, best_match_index
 
 
-def calculate_best_mst_orb(rgb, mst_orb_salient_colors): 
-    """ Calculate the best MST orb for a given RGB color based on the salient colors.
+def calculate_best_mst_orb(rgb, mst_orb_salient_colors):
+    """Calculate the best MST orb for a given RGB color based on the salient colors.
 
     Args:
         rgb (tuple): The RGB color to match.
         mst_orb_salient_colors (dict): The salient colors for each MST orb.
 
     Returns:
-        tuple: The best MST orb and the lowest RMSE value.    
-    """      
+        tuple: The best MST orb and the lowest RMSE value.
+    """
 
     linear_combined_rgb = linear_rgb(rgb)
 
     best_mst_orb = None
-    lowest_rmse = float('inf')
+    lowest_rmse = float("inf")
 
     # Compare against each MST orb's salient colors
     for mst_orb_name, salient_colors in mst_orb_salient_colors.items():
@@ -573,13 +569,13 @@ def calculate_best_mst_orb(rgb, mst_orb_salient_colors):
         # Check if this orb has the lowest RMSE so far
         if rmse < lowest_rmse:
             lowest_rmse = rmse
-            best_mst_orb = mst_orb_name.split('.')[0].split('_')[1] 
+            best_mst_orb = mst_orb_name.split(".")[0].split("_")[1]
 
     return best_mst_orb, lowest_rmse
 
 
 def mode(values):
-    """ Calculate the mode of a list of values.
+    """Calculate the mode of a list of values.
 
     Args:
         values (list): The list of values
@@ -591,14 +587,12 @@ def mode(values):
     value_counts = Counter(values)
     max_count = max(value_counts.values())
     modes = [value for value, count in value_counts.items() if count == max_count]
-    
+
     return modes
 
 
-
-
 def get_image_paths(root_dir, valid_extensions=("jpg", "jpeg", "png", "bmp", "tiff")):
-    """ Get a list of image paths from the specified directory.
+    """Get a list of image paths from the specified directory.
 
     Args:
         root_dir (str): The root directory to search for images.
@@ -609,17 +603,17 @@ def get_image_paths(root_dir, valid_extensions=("jpg", "jpeg", "png", "bmp", "ti
     """
 
     image_paths = []
-    
+
     for root, _, files in os.walk(root_dir):
         for file in files:
             if file.lower().endswith(valid_extensions):
                 image_paths.append(os.path.join(root, file))
-    
+
     return image_paths
 
 
 def filter_image_paths(image_paths, txt_file_path, root_folder):
-    """ Filter image paths based on a list of valid relative paths in a text file.
+    """Filter image paths based on a list of valid relative paths in a text file.
 
     Args:
         image_paths (list): List of image paths.
@@ -632,17 +626,20 @@ def filter_image_paths(image_paths, txt_file_path, root_folder):
 
     with open(txt_file_path, "r") as file:
         valid_relative_paths = set(line.strip() for line in file)
-    
+
     filtered_paths = [
-        path for path in image_paths
+        path
+        for path in image_paths
         if os.path.relpath(path, root_folder).replace("\\", "/") in valid_relative_paths
     ]
-    
+
     return filtered_paths
 
 
-def split_json_by_paths(json_file, indoor_txt, outdoor_txt, output_indoor_json, output_outdoor_json):
-    """ Split a JSON file into indoor and outdoor datasets based on paths in .txt files.
+def split_json_by_paths(
+    json_file, indoor_txt, outdoor_txt, output_indoor_json, output_outdoor_json
+):
+    """Split a JSON file into indoor and outdoor datasets based on paths in .txt files.
 
     Args:
         json_file (str): The path to the JSON file.
@@ -654,17 +651,17 @@ def split_json_by_paths(json_file, indoor_txt, outdoor_txt, output_indoor_json, 
 
     with open(json_file, "r") as file:
         data = json.load(file)
-    
+
     with open(indoor_txt, "r") as file:
         indoor_paths = set(line.strip() for line in file)
-    
+
     with open(outdoor_txt, "r") as file:
         outdoor_paths = set(line.strip() for line in file)
-    
+
     # Initialize dictionaries for indoor and outdoor datasets
     indoor_data = {}
     outdoor_data = {}
-    
+
     # Split data based on paths
     for subject_id, images in data.items():
         for image_name, attributes in images.items():
@@ -677,10 +674,10 @@ def split_json_by_paths(json_file, indoor_txt, outdoor_txt, output_indoor_json, 
                 if subject_id not in outdoor_data:
                     outdoor_data[subject_id] = {}
                 outdoor_data[subject_id][image_name] = attributes
-    
+
     # Save indoor and outdoor JSON files
     with open(output_indoor_json, "w") as file:
         json.dump(indoor_data, file, indent=4)
-    
+
     with open(output_outdoor_json, "w") as file:
         json.dump(outdoor_data, file, indent=4)
